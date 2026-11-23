@@ -110,3 +110,67 @@ def choropleth(gdf, col, path, title, cmap_colors=SEQ_BLUES, label="", inset_cou
     cb.outline.set_visible(False)
     fig.suptitle(title, x=0.02, ha="left", fontsize=12, fontweight="bold")
     _finish(fig, path)
+
+
+def actual_vs_expected(d, year, path, title, highlight_county="01"):
+    style()
+    s = d[d["year"] == year]
+    fig, ax = plt.subplots(figsize=(6.4, 5.6))
+    hi = s["county"] == highlight_county
+    lo, up = float(min(s["expected"].min(), s["merit"].min())) - 3, float(max(s["expected"].max(), s["merit"].max())) + 3
+    ax.plot([lo, up], [lo, up], color=AXIS, lw=1, zorder=1)
+    ax.scatter(s.loc[~hi, "expected"], s.loc[~hi, "merit"], s=16, color=BLUE, alpha=0.6, lw=0,
+               label="other municipalities", zorder=2)
+    ax.scatter(s.loc[hi, "expected"], s.loc[hi, "merit"], s=26, color=ORANGE, lw=0.6, edgecolor=SURFACE,
+               label="Stockholm county", zorder=3)
+    ax.text(up - 1, up - 4, "actual = expected", color=MUTED, fontsize=8, ha="right", va="top", rotation=0)
+    ax.set_xlim(lo, up)
+    ax.set_ylim(lo, up)
+    ax.set_xlabel(f"Expected merit value {year} from pupil background (points)")
+    ax.set_ylabel(f"Actual merit value {year} (points)")
+    ax.set_title(title, fontsize=11)
+    ax.legend(frameon=False, loc="upper left", fontsize=8.5)
+    _finish(fig, path)
+
+
+def caterpillar(eff, path, title):
+    """Every municipality's persistent effect with its 95 % interval, sorted."""
+    style()
+    e = eff.sort_values("eb_mean").reset_index(drop=True)
+    colors = np.where(e["verdict"] == "above", DIV_POS, np.where(e["verdict"] == "below", DIV_NEG, "#b5b4ad"))
+    fig, ax = plt.subplots(figsize=(9, 4.6))
+    x = np.arange(len(e))
+    ax.vlines(x, e["lo95"], e["hi95"], colors=colors, lw=1.1, alpha=0.9)
+    ax.scatter(x, e["eb_mean"], s=7, c=colors, zorder=3, lw=0)
+    ax.axhline(0, color=INK2, lw=0.8)
+    n_above, n_below = int((e["verdict"] == "above").sum()), int((e["verdict"] == "below").sum())
+    ax.text(len(e) - 2, float(e["hi95"].max()), f"{n_above} clearly above expected", color=DIV_POS,
+            ha="right", va="top", fontsize=9)
+    ax.text(2, float(e["lo95"].min()), f"{n_below} clearly below expected", color=DIV_NEG, ha="left",
+            va="bottom", fontsize=9)
+    ax.text(len(e) / 2, float(e["hi95"].max()), f"{len(e) - n_above - n_below} interval includes 0",
+            color=INK2, ha="center", va="top", fontsize=9)
+    ax.set_xticks([])
+    ax.set_xlabel("290 municipalities, sorted by estimated persistent effect")
+    ax.set_ylabel("Persistent difference from expected\nmerit value (points, 95 % interval)")
+    ax.set_title(title)
+    ax.grid(axis="x", visible=False)
+    _finish(fig, path)
+
+
+def rank_ranges(eff, path, title, county="01"):
+    """Rank intervals (1 = furthest above expected among all 290) for one county."""
+    style()
+    e = eff[eff["county"] == county].sort_values("rank_point", ascending=False).reset_index(drop=True)
+    fig, ax = plt.subplots(figsize=(8, 0.28 * len(e) + 1.6))
+    y = np.arange(len(e))
+    colors = np.where(e["verdict"] == "above", DIV_POS, np.where(e["verdict"] == "below", DIV_NEG, "#8f8e87"))
+    ax.hlines(y, e["rank_lo"], e["rank_hi"], colors=colors, lw=3, alpha=0.55)
+    ax.scatter(e["rank_point"], y, s=22, c=colors, zorder=3, lw=0)
+    ax.set_yticks(y)
+    ax.set_yticklabels(e["name"], fontsize=8.5, color=INK2)
+    ax.set_xlim(0, len(eff) + 5)
+    ax.set_xlabel(f"Rank among all {len(eff)} municipalities (1 = furthest above expected), 95 % interval")
+    ax.set_title(title, fontsize=11)
+    ax.grid(axis="y", visible=False)
+    _finish(fig, path, source=SOURCE + " Rank intervals simulated from the model.")

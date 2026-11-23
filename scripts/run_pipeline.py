@@ -23,6 +23,12 @@ Stages
   descriptives  M4, offline. Rank stability, top/bottom churn, cohort-noise model
          (change^2 = a + b/n), funnel limits; reports/descriptives.json + figures.
 
+  expected  M5. OLS expected value (D8; D11 functional-form rule), diagnostics,
+         SALSA reconciliation: reports/expected_value.json, data/processed/expected_values.csv.
+  persistence  M6. Random-intercept model, size-dependent noise, empirical-Bayes
+         effects, rank intervals, decision thresholds: reports/persistence.json,
+         reports/municipality_effects.csv and figures.
+
 Network access is only needed for `probe`, `probe_scb`, `fetch` and `reconcile`. The build
 sandbox cannot reach the sources, so these stages run in GitHub Actions.
 """
@@ -414,8 +420,68 @@ def stage_descriptives() -> None:
                                         "share_changes_inside_band", "funnel_outside95")}))
 
 
+def _panel():
+    import pandas as pd
+
+    return pd.read_csv(config.PROCESSED / "panel.csv", dtype={"municipality": str, "county": str})
+
+
+def stage_expected() -> None:
+    """M5: expected merit value from pupil background (D8, D11) + SALSA reconciliation."""
+    import analysis
+    import figures
+
+    out, d, f = analysis.expected_value(_panel())
+    _write_json(config.REPORTS / "expected_value.json", out)
+    d[["municipality", "name", "year", "merit", "expected", "resid", "cohort_est"]].to_csv(
+        config.PROCESSED / "expected_values.csv", index=False, lineterminator="\n", float_format="%.4f")
+    y = config.YEARS[-1]
+    figures.actual_vs_expected(
+        d, y, config.FIGURES / f"actual_vs_expected_{y}.png",
+        title=f"Pupil background explains {out['within_year_r2_chosen']:.0%} of the differences "
+              f"between municipalities")
+    print(json.dumps({k: out[k] for k in ("r2_chosen", "within_year_r2_chosen", "reset_p_linear",
+                                          "d11_use_quadratic", "breusch_pagan_p")}))
+    print(json.dumps(out.get("salsa")))
+
+
+def stage_persistence() -> None:
+    """M6: persistent municipality effect vs year-to-year noise, rank intervals, decision rule."""
+    import analysis
+    import figures
+    import models
+
+    p = _panel()
+    exp = json.loads((config.REPORTS / "expected_value.json").read_text(encoding="utf-8"))
+    f = exp["formula_chosen"]
+    d = models.model_frame(p, "merit", ["parents_post_secondary", "foreign_background"])
+    out, eff = analysis.persistence(d, f, seed=config.SEED)
+    _write_json(config.REPORTS / "persistence.json", out)
+    eff.to_csv(config.REPORTS / "municipality_effects.csv", index=False, lineterminator="\n", float_format="%.4f")
+    sd = out["size_dependent"]
+    figures.caterpillar(eff, config.FIGURES / "persistent_effects.png",
+                        title=f"After background, {sd['verdicts'].get('above', 0) + sd['verdicts'].get('below', 0)} "
+                              f"of 290 municipalities differ persistently from expected")
+    figures.rank_ranges(eff, config.FIGURES / "rank_intervals_stockholm.png",
+                        title="Stockholm county: most rank intervals span dozens of places")
+    try:
+        import geopandas as gpd
+
+        g = gpd.read_file(config.RAW / "geo" / "kommuner.geojson").to_crs(3006)
+        g = g.merge(eff[["municipality", "eb_mean"]], left_on="kommun", right_on="municipality", how="left")
+        lim = float(eff["eb_mean"].abs().quantile(0.98))
+        figures.choropleth(g, "eb_mean", config.FIGURES / "map_persistent_effects.png",
+                           title="Persistent difference from expected merit value, 2015–2025",
+                           label="Points above (blue) or below (red) what pupil background predicts",
+                           diverging=True, vlim=lim)
+    except ImportError:
+        print("geopandas not installed: map skipped")
+    print(json.dumps({k: out[k] for k in ("homoskedastic", "size_dependent")}, default=str)[:3000])
+
+
 STAGES = {"probe": stage_probe, "probe_scb": stage_probe_scb, "fetch": stage_fetch,
-          "reconcile": stage_reconcile, "quality": stage_quality, "descriptives": stage_descriptives}
+          "reconcile": stage_reconcile, "quality": stage_quality, "descriptives": stage_descriptives,
+          "expected": stage_expected, "persistence": stage_persistence}
 
 
 def main(argv: list[str]) -> None:
