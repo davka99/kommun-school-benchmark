@@ -4,15 +4,16 @@ rootdir: /home/runner/work/portfolio-agent/portfolio-agent/projects/kommun-schoo
 configfile: pytest.ini
 testpaths: tests
 plugins: platformdirs-4.14.8
-collected 63 items
+collected 64 items
 
 tests/test_analysis_statsmodels.py ..                                    [  3%]
 tests/test_dataset_quality.py ...........                                [ 20%]
 tests/test_descriptives.py .....                                         [ 28%]
-tests/test_kolada.py ...........                                         [ 46%]
-tests/test_models.py .......                                             [ 57%]
-tests/test_municipalities_geo.py ...................                     [ 87%]
-tests/test_pipeline_cli.py ...                                           [ 92%]
+tests/test_kolada.py ...........                                         [ 45%]
+tests/test_models.py .......                                             [ 56%]
+tests/test_municipalities_geo.py ...................                     [ 85%]
+tests/test_pipeline_cli.py ...                                           [ 90%]
+tests/test_readme_numbers.py .                                           [ 92%]
 tests/test_scb.py .....                                                  [100%]
 
 =============================== warnings summary ===============================
@@ -24,4 +25,4 @@ tests/test_analysis_statsmodels.py::test_persistence_runs_and_returns_consistent
     warnings.warn(msg)
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-======================== 63 passed, 4 warnings in 2.72s ========================
+======================== 64 passed, 4 warnings in 2.83s ========================

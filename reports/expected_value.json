@@ -10,7 +10,7 @@
         0.915,
         1.13
       ],
-      "p": 3.0017675309427185e-77
+      "p": 3.0017675309509316e-77
     },
     "foreign_background": {
       "coef": -0.005,
@@ -18,13 +18,13 @@
         -0.104,
         0.094
       ],
-      "p": 0.9270465692840153
+      "p": 0.9270465692840438
     }
   },
   "r2_linear": 0.519,
   "adj_r2_linear": 0.517,
   "within_year_r2_linear": 0.509,
-  "reset_p_linear": 5.6790695413475633e-08,
+  "reset_p_linear": 5.679069541394816e-08,
   "r2_gain_quadratic": 0.0245,
   "d11_use_quadratic": true,
   "formula_chosen": "merit ~ parents_post_secondary + foreign_background + C(year) + I(((parents_post_secondary - 50) / 10) ** 2)",
@@ -35,7 +35,7 @@
         0.726,
         0.959
       ],
-      "p": 1.4609434756781985e-45
+      "p": 1.4609434756808066e-45
     },
     "foreign_background": {
       "coef": -0.028,
@@ -43,7 +43,7 @@
         -0.132,
         0.076
       ],
-      "p": 0.5937365449889207
+      "p": 0.593736544988899
     },
     "I(((parents_post_secondary - 50) / 10) ** 2)": {
       "coef": 1.468,
@@ -51,13 +51,13 @@
         0.933,
         2.004
       ],
-      "p": 7.824824756843816e-08
+      "p": 7.824824756841907e-08
     }
   },
   "r2_chosen": 0.544,
   "within_year_r2_chosen": 0.534,
   "resid_sd": 10.77,
-  "breusch_pagan_p": 1.8819291085829345e-35,
+  "breusch_pagan_p": 1.8819291085822855e-35,
   "resid_sd_by_size": {
     "<50": 16.93,
     "50-99": 13.08,

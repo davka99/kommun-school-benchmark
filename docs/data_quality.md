@@ -124,7 +124,7 @@ Largest changes (checked: all are small or mid-sized municipalities, several rev
 | Jokkmokk | 2510 | 2024 | 38.1 | -41.6 |
 | Sorsele | 2422 | 2021 | 24.4 | -41.5 |
 | Berg | 2326 | 2017 | 79.7 | -40.8 |
-| Bjurholm | 2403 | 2024 | 26.3 | -40.4 |
+| Ragunda | 2303 | 2017 | 61.2 | -40.4 |
 
 ## 6. Populations agree
 - Correlation of the primary outcome with home municipality 0.961 and with municipal schools 0.963.

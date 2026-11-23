@@ -1,7 +1,7 @@
 municipality,primary,verdict|primary,homoskedastic noise,verdict|homoskedastic noise,linear background (no square),verdict|linear background (no square),home municipality,verdict|home municipality,municipal schools only,verdict|municipal schools only,excl. newly arrived pupils,verdict|excl. newly arrived pupils,without 2020–2021,verdict|without 2020–2021,SALSA expected value as covariate,verdict|SALSA expected value as covariate
 0114,13.5847,above,12.3458,above,12.1032,above,11.1594,above,3.6700,above,13.2735,above,12.7574,above,15.0536,above
 0115,0.4400,not distinguishable,0.3616,not distinguishable,1.5145,not distinguishable,5.0430,above,3.3326,above,-0.2884,not distinguishable,0.7691,not distinguishable,5.7850,above
-0117,8.7158,above,8.0970,above,8.7440,above,13.7950,above,8.8711,above,8.6549,above,7.4738,above,13.7276,above
+0117,8.7158,above,8.0970,above,8.7440,above,13.7950,above,8.8711,above,8.6549,above,7.4737,above,13.7276,above
 0120,5.4596,above,5.0323,above,6.1139,above,10.9677,above,2.7232,not distinguishable,6.8472,above,5.1193,above,10.6895,above
 0123,7.7401,above,7.0211,above,6.5607,above,8.3092,above,5.4380,above,7.0212,above,6.5814,above,12.2930,above
 0125,9.2419,above,8.6113,above,11.1087,above,11.2529,above,8.7045,above,10.6033,above,8.4099,above,16.6664,above
@@ -9,23 +9,23 @@ municipality,primary,verdict|primary,homoskedastic noise,verdict|homoskedastic n
 0127,11.5483,above,10.4279,above,9.2837,above,11.8975,above,12.1108,above,8.0544,above,10.5216,above,11.9692,above
 0128,8.7652,above,8.3156,above,8.1438,above,10.7584,above,12.3601,above,7.5945,above,7.9325,above,7.4397,above
 0136,2.7293,above,2.6378,not distinguishable,1.4056,not distinguishable,9.6441,above,2.9305,above,0.2800,not distinguishable,1.9119,not distinguishable,2.1253,not distinguishable
-0138,7.6969,above,7.0190,above,7.9007,above,8.9060,above,4.0875,above,8.0488,above,7.4569,above,13.1853,above
+0138,7.6969,above,7.0190,above,7.9007,above,8.9060,above,4.0875,above,8.0488,above,7.4568,above,13.1853,above
 0139,13.2344,above,12.5063,above,11.5973,above,13.2312,above,15.4748,above,11.5675,above,13.1803,above,12.0902,above
 0140,10.7710,above,10.6879,above,10.3766,above,9.4870,above,12.2937,above,10.5444,above,10.7729,above,13.9981,above
-0160,7.7283,above,6.9769,above,14.1852,above,9.5355,above,9.4712,above,3.4119,above,7.4064,above,23.8535,above
-0162,13.2438,above,12.4298,above,22.0944,above,11.6794,above,14.2873,above,7.8946,above,12.0627,above,28.6244,above
+0160,7.7283,above,6.9769,above,14.1852,above,9.5355,above,9.4712,above,3.4119,above,7.4063,above,23.8535,above
+0162,13.2438,above,12.4298,above,22.0944,above,11.6794,above,14.2873,above,7.8946,above,12.0626,above,28.6244,above
 0163,16.8979,above,15.2730,above,19.0601,above,17.2175,above,20.3491,above,14.2296,above,16.3556,above,23.7968,above
-0180,13.6144,above,12.1510,above,14.9998,above,11.2433,above,13.9098,above,12.5943,above,12.9361,above,23.4390,above
+0180,13.6144,above,12.1510,above,14.9998,above,11.2433,above,13.9098,above,12.5943,above,12.9360,above,23.4390,above
 0181,13.5261,above,12.2240,above,11.2039,above,11.8669,above,12.4445,above,8.4611,above,13.1507,above,9.8071,above
 0182,17.8916,above,16.1284,above,22.5522,above,14.5701,above,17.0341,above,15.0850,above,17.3725,above,28.1380,above
-0183,15.0660,above,13.0854,above,14.7191,above,12.0073,above,-4.2630,below,15.2209,above,12.6531,above,21.3494,above
+0183,15.0660,above,13.0854,above,14.7191,above,12.0073,above,-4.2630,below,15.2209,above,12.6530,above,21.3494,above
 0184,-0.9844,not distinguishable,-0.8385,not distinguishable,0.7888,not distinguishable,13.3279,above,1.9652,not distinguishable,-3.4913,below,-0.8414,not distinguishable,8.7125,above
-0186,13.9094,above,12.7674,above,21.1251,above,12.7267,above,14.4082,above,9.8957,above,12.8843,above,30.8763,above
+0186,13.9094,above,12.7674,above,21.1251,above,12.7267,above,14.4082,above,9.8957,above,12.8842,above,30.8763,above
 0187,5.7968,above,5.7202,above,10.5016,above,4.8100,above,7.9458,above,3.9433,not distinguishable,3.5593,not distinguishable,23.0459,above
 0188,7.4031,above,6.9065,above,6.8486,above,7.0560,above,3.1096,above,8.4943,above,7.5625,above,4.3300,above
 0191,14.2112,above,13.0158,above,12.1083,above,12.9092,above,8.4664,above,13.4605,above,11.7334,above,9.8812,above
 0192,7.5719,above,7.0401,above,6.5503,above,7.8843,above,9.3604,above,5.9256,above,6.7294,above,3.4052,not distinguishable
-0305,5.3685,above,5.0726,above,4.4982,above,5.7637,above,0.9320,not distinguishable,5.3439,above,5.6662,above,5.2226,above
+0305,5.3685,above,5.0726,above,4.4982,above,5.7637,above,0.9320,not distinguishable,5.3439,above,5.6663,above,5.2226,above
 0319,-12.4105,below,-13.0141,below,-13.1463,below,-10.9526,below,-10.9227,below,-10.4689,below,-11.7739,below,-13.8681,below
 0330,-6.3649,below,-5.8435,below,-4.2771,below,-3.0895,not distinguishable,-4.3712,below,-7.1515,below,-5.7398,below,0.6657,not distinguishable
 0331,-3.4477,not distinguishable,-3.2568,not distinguishable,-3.0483,not distinguishable,-3.1846,not distinguishable,-3.1729,not distinguishable,-5.3257,below,-1.6204,not distinguishable,-4.6927,below
@@ -46,11 +46,11 @@ municipality,primary,verdict|primary,homoskedastic noise,verdict|homoskedastic n
 0512,5.9521,not distinguishable,7.9239,above,5.6794,not distinguishable,6.5959,not distinguishable,6.9357,not distinguishable,9.0050,above,4.8977,not distinguishable,8.6611,above
 0513,-2.8584,not distinguishable,-3.0691,not distinguishable,-3.4040,not distinguishable,-3.5319,not distinguishable,-2.0581,not distinguishable,-2.6605,not distinguishable,-1.4455,not distinguishable,-4.9199,not distinguishable
 0560,2.9240,not distinguishable,3.0915,not distinguishable,3.0330,not distinguishable,3.7169,not distinguishable,3.3586,not distinguishable,2.6478,not distinguishable,3.2947,not distinguishable,,
-0561,-3.7899,not distinguishable,-3.8066,not distinguishable,-4.3923,not distinguishable,-3.6190,not distinguishable,-3.1140,not distinguishable,-3.7827,not distinguishable,-4.8916,not distinguishable,-6.7919,below
+0561,-3.7899,not distinguishable,-3.8066,not distinguishable,-4.3923,not distinguishable,-3.6190,not distinguishable,-3.1140,not distinguishable,-3.7827,not distinguishable,-4.8915,not distinguishable,-6.7919,below
 0562,-3.3505,not distinguishable,-3.2755,not distinguishable,-4.3005,below,-0.6189,not distinguishable,-1.7283,not distinguishable,-3.4879,not distinguishable,-3.3295,not distinguishable,-5.8325,below
 0563,1.1816,not distinguishable,1.2823,not distinguishable,2.0607,not distinguishable,-0.1103,not distinguishable,1.5233,not distinguishable,-0.8603,not distinguishable,2.9634,not distinguishable,-2.0091,not distinguishable
 0580,-2.5381,below,-2.2969,not distinguishable,-2.5039,below,-3.9974,below,-2.7528,below,-2.8032,below,-3.1771,below,0.0856,not distinguishable
-0581,5.1575,above,4.5510,not distinguishable,3.6489,above,3.7391,above,-0.2303,not distinguishable,4.2250,above,3.7790,above,4.5012,above
+0581,5.1575,above,4.5510,not distinguishable,3.6489,above,3.7391,above,-0.2303,not distinguishable,4.2250,above,3.7789,above,4.5012,above
 0582,0.8462,not distinguishable,1.0344,not distinguishable,0.2405,not distinguishable,3.7945,not distinguishable,2.2758,not distinguishable,2.0127,not distinguishable,2.6259,not distinguishable,-0.8038,not distinguishable
 0583,0.9204,not distinguishable,0.8600,not distinguishable,-0.3211,not distinguishable,0.3933,not distinguishable,0.0765,not distinguishable,-0.5279,not distinguishable,1.1890,not distinguishable,-3.4736,below
 0584,7.0999,above,8.2509,above,6.6051,above,6.5049,above,8.2276,above,7.3877,above,6.6230,not distinguishable,5.9506,above
@@ -74,7 +74,7 @@ municipality,primary,verdict|primary,homoskedastic noise,verdict|homoskedastic n
 0764,-4.2410,below,-4.0151,not distinguishable,-5.3680,below,-2.7445,not distinguishable,-1.9872,not distinguishable,-0.9455,not distinguishable,-3.8044,not distinguishable,-4.4201,below
 0765,-6.6921,below,-6.1944,below,-8.3458,below,-7.6063,below,-3.5793,not distinguishable,-5.9453,below,-5.4781,below,-3.2236,not distinguishable
 0767,0.9950,not distinguishable,1.0014,not distinguishable,0.9982,not distinguishable,-0.8222,not distinguishable,2.4601,not distinguishable,-0.5360,not distinguishable,0.0683,not distinguishable,-1.2821,not distinguishable
-0780,-2.7501,below,-2.5685,not distinguishable,-3.2273,below,-4.1395,below,-3.3185,below,-2.5643,below,-2.9754,below,-1.0657,not distinguishable
+0780,-2.7501,below,-2.5685,not distinguishable,-3.2273,below,-4.1395,below,-3.3185,below,-2.5643,below,-2.9755,below,-1.0657,not distinguishable
 0781,-0.5959,not distinguishable,-0.5543,not distinguishable,-2.0132,not distinguishable,-1.0610,not distinguishable,0.6244,not distinguishable,1.0235,not distinguishable,-0.9205,not distinguishable,-3.8409,below
 0821,-1.2666,not distinguishable,-1.6115,not distinguishable,0.0721,not distinguishable,-4.1332,not distinguishable,-0.0915,not distinguishable,2.3716,not distinguishable,-1.7137,not distinguishable,-4.8545,not distinguishable
 0834,-0.1251,not distinguishable,0.2462,not distinguishable,-0.6226,not distinguishable,-0.0806,not distinguishable,0.7019,not distinguishable,1.2314,not distinguishable,0.1726,not distinguishable,-0.5699,not distinguishable
@@ -106,7 +106,7 @@ municipality,primary,verdict|primary,homoskedastic noise,verdict|homoskedastic n
 1263,1.6738,not distinguishable,1.5494,not distinguishable,1.8385,not distinguishable,2.4555,not distinguishable,3.8447,above,1.2932,not distinguishable,2.1466,not distinguishable,6.3697,above
 1264,5.8644,above,5.7619,above,5.2877,above,7.8773,above,6.9177,above,5.4644,above,6.9647,above,1.6048,not distinguishable
 1265,-4.7252,below,-4.5206,not distinguishable,-4.7091,below,2.7223,not distinguishable,-3.1459,not distinguishable,-4.8601,below,-3.3512,not distinguishable,-7.2475,below
-1266,-1.8002,not distinguishable,-1.7706,not distinguishable,-2.8239,not distinguishable,0.4825,not distinguishable,-3.7785,not distinguishable,-0.8963,not distinguishable,-2.1440,not distinguishable,-4.6714,below
+1266,-1.8002,not distinguishable,-1.7706,not distinguishable,-2.8239,not distinguishable,0.4825,not distinguishable,-3.7785,not distinguishable,-0.8963,not distinguishable,-2.1439,not distinguishable,-4.6714,below
 1267,-6.1587,below,-5.9116,below,-6.3249,below,-2.8425,not distinguishable,-5.1726,below,-5.0844,below,-5.9253,below,-2.2664,not distinguishable
 1270,-13.6164,below,-13.7982,below,-12.6966,below,-7.6944,below,-13.4401,below,-17.0071,below,-12.3165,below,-17.4790,below
 1272,-4.5997,not distinguishable,-4.4965,not distinguishable,-5.3478,below,-4.6023,below,-3.1683,not distinguishable,-4.4403,below,-4.3780,not distinguishable,-4.7742,below
@@ -117,7 +117,7 @@ municipality,primary,verdict|primary,homoskedastic noise,verdict|homoskedastic n
 1278,4.8761,above,4.8858,above,4.1495,not distinguishable,3.4142,not distinguishable,7.1081,above,6.2874,above,4.4269,not distinguishable,8.4088,above
 1280,8.6164,above,7.6410,above,6.5058,above,6.4026,above,8.3742,above,7.1636,above,7.3877,above,10.6605,above
 1281,3.7275,above,3.3392,not distinguishable,9.1494,above,1.4734,not distinguishable,4.1013,above,-0.4754,not distinguishable,3.1466,above,15.5431,above
-1282,16.5698,above,15.2787,above,14.9392,above,14.4108,above,14.1351,above,13.1721,above,14.9607,above,12.8176,above
+1282,16.5698,above,15.2787,above,14.9392,above,14.4108,above,14.1351,above,13.1721,above,14.9606,above,12.8176,above
 1283,11.1291,above,10.0252,above,9.4173,above,9.5187,above,11.0634,above,9.1900,above,10.2564,above,14.0690,above
 1284,2.1762,not distinguishable,2.1218,not distinguishable,2.9702,not distinguishable,1.9437,not distinguishable,4.3878,above,2.0329,not distinguishable,3.1961,not distinguishable,4.4945,not distinguishable
 1285,0.9136,not distinguishable,0.8626,not distinguishable,-0.4832,not distinguishable,1.6710,not distinguishable,3.5522,above,2.3286,not distinguishable,0.8223,not distinguishable,2.2483,not distinguishable
@@ -133,10 +133,10 @@ municipality,primary,verdict|primary,homoskedastic noise,verdict|homoskedastic n
 1382,4.5582,above,4.1638,not distinguishable,3.4126,above,4.4446,above,1.4916,not distinguishable,4.9025,above,4.2808,above,-3.0465,below
 1383,-1.7404,not distinguishable,-1.5248,not distinguishable,-1.8419,not distinguishable,-2.7146,below,-0.3807,not distinguishable,-1.6393,not distinguishable,-0.6424,not distinguishable,2.2972,not distinguishable
 1384,-0.0957,not distinguishable,-0.0803,not distinguishable,2.0965,not distinguishable,-0.1245,not distinguishable,-0.2820,not distinguishable,0.7624,not distinguishable,-0.3559,not distinguishable,4.8824,above
-1401,-0.4234,not distinguishable,-0.3255,not distinguishable,2.6838,not distinguishable,-1.2331,not distinguishable,-1.6745,not distinguishable,-0.7960,not distinguishable,0.0195,not distinguishable,7.0620,above
-1402,-2.5665,not distinguishable,-2.3097,not distinguishable,-0.4770,not distinguishable,-1.6104,not distinguishable,-0.2896,not distinguishable,-3.1326,below,-2.8553,not distinguishable,3.3377,above
+1401,-0.4234,not distinguishable,-0.3255,not distinguishable,2.6838,not distinguishable,-1.2331,not distinguishable,-1.6745,not distinguishable,-0.7960,not distinguishable,0.0194,not distinguishable,7.0620,above
+1402,-2.5665,not distinguishable,-2.3097,not distinguishable,-0.4770,not distinguishable,-1.6104,not distinguishable,-0.2896,not distinguishable,-3.1326,below,-2.8554,not distinguishable,3.3377,above
 1407,-0.3987,not distinguishable,-0.4589,not distinguishable,-0.2274,not distinguishable,1.2961,not distinguishable,0.7386,not distinguishable,2.1999,not distinguishable,0.2844,not distinguishable,4.0554,not distinguishable
-1415,-5.3765,below,-5.0659,below,-5.4556,below,-4.6126,below,-3.8048,below,-3.3539,below,-5.1664,below,-4.2509,below
+1415,-5.3765,below,-5.0659,below,-5.4556,below,-4.6126,below,-3.8048,below,-3.3539,below,-5.1665,below,-4.2509,below
 1419,-1.1370,not distinguishable,-1.0855,not distinguishable,-1.5964,not distinguishable,-1.2944,not distinguishable,0.5130,not distinguishable,0.9368,not distinguishable,0.2264,not distinguishable,3.5256,not distinguishable
 1421,-0.6093,not distinguishable,-0.6426,not distinguishable,-1.4623,not distinguishable,-1.5219,not distinguishable,-0.6797,not distinguishable,1.3997,not distinguishable,-0.2276,not distinguishable,1.0167,not distinguishable
 1427,3.7544,not distinguishable,4.1420,not distinguishable,3.3423,not distinguishable,4.6856,not distinguishable,4.7505,not distinguishable,4.9996,not distinguishable,3.4900,not distinguishable,4.6770,not distinguishable
@@ -149,8 +149,8 @@ municipality,primary,verdict|primary,homoskedastic noise,verdict|homoskedastic n
 1442,-8.7463,below,-8.6618,below,-9.8921,below,-7.9528,below,-7.1852,below,-6.9332,below,-9.2738,below,-7.2709,below
 1443,3.6438,not distinguishable,3.8032,not distinguishable,3.1372,not distinguishable,4.4878,not distinguishable,5.0159,not distinguishable,4.8767,above,4.5165,not distinguishable,6.2765,above
 1444,7.5618,above,8.6663,above,7.2117,above,7.1443,above,8.4562,above,7.9612,above,7.5821,above,9.3132,above
-1445,1.5445,not distinguishable,1.8700,not distinguishable,2.4690,not distinguishable,1.3816,not distinguishable,1.2458,not distinguishable,0.2538,not distinguishable,-0.0660,not distinguishable,-3.3366,not distinguishable
-1446,2.0105,not distinguishable,2.2615,not distinguishable,1.2922,not distinguishable,1.6151,not distinguishable,3.4777,not distinguishable,1.7290,not distinguishable,1.6300,not distinguishable,2.0398,not distinguishable
+1445,1.5445,not distinguishable,1.8700,not distinguishable,2.4690,not distinguishable,1.3816,not distinguishable,1.2458,not distinguishable,0.2538,not distinguishable,-0.0659,not distinguishable,-3.3366,not distinguishable
+1446,2.0105,not distinguishable,2.2615,not distinguishable,1.2922,not distinguishable,1.6151,not distinguishable,3.4777,not distinguishable,1.7290,not distinguishable,1.6301,not distinguishable,2.0398,not distinguishable
 1447,-8.0199,below,-9.2888,below,-5.6906,not distinguishable,-7.4226,below,-7.8881,below,-8.5941,below,-8.3311,below,-9.8184,below
 1452,0.1936,not distinguishable,0.1776,not distinguishable,-0.2359,not distinguishable,-0.0479,not distinguishable,1.6088,not distinguishable,-0.0098,not distinguishable,0.2551,not distinguishable,-0.1287,not distinguishable
 1460,6.6305,above,7.2022,above,6.8056,above,5.7235,above,7.9218,above,9.4363,above,6.8606,above,4.9697,not distinguishable
@@ -186,7 +186,7 @@ municipality,primary,verdict|primary,homoskedastic noise,verdict|homoskedastic n
 1730,4.8758,not distinguishable,5.5862,above,6.4905,above,3.3495,not distinguishable,5.2783,not distinguishable,1.4105,not distinguishable,4.8459,not distinguishable,-2.8691,not distinguishable
 1737,11.0398,above,11.5727,above,12.0565,above,10.1247,above,11.3032,above,10.8606,above,9.6287,above,7.6580,above
 1760,20.8688,above,26.7097,above,22.9843,above,4.3553,not distinguishable,5.5659,not distinguishable,16.4365,above,18.8413,above,15.8228,above
-1761,-8.9344,below,-8.1913,below,-4.5203,below,-7.4933,below,-6.8555,below,-9.0088,below,-8.8381,below,5.2711,above
+1761,-8.9344,below,-8.1913,below,-4.5203,below,-7.4933,below,-6.8555,below,-9.0088,below,-8.8382,below,5.2711,above
 1762,3.8593,not distinguishable,5.0128,above,5.0084,not distinguishable,3.1545,not distinguishable,4.1154,not distinguishable,1.5711,not distinguishable,4.0419,not distinguishable,0.4066,not distinguishable
 1763,-8.4040,below,-8.4488,below,-9.2462,below,-7.5599,below,-7.1157,below,-6.4111,below,-7.2890,below,-6.5632,below
 1764,-4.7912,not distinguishable,-5.2764,below,-3.3162,not distinguishable,-3.0599,not distinguishable,-5.2827,not distinguishable,-4.5579,not distinguishable,-6.3207,below,-7.1705,below
@@ -200,7 +200,7 @@ municipality,primary,verdict|primary,homoskedastic noise,verdict|homoskedastic n
 1785,0.2642,not distinguishable,0.2818,not distinguishable,0.5959,not distinguishable,0.0761,not distinguishable,1.0126,not distinguishable,0.6358,not distinguishable,-0.3448,not distinguishable,-3.3139,not distinguishable
 1814,-9.7017,below,-9.6428,below,-10.5051,below,-2.3836,not distinguishable,-8.9590,below,-8.1931,below,-9.4139,below,-8.9247,below
 1860,-6.4155,not distinguishable,-7.5194,below,-5.8308,not distinguishable,-1.4232,not distinguishable,-5.6504,not distinguishable,-0.1579,not distinguishable,-5.6818,not distinguishable,-5.7701,not distinguishable
-1861,-8.8367,below,-8.2090,below,-9.0616,below,-5.9518,below,-7.6181,below,-10.1697,below,-6.7416,below,-11.7357,below
+1861,-8.8367,below,-8.2090,below,-9.0616,below,-5.9518,below,-7.6181,below,-10.1697,below,-6.7415,below,-11.7357,below
 1862,-3.2750,not distinguishable,-3.4402,not distinguishable,-2.7556,not distinguishable,-5.6858,below,-2.7011,not distinguishable,-7.1166,below,-2.7564,not distinguishable,-6.9268,below
 1863,0.2472,not distinguishable,0.2706,not distinguishable,2.5274,not distinguishable,1.3024,not distinguishable,0.7284,not distinguishable,-1.2040,not distinguishable,0.3031,not distinguishable,-2.0716,not distinguishable
 1864,-9.6925,below,-12.5292,below,-8.9295,below,-10.3238,below,-9.3330,below,-12.4756,below,-9.7449,below,-9.7539,below
@@ -240,7 +240,7 @@ municipality,primary,verdict|primary,homoskedastic noise,verdict|homoskedastic n
 2121,3.2056,not distinguishable,3.2714,not distinguishable,3.4173,not distinguishable,2.2188,not distinguishable,3.6315,not distinguishable,5.3438,above,2.8779,not distinguishable,5.1720,above
 2132,-5.9975,below,-6.4988,below,-5.7151,below,-4.9007,not distinguishable,-4.6718,not distinguishable,-7.9505,below,-6.6433,below,-9.3853,not distinguishable
 2161,2.4709,not distinguishable,2.2447,not distinguishable,2.9437,not distinguishable,0.8656,not distinguishable,0.6327,not distinguishable,0.4806,not distinguishable,3.2297,not distinguishable,-3.2389,not distinguishable
-2180,-6.9919,below,-6.3366,below,-8.0742,below,-8.6804,below,-11.8625,below,-6.5473,below,-6.7674,below,-0.9906,not distinguishable
+2180,-6.9919,below,-6.3366,below,-8.0742,below,-8.6804,below,-11.8625,below,-6.5473,below,-6.7675,below,-0.9906,not distinguishable
 2181,-4.7928,below,-4.4665,not distinguishable,-6.0541,below,-4.4222,below,-4.8830,below,-4.4938,below,-5.5978,below,-8.1739,below
 2182,5.0650,above,4.8200,above,4.8696,above,4.1411,above,7.1048,above,4.6410,above,4.1579,above,2.2702,not distinguishable
 2183,-5.1602,below,-4.8894,below,-6.1219,below,-5.2339,below,-22.8083,below,-3.8077,below,-5.0935,below,-3.8500,below
@@ -249,7 +249,7 @@ municipality,primary,verdict|primary,homoskedastic noise,verdict|homoskedastic n
 2262,-5.2899,below,-5.1083,below,-6.0513,below,-2.8341,not distinguishable,-4.3422,below,-4.3077,below,-5.4567,below,-6.6831,below
 2280,-2.3730,not distinguishable,-2.2927,not distinguishable,-3.8072,below,-2.0690,not distinguishable,-0.5867,not distinguishable,2.2077,not distinguishable,-4.1358,below,-2.8423,not distinguishable
 2281,-6.5679,below,-5.9500,below,-7.1767,below,-7.4846,below,-18.1537,below,-5.8607,below,-6.7007,below,-5.9876,below
-2282,-4.5117,below,-4.6124,not distinguishable,-4.3715,below,-3.4065,not distinguishable,-3.7406,not distinguishable,-2.9373,not distinguishable,-3.0562,not distinguishable,-5.6426,below
+2282,-4.5118,below,-4.6124,not distinguishable,-4.3715,below,-3.4065,not distinguishable,-3.7406,not distinguishable,-2.9373,not distinguishable,-3.0562,not distinguishable,-5.6426,below
 2283,-8.9721,below,-8.7119,below,-9.6258,below,-9.6133,below,-7.7578,below,-7.9617,below,-7.7325,below,-6.1773,below
 2284,-6.8626,below,-6.2046,below,-7.2376,below,-7.3497,below,-3.7061,below,-5.9515,below,-5.6427,below,-4.2192,below
 2303,-3.8167,not distinguishable,-4.3744,not distinguishable,-2.6934,not distinguishable,-1.8270,not distinguishable,-3.9527,not distinguishable,-1.4353,not distinguishable,-4.3528,not distinguishable,-5.9250,not distinguishable
@@ -265,7 +265,7 @@ municipality,primary,verdict|primary,homoskedastic noise,verdict|homoskedastic n
 2404,-2.4782,not distinguishable,-2.7045,not distinguishable,-3.1653,not distinguishable,-0.8899,not distinguishable,-1.6174,not distinguishable,-3.0495,not distinguishable,-0.9908,not distinguishable,-3.3407,not distinguishable
 2409,3.7478,not distinguishable,4.1453,not distinguishable,3.2650,not distinguishable,3.3766,not distinguishable,4.4793,not distinguishable,5.3020,not distinguishable,5.0433,not distinguishable,1.7142,not distinguishable
 2417,6.2382,not distinguishable,7.7742,above,6.5284,not distinguishable,5.1883,not distinguishable,6.8361,not distinguishable,9.2167,above,4.4607,not distinguishable,8.4369,above
-2418,-5.4649,not distinguishable,-7.3132,below,-5.7540,not distinguishable,-6.7643,not distinguishable,-5.2027,not distinguishable,-4.1761,not distinguishable,-3.7124,not distinguishable,-7.8135,below
+2418,-5.4649,not distinguishable,-7.3132,below,-5.7540,not distinguishable,-6.7643,not distinguishable,-5.2027,not distinguishable,-4.1761,not distinguishable,-3.7123,not distinguishable,-7.8135,below
 2421,-1.3315,not distinguishable,-1.5592,not distinguishable,-1.8758,not distinguishable,-2.1871,not distinguishable,-0.4635,not distinguishable,1.6198,not distinguishable,-1.1818,not distinguishable,-4.1527,not distinguishable
 2422,3.7364,not distinguishable,5.6648,above,4.2932,not distinguishable,4.0623,not distinguishable,4.1576,not distinguishable,9.1494,above,1.7042,not distinguishable,,
 2425,4.4225,not distinguishable,6.9760,above,5.5436,not distinguishable,1.3690,not distinguishable,4.5061,not distinguishable,1.9075,not distinguishable,4.3833,not distinguishable,5.4039,not distinguishable
