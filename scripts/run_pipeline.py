@@ -29,6 +29,9 @@ Stages
          effects, rank intervals, decision thresholds: reports/persistence.json,
          reports/municipality_effects.csv and figures.
 
+  robustness  M7. Pre-registered robustness variants, Stockholm-county table,
+         Moran's I: reports/robustness.json, robustness_effects.csv, stockholm_county.csv.
+
 Network access is only needed for `probe`, `probe_scb`, `fetch` and `reconcile`. The build
 sandbox cannot reach the sources, so these stages run in GitHub Actions.
 """
@@ -485,9 +488,56 @@ def stage_persistence() -> None:
     print(json.dumps({k: out[k] for k in ("homoskedastic", "size_dependent")}, default=str)[:3000])
 
 
+def stage_robustness() -> None:
+    """M7: robustness variants, Stockholm-county table and Moran's I."""
+    import pandas as pd
+
+    import figures
+    import robustness
+
+    p = _panel()
+    exp = json.loads((config.REPORTS / "expected_value.json").read_text(encoding="utf-8"))
+    out, wide = robustness.run(p, exp["formula_chosen"], stockholm=config.STOCKHOLM_COUNTY)
+    wide.to_csv(config.REPORTS / "robustness_effects.csv", index=False, lineterminator="\n", float_format="%.4f")
+
+    eff = pd.read_csv(config.REPORTS / "municipality_effects.csv", dtype={"municipality": str, "county": str})
+    st = eff[eff["county"] == config.STOCKHOLM_COUNTY].merge(
+        wide[["municipality", "home municipality", "SALSA expected value as covariate", "municipal schools only"]],
+        on="municipality", how="left")
+    cols = ["name", "cohort_median", "eb_mean", "lo95", "hi95", "rank_point", "rank_lo", "rank_hi", "verdict",
+            "home municipality", "municipal schools only", "SALSA expected value as covariate"]
+    st[cols].sort_values("eb_mean", ascending=False).to_csv(
+        config.REPORTS / "stockholm_county.csv", index=False, lineterminator="\n", float_format="%.2f")
+
+    try:
+        import geopandas as gpd
+
+        g = gpd.read_file(config.RAW / "geo" / "kommuner.geojson").to_crs(3006).sort_values("kommun")
+        g = g.merge(eff[["municipality", "eb_mean"]], left_on="kommun", right_on="municipality", how="left")
+        g = g.merge(wide[["municipality", "SALSA expected value as covariate"]].rename(
+            columns={"SALSA expected value as covariate": "eb_salsa"}), on="municipality", how="left")
+        last = p[p["year"] == p["year"].max()][["municipality", "merit"]]
+        g = g.merge(last, on="municipality", how="left")
+        out["morans_i"] = {
+            "persistent_effect_primary": robustness.morans_i(g, "eb_mean", seed=config.SEED),
+            "raw_merit_last_year": robustness.morans_i(g, "merit", seed=config.SEED),
+        }
+        gs = g.dropna(subset=["eb_salsa"])
+        if len(gs) == len(g):
+            out["morans_i"]["persistent_effect_salsa_covariate"] = robustness.morans_i(gs, "eb_salsa", seed=config.SEED)
+    except ImportError:
+        print("geopandas/esda not installed: spatial check skipped")
+    _write_json(config.REPORTS / "robustness.json", out)
+    prim = next(r for r in out["variants"] if r["variant"] == "primary")
+    figures.robustness_bars(out["variants"], config.FIGURES / "robustness.png",
+                            title=f"Municipalities clearly below / above expected under {len(out['variants'])} "
+                                  f"specifications (primary: {prim['below']} / {prim['above']})")
+    print(json.dumps(out, default=str)[:4000])
+
+
 STAGES = {"probe": stage_probe, "probe_scb": stage_probe_scb, "fetch": stage_fetch,
           "reconcile": stage_reconcile, "quality": stage_quality, "descriptives": stage_descriptives,
-          "expected": stage_expected, "persistence": stage_persistence}
+          "expected": stage_expected, "persistence": stage_persistence, "robustness": stage_robustness}
 
 
 def main(argv: list[str]) -> None:

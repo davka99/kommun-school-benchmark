@@ -174,3 +174,30 @@ def rank_ranges(eff, path, title, county="01"):
     ax.set_title(title, fontsize=11)
     ax.grid(axis="y", visible=False)
     _finish(fig, path, source=SOURCE + " Rank intervals simulated from the model.")
+
+
+def robustness_bars(rows, path, title):
+    """Municipalities clearly below (left) / above (right) expected under each specification."""
+    style()
+    rows = list(rows)[::-1]
+    fig, ax = plt.subplots(figsize=(8.4, 0.42 * len(rows) + 1.4))
+    y = np.arange(len(rows))
+    below = np.array([r["below"] for r in rows])
+    above = np.array([r["above"] for r in rows])
+    ax.barh(y, -below, color=DIV_NEG, height=0.6, edgecolor=SURFACE, linewidth=1)
+    ax.barh(y, above, color=DIV_POS, height=0.6, edgecolor=SURFACE, linewidth=1)
+    for yi, b, a, r in zip(y, below, above, rows):
+        ax.text(-b - 2, yi, str(b), va="center", ha="right", fontsize=8.5, color=INK2)
+        ax.text(a + 2, yi, f"{a}   (ρ = {r['spearman_with_primary']:.2f})", va="center", ha="left",
+                fontsize=8.5, color=INK2)
+    ax.axvline(0, color=INK2, lw=0.8)
+    ax.set_yticks(y)
+    ax.set_yticklabels([r["variant"] for r in rows], fontsize=9, color=INK2)
+    lim = max(below.max(), above.max()) + 45
+    ax.set_xlim(-lim + 25, lim)
+    ax.set_xticks([])
+    ax.grid(False)
+    ax.set_xlabel("municipalities clearly below expected  ←   |   →  clearly above expected "
+                  "(ρ = rank correlation with primary)", fontsize=8.5)
+    ax.set_title(title, fontsize=11)
+    _finish(fig, path)
