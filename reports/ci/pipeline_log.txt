@@ -1,4 +1,44 @@
-== probe_scb
-SCB: 10 matching tables, 0 errors
-== fetch
-{"N15504": {"2015": 3569, "2016": 3569, "2017": 3569, "2018": 3569, "2019": 3569, "2020": 3569, "2021": 3569, "2022": 3569, "2023": 3569, "2024": 3569, "2025": 3569}, "N15505": {"2015": 3569, "2016": 3569, "2017": 3569, "2018": 3569, "2019": 3569, "2020": 3569, "2021": 3569, "2022": 3569, "2023": 3569, "2024": 3569, "2025": 3569}, "N15506": {"2015": 2709, "2016": 2719, "2017": 2660, "2018": 2805, "2019": 2656, "2020": 2698, "2021": 2862, "2022": 2805, "2023": 2752, "2024": 2976, "2025": 2910}, "N15507": {"2015": 3569, "2016": 3569, "2017": 3569, "2018": 3569, "2019": 3568, "2020": 3569, "2021": 3569, "2022": 3569, "2023": 3569, "2024": 3569, "2025": 3569}, "N15566": {"2015": 3569, "2016": 3569, "2017": 3569, "2018": 3569, "2019": 3568, "2020": 3569, "2021": 3569, "2022": 3569, "2023": 3569, "2024": 3569, "2025": 3569}, "N15567": {"2015": 3569, "2016": 3569, "2017": 3569, "2018": 3569, "2019": 3568, "2020": 3569, "2021": 3569, "2022": 3569, "2023": 3569, "2024": 3569, "2025": 3569}, "N15424": {"2015": 3559, "2016": 3555, "2017": 3565, "2018": 3560, "2019": 3559, "2020": 3557, "2021": 3561, "2022": 3558, "2023": 3558, "2024": 3563, "2025": 3561}, "N15428": {"2015": 3656, "2016": 3656, "2017": 3656, "2018": 3656, "2019": 3655, "2020": 3656, "2021": 3656, "2022": 3656, "2023": 3656, "2024": 3656, "2025": 3656}, "N15436": {"2015": 3558, "2016": 3555, "2017": 3565, "2018": 3560, "2019": 3559, "2020": 3557, "2021": 3561, "2022": 3557, "2023": 3558, "2024": 3560, "2025": 3559}, "N15508": {"2015": 3566, "2016": 3567, "2017": 3566, "2018": 3567, "2019": 3566, "2020": 3563, "2021": 3567, "2022": 3566, "2023": 3566, "2024": 3567, "2025": 3567}, "N15418": {"2015": 3569, "2016": 3569, "2017": 3569, "2018": 3568, "2019": 3569, "2020": 3569, "2021": 3569, "2022": 3569, "2023": 3568, "2024": 3569, "2025": 3569}, "N15090": {"2025": 3568}, "N15091": {"2025": 3558}, "N15816": {"2015": 3569, "2016": 3569, "2017": 3569, "2018": 3569, "2019": 3569, "2020": 3569, "2021": 3569, "2022": 3569, "2023": 3569, "2024": 3569, "2025": 3569}, "N15818": {"2015": 3569, "2016": 3569, "2017": 3569, "2018": 3569, "2019": 3569, "2020": 3569, "2021": 3569, "2022": 3569, "2023": 3569, "2024": 3569, "2025": 3569}, "N15819": {"2015": 3326, "2016": 3568, "2017": 3568, "2018": 3568, "2019": 3567, "2020": 3507, "2021": 3506, "2022": 3505, "2023": 3507, "2024": 3509}, "N15820": {"2015": 3569, "2016": 3569, "2017": 3569, "2018": 3569, "2019": 3569, "2020": 3569, "2021": 3569, "2022": 3569, "2023": 3569, "2024": 3569, "2025": 3568}, "N15822": {"2015": 3569, "2016": 3569, "2017": 3569, "2018": 3569, "2019": 3569, "2020": 3569, "2021": 3569, "2022": 3569, "2023": 3569, "2024": 3546, "2025": 3546}, "N15823": {"2015": 3305, "2017": 3568, "2018": 3568, "2019": 3567, "2020": 3568, "2021": 3568, "2022": 3568, "2023": 3568, "2024": 3568}, "N15901": {"2015": 3566, "2016": 3569, "2017": 3569, "2018": 3569, "2019": 3569, "2020": 3569, "2021": 3569, "2022": 3568, "2023": 3566, "2024": 3566, "2025": 3563}, "
+== reconcile
+                                              ForUtb      Kon      Tid  00000368
+0   föräldrar med högst förgymnasial utbildningsnivå  flickor  2014/15       NaN
+1   föräldrar med högst förgymnasial utbildningsnivå  flickor  2015/16       NaN
+2   föräldrar med högst förgymnasial utbildningsnivå  flickor  2016/17       NaN
+3   föräldrar med högst förgymnasial utbildningsnivå  flickor  2017/18       NaN
+4   föräldrar med högst förgymnasial utbildningsnivå  flickor  2018/19       NaN
+5   föräldrar med högst förgymnasial utbildningsnivå  flickor  2019/20       NaN
+6   föräldrar med högst förgymnasial utbildningsnivå  flickor  2020/21       NaN
+7   föräldrar med högst förgymnasial utbildningsnivå  flickor  2021/22       NaN
+8   föräldrar med högst förgymnasial utbildningsnivå  flickor  2022/23       NaN
+9   föräldrar med högst förgymnasial utbildningsnivå  flickor  2023/24       NaN
+10  föräldrar med högst förgymnasial utbildningsnivå  flickor  2024/25       NaN
+11  föräldrar med högst förgymnasial utbildningsnivå   pojkar  2014/15       NaN
+== quality
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'SvUtlBakgrund'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/work/portfolio-agent/portfolio-agent/projects/kommun-school-benchmark/scripts/run_pipeline.py", line 385, in <module>
+    main(sys.argv[1:])
+  File "/home/runner/work/portfolio-agent/portfolio-agent/projects/kommun-school-benchmark/scripts/run_pipeline.py", line 381, in main
+    STAGES[s]()
+  File "/home/runner/work/portfolio-agent/portfolio-agent/projects/kommun-school-benchmark/scripts/run_pipeline.py", line 361, in stage_quality
+    scb_cmp = quality.scb_comparison(pd.read_csv(scb_path), raw) if scb_path.exists() else None
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/portfolio-agent/portfolio-agent/projects/kommun-school-benchmark/src/quality.py", line 163, in scb_comparison
+    t = t[(t["SvUtlBakgrund"] == "totalt") & (t["ForUtb"] == "totalt")]
+           ~^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'SvUtlBakgrund'

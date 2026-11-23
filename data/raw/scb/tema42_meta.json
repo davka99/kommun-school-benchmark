@@ -1,0 +1,66 @@
+{
+  "title": "Meritvärde för elever som avslutat årskurs 9 (genomsnittlig betygspoäng) efter svensk och utländsk bakgrund, föräldrars utbildningsnivå, kön, tabellinnehåll och läsår",
+  "variables": [
+    {
+      "code": "SvUtlBakgrund",
+      "text": "svensk och utländsk bakgrund",
+      "n_values": 3,
+      "examples": [
+        "svensk bakgrund",
+        "utländsk bakgrund",
+        "totalt"
+      ],
+      "time": false,
+      "last": "totalt"
+    },
+    {
+      "code": "ForUtb",
+      "text": "föräldrars utbildningsnivå",
+      "n_values": 4,
+      "examples": [
+        "föräldrar med högst förgymnasial utbildningsnivå",
+        "föräldrar med högst gymnasial utbildningsnivå",
+        "föräldrar med eftergymnasial utbildningsnivå",
+        "totalt"
+      ],
+      "time": false,
+      "last": "totalt"
+    },
+    {
+      "code": "Kon",
+      "text": "kön",
+      "n_values": 2,
+      "examples": [
+        "flickor",
+        "pojkar"
+      ],
+      "time": false,
+      "last": "pojkar"
+    },
+    {
+      "code": "ContentsCode",
+      "text": "tabellinnehåll",
+      "n_values": 1,
+      "examples": [
+        "Antal"
+      ],
+      "time": false,
+      "last": "Antal"
+    },
+    {
+      "code": "Tid",
+      "text": "läsår",
+      "n_values": 11,
+      "examples": [
+        "2014/15",
+        "2015/16",
+        "2016/17",
+        "2017/18",
+        "2018/19",
+        "2019/20"
+      ],
+      "time": true,
+      "last": "2024/25"
+    }
+  ]
+}
