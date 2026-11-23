@@ -97,7 +97,10 @@ def change_by_size(ch: pd.DataFrame) -> pd.DataFrame:
 def summarise(p: pd.DataFrame, raw: pd.DataFrame, ou: pd.DataFrame | None, scb: pd.DataFrame | None) -> dict:
     comp = completeness(p)
     ch = year_to_year_changes(p)
-    top = ch.reindex(ch["change"].abs().sort_values(ascending=False).index).head(10)
+    # Stable order: largest |change| first, ties broken by municipality code and year.
+    top = (ch.assign(_abs=ch["change"].abs())
+           .sort_values(["_abs", "municipality", "year"], ascending=[False, True, True], kind="mergesort")
+           .drop(columns="_abs").head(10))
     rec = national_reconciliation(p, raw, ["merit", "merit_home", "parents_post_secondary", "foreign_background"])
     out = {
         "raw_rows": int(len(raw)),

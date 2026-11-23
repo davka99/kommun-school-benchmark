@@ -1,9 +1,4 @@
 # One pipeline stage per line. Pushing a change to this file runs the
 # pipeline workflow in the portfolio-agent workspace (see PLAN.md).
-# Run 8 (M8): QA rerun of every offline stage from the committed raw data.
-# If the outputs are deterministic, the workflow has nothing to commit.
+# Run 8 (M8): QA rerun 2 after the stable sort fix in the quality report.
 quality
-descriptives
-expected
-persistence
-robustness

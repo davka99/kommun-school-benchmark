@@ -30,19 +30,19 @@ The build sandbox cannot reach these hosts or PyPI. `scripts/run_pipeline.py <st
 - [x] M5 Expected-value model with diagnostics; reconciliation against published model values
 - [x] M6 Mixed model: persistent effects, ICC/reliability, shrinkage, rank intervals, decision rule
 - [x] M7 Spatial check, Stockholm county view, robustness checks
-- [ ] M8 Final README with real results, figures, README-number test, QA rerun, PR
+- [x] M8 Final README with real results, figures, README-number test, QA rerun, PR
 
 Max 15 build runs.
 
 ## Definition of Done
-- [ ] All data fetched by a script; raw/processed data and geodata in the repo or reproducible by one command; sources and licences stated
-- [ ] KPI list, covariates and analysis plan committed before any residual or rank was computed
-- [ ] `docs/data_quality.md` with coverage, suppression, breaks and a reconciliation to a published figure
-- [ ] Expected-value model with diagnostics and an explicit "not value added" caveat
-- [ ] Persistent-vs-noise split with intervals (ICC, reliability) and rank intervals
-- [ ] Concrete decision rule for committees, with its uncertainty
-- [ ] Map + Stockholm-county view + spatial autocorrelation check
-- [ ] Robustness table (≥ 4 variants) saying which findings depend on choices
-- [ ] README per portfolio standard; every number in it recomputed by a test
-- [ ] Pinned requirements, fixed seed, tests pass locally and in GitHub Actions; standalone workflows in `projects/kommun-school-benchmark/.github/workflows/`
-- [ ] `docs/qa.md`: full rerun from scratch and the three strongest objections answered
+- [x] All data fetched by a script; raw/processed data and geodata in the repo or reproducible by one command; sources and licences stated
+- [x] KPI list, covariates and analysis plan committed before any residual or rank was computed
+- [x] `docs/data_quality.md` with coverage, suppression, breaks and a reconciliation to a published figure
+- [x] Expected-value model with diagnostics and an explicit "not value added" caveat
+- [x] Persistent-vs-noise split with intervals (ICC, reliability) and rank intervals
+- [x] Concrete decision rule for committees, with its uncertainty
+- [x] Map + Stockholm-county view + spatial autocorrelation check
+- [x] Robustness table (≥ 4 variants) saying which findings depend on choices
+- [x] README per portfolio standard; every number in it recomputed by a test
+- [x] Pinned requirements, fixed seed, tests pass locally and in GitHub Actions; standalone workflows in `projects/kommun-school-benchmark/.github/workflows/`
+- [x] `docs/qa.md`: full rerun from scratch and the three strongest objections answered
