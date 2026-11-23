@@ -15,7 +15,12 @@ Stages
          data/raw/kolada/kolada_long.csv.gz (+ fetch_manifest.json), and
          school-unit SALSA values with their municipality to salsa_school_units.csv.gz.
 
-Network access is only needed for `probe`, `probe_scb` and `fetch`. The build
+  reconcile  M3. SCB table Tema42 (national grade-9 merit value by sex) to
+         data/raw/scb/ for an external check of Kolada's national values.
+  quality  M3, offline. data/processed/panel.csv (290 municipalities x years),
+         reports/data_quality_summary.json and docs/data_quality.md.
+
+Network access is only needed for `probe`, `probe_scb`, `fetch` and `reconcile`. The build
 sandbox cannot reach the sources, so these stages run in GitHub Actions.
 """
 
@@ -310,8 +315,58 @@ def stage_fetch() -> None:
     _write_json(kdir / "fetch_manifest.json", manifest)
     print(json.dumps({k: v["values_T_per_year"] for k, v in manifest["kpis"].items()})[:3000])
 
+def stage_reconcile() -> None:
+    """M3: SCB table LE0201Utb/Tema42 (national merit value by sex; Skolverket data via SCB)
+    for an external check of Kolada's national figures."""
+    import scb
 
-STAGES = {"probe": stage_probe, "probe_scb": stage_probe_scb, "fetch": stage_fetch}
+    get = kolada.make_getter(timeout=config.HTTP_TIMEOUT, user_agent=config.USER_AGENT)
+    url = f"{scb.SCB_BASE}/{config.SCB_RECONCILE_TABLE}"
+    meta = get(url)
+    import requests
+
+    r = requests.post(url, json={"query": [], "response": {"format": "json"}}, timeout=config.HTTP_TIMEOUT,
+                      headers={"User-Agent": config.USER_AGENT})
+    r.raise_for_status()
+    df = scb.px_to_frame(meta, r.json())
+    out = config.RAW / "scb"
+    out.mkdir(parents=True, exist_ok=True)
+    df.to_csv(out / "tema42_merit_national.csv", index=False)
+    _write_json(out / "tema42_meta.json", scb.summarise_metadata(meta))
+    print(df.head(12).to_string())
+
+
+def _load_inputs():
+    import pandas as pd
+
+    raw = pd.read_csv(config.RAW / "kolada" / "kolada_long.csv.gz", dtype={"municipality": str, "status": str})
+    ou_path = config.RAW / "kolada" / "salsa_school_units.csv.gz"
+    ou = pd.read_csv(ou_path, dtype={"municipality": str, "ou": str, "status": str}) if ou_path.exists() else None
+    names = pd.read_csv(config.PROBE_DIR / "municipalities.csv", dtype=str)
+    return raw, ou, names
+
+
+def stage_quality() -> None:
+    """M3 (offline): analysis panel + data-quality summary and report."""
+    import pandas as pd
+
+    import dataset
+    import quality
+
+    raw, ou, names = _load_inputs()
+    panel = dataset.build_panel(raw, ou, names, config.YEARS)
+    config.PROCESSED.mkdir(parents=True, exist_ok=True)
+    panel.to_csv(config.PROCESSED / "panel.csv", index=False, lineterminator="\n", float_format="%.6g")
+    scb_path = config.RAW / "scb" / "tema42_merit_national.csv"
+    scb_cmp = quality.scb_comparison(pd.read_csv(scb_path), raw) if scb_path.exists() else None
+    summary = quality.summarise(panel, raw, ou, scb_cmp)
+    _write_json(config.REPORTS / "data_quality_summary.json", summary)
+    (ROOT / "docs" / "data_quality.md").write_text(quality.render_markdown(summary), encoding="utf-8")
+    print(json.dumps({k: summary[k] for k in ("panel_rows", "range_violations", "max_abs_reconciliation_diff")}))
+
+
+STAGES = {"probe": stage_probe, "probe_scb": stage_probe_scb, "fetch": stage_fetch,
+          "reconcile": stage_reconcile, "quality": stage_quality}
 
 
 def main(argv: list[str]) -> None:

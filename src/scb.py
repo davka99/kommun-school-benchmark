@@ -62,3 +62,25 @@ def summarise_metadata(meta: dict) -> dict:
             "last": labels[-1] if labels else None,
         })
     return out
+
+
+def px_to_frame(meta: dict, result: dict):
+    """Turn a PxWeb v1 JSON result into a DataFrame with value *texts* (not codes)."""
+    import pandas as pd
+
+    labels = {v["code"]: dict(zip(v.get("values", []), v.get("valueTexts", []))) for v in meta["variables"]}
+    dims = [c for c in result["columns"] if c.get("type") != "c"]
+    measures = [c for c in result["columns"] if c.get("type") == "c"]
+    rows = []
+    for rec in result["data"]:
+        row = {d["code"]: labels.get(d["code"], {}).get(k, k) for d, k in zip(dims, rec["key"])}
+        for m, v in zip(measures, rec["values"]):
+            row[m["code"]] = pd.to_numeric(v, errors="coerce")
+        rows.append(row)
+    return pd.DataFrame(rows)
+
+
+def school_year_to_spring(label: str) -> int:
+    """'2014/15' -> 2015 (the spring term in which grade 9 ends)."""
+    a, b = str(label).split("/")
+    return int(a) + 1

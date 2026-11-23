@@ -1,0 +1,681 @@
+{
+  "raw_rows": 1698146,
+  "raw_id_categories": {
+    "kolada_group": 3344,
+    "municipality": 290,
+    "region": 21,
+    "country": 1
+  },
+  "panel_rows": 3190,
+  "municipalities": 290,
+  "years": [
+    2015,
+    2025
+  ],
+  "completeness": {
+    "merit": {
+      "2015": 290,
+      "2016": 290,
+      "2017": 290,
+      "2018": 290,
+      "2019": 290,
+      "2020": 290,
+      "2021": 290,
+      "2022": 290,
+      "2023": 290,
+      "2024": 290,
+      "2025": 290
+    },
+    "merit_home": {
+      "2015": 290,
+      "2016": 290,
+      "2017": 290,
+      "2018": 290,
+      "2019": 289,
+      "2020": 290,
+      "2021": 290,
+      "2022": 290,
+      "2023": 290,
+      "2024": 290,
+      "2025": 290
+    },
+    "merit_municipal": {
+      "2015": 290,
+      "2016": 290,
+      "2017": 290,
+      "2018": 290,
+      "2019": 290,
+      "2020": 290,
+      "2021": 290,
+      "2022": 290,
+      "2023": 290,
+      "2024": 290,
+      "2025": 290
+    },
+    "merit_excl_new": {
+      "2015": 290,
+      "2016": 290,
+      "2017": 290,
+      "2018": 290,
+      "2019": 289,
+      "2020": 290,
+      "2021": 290,
+      "2022": 290,
+      "2023": 290,
+      "2024": 290,
+      "2025": 290
+    },
+    "elig_vocational": {
+      "2015": 280,
+      "2016": 276,
+      "2017": 286,
+      "2018": 281,
+      "2019": 280,
+      "2020": 278,
+      "2021": 282,
+      "2022": 279,
+      "2023": 279,
+      "2024": 284,
+      "2025": 282
+    },
+    "parents_post_secondary": {
+      "2015": 290,
+      "2016": 290,
+      "2017": 290,
+      "2018": 290,
+      "2019": 290,
+      "2020": 290,
+      "2021": 290,
+      "2022": 290,
+      "2023": 290,
+      "2024": 290,
+      "2025": 290
+    },
+    "foreign_background": {
+      "2015": 290,
+      "2016": 290,
+      "2017": 290,
+      "2018": 290,
+      "2019": 290,
+      "2020": 290,
+      "2021": 290,
+      "2022": 290,
+      "2023": 290,
+      "2024": 290,
+      "2025": 290
+    },
+    "pupils_1_9": {
+      "2015": 290,
+      "2016": 290,
+      "2017": 290,
+      "2018": 290,
+      "2019": 290,
+      "2020": 290,
+      "2021": 290,
+      "2022": 290,
+      "2023": 290,
+      "2024": 290,
+      "2025": 290
+    }
+  },
+  "status_counts": {
+    "elig_vocational|Missing": 1,
+    "elig_vocational|Privacy": 102,
+    "merit_excl_new|Missing": 1,
+    "merit_home|Privacy": 1
+  },
+  "integer_share": {
+    "merit": {
+      "2015": 0.09,
+      "2016": 0.13,
+      "2017": 0.08,
+      "2018": 0.1,
+      "2019": 0.1,
+      "2020": 0.11,
+      "2021": 0.1,
+      "2022": 0.1,
+      "2023": 0.1,
+      "2024": 0.1,
+      "2025": 0.1
+    },
+    "merit_home": {
+      "2015": 0.01,
+      "2016": 1.0,
+      "2017": 1.0,
+      "2018": 1.0,
+      "2019": 1.0,
+      "2020": 1.0,
+      "2021": 1.0,
+      "2022": 1.0,
+      "2023": 1.0,
+      "2024": 1.0,
+      "2025": 1.0
+    },
+    "parents_post_secondary": {
+      "2015": 1.0,
+      "2016": 1.0,
+      "2017": 1.0,
+      "2018": 1.0,
+      "2019": 1.0,
+      "2020": 1.0,
+      "2021": 1.0,
+      "2022": 1.0,
+      "2023": 0.11,
+      "2024": 0.11,
+      "2025": 0.09
+    },
+    "foreign_background": {
+      "2015": 1.0,
+      "2016": 1.0,
+      "2017": 1.0,
+      "2018": 1.0,
+      "2019": 1.0,
+      "2020": 1.0,
+      "2021": 1.0,
+      "2022": 1.0,
+      "2023": 0.09,
+      "2024": 0.11,
+      "2025": 0.12
+    }
+  },
+  "range_violations": {
+    "elig_vocational": 0,
+    "parents_post_secondary": 0,
+    "foreign_background": 0,
+    "merit": 0,
+    "merit_home": 0,
+    "merit_municipal": 0,
+    "merit_excl_new": 0,
+    "pupils_1_9_nonpositive": 0
+  },
+  "national_reconciliation": [
+    {
+      "variable": "merit",
+      "year": 2015,
+      "kolada_national": 224.7,
+      "weighted_mean": 225.15,
+      "difference": 0.45
+    },
+    {
+      "variable": "merit",
+      "year": 2016,
+      "kolada_national": 229.2,
+      "weighted_mean": 229.61,
+      "difference": 0.41
+    },
+    {
+      "variable": "merit",
+      "year": 2017,
+      "kolada_national": 223.5,
+      "weighted_mean": 224.05,
+      "difference": 0.55
+    },
+    {
+      "variable": "merit",
+      "year": 2018,
+      "kolada_national": 228.7,
+      "weighted_mean": 229.13,
+      "difference": 0.43
+    },
+    {
+      "variable": "merit",
+      "year": 2019,
+      "kolada_national": 229.8,
+      "weighted_mean": 230.01,
+      "difference": 0.21
+    },
+    {
+      "variable": "merit",
+      "year": 2020,
+      "kolada_national": 231.1,
+      "weighted_mean": 231.21,
+      "difference": 0.11
+    },
+    {
+      "variable": "merit",
+      "year": 2021,
+      "kolada_national": 232.1,
+      "weighted_mean": 232.09,
+      "difference": -0.01
+    },
+    {
+      "variable": "merit",
+      "year": 2022,
+      "kolada_national": 229.2,
+      "weighted_mean": 229.05,
+      "difference": -0.15
+    },
+    {
+      "variable": "merit",
+      "year": 2023,
+      "kolada_national": 228.5,
+      "weighted_mean": 228.31,
+      "difference": -0.19
+    },
+    {
+      "variable": "merit",
+      "year": 2024,
+      "kolada_national": 227.6,
+      "weighted_mean": 227.32,
+      "difference": -0.28
+    },
+    {
+      "variable": "merit",
+      "year": 2025,
+      "kolada_national": 228.5,
+      "weighted_mean": 228.11,
+      "difference": -0.39
+    },
+    {
+      "variable": "merit_home",
+      "year": 2015,
+      "kolada_national": 224.7,
+      "weighted_mean": 226.48,
+      "difference": 1.78
+    },
+    {
+      "variable": "merit_home",
+      "year": 2016,
+      "kolada_national": 229.2,
+      "weighted_mean": 229.88,
+      "difference": 0.68
+    },
+    {
+      "variable": "merit_home",
+      "year": 2017,
+      "kolada_national": 234.4,
+      "weighted_mean": 229.01,
+      "difference": -5.39
+    },
+    {
+      "variable": "merit_home",
+      "year": 2018,
+      "kolada_national": 230.0,
+      "weighted_mean": 230.99,
+      "difference": 0.99
+    },
+    {
+      "variable": "merit_home",
+      "year": 2019,
+      "kolada_national": 230.0,
+      "weighted_mean": 230.95,
+      "difference": 0.95
+    },
+    {
+      "variable": "merit_home",
+      "year": 2020,
+      "kolada_national": 232.0,
+      "weighted_mean": 232.08,
+      "difference": 0.08
+    },
+    {
+      "variable": "merit_home",
+      "year": 2021,
+      "kolada_national": 233.0,
+      "weighted_mean": 232.87,
+      "difference": -0.13
+    },
+    {
+      "variable": "merit_home",
+      "year": 2022,
+      "kolada_national": 230.0,
+      "weighted_mean": 229.91,
+      "difference": -0.09
+    },
+    {
+      "variable": "merit_home",
+      "year": 2023,
+      "kolada_national": 229.0,
+      "weighted_mean": 229.48,
+      "difference": 0.48
+    },
+    {
+      "variable": "merit_home",
+      "year": 2024,
+      "kolada_national": 228.0,
+      "weighted_mean": 228.38,
+      "difference": 0.38
+    },
+    {
+      "variable": "merit_home",
+      "year": 2025,
+      "kolada_national": 229.0,
+      "weighted_mean": 228.87,
+      "difference": -0.13
+    },
+    {
+      "variable": "parents_post_secondary",
+      "year": 2015,
+      "kolada_national": 56.0,
+      "weighted_mean": 55.79,
+      "difference": -0.21
+    },
+    {
+      "variable": "parents_post_secondary",
+      "year": 2016,
+      "kolada_national": 57.0,
+      "weighted_mean": 56.81,
+      "difference": -0.19
+    },
+    {
+      "variable": "parents_post_secondary",
+      "year": 2017,
+      "kolada_national": 58.0,
+      "weighted_mean": 58.12,
+      "difference": 0.12
+    },
+    {
+      "variable": "parents_post_secondary",
+      "year": 2018,
+      "kolada_national": 59.0,
+      "weighted_mean": 59.04,
+      "difference": 0.04
+    },
+    {
+      "variable": "parents_post_secondary",
+      "year": 2019,
+      "kolada_national": 60.0,
+      "weighted_mean": 59.89,
+      "difference": -0.11
+    },
+    {
+      "variable": "parents_post_secondary",
+      "year": 2020,
+      "kolada_national": 60.78,
+      "weighted_mean": 60.81,
+      "difference": 0.03
+    },
+    {
+      "variable": "parents_post_secondary",
+      "year": 2021,
+      "kolada_national": 61.64281832,
+      "weighted_mean": 61.7,
+      "difference": 0.05
+    },
+    {
+      "variable": "parents_post_secondary",
+      "year": 2022,
+      "kolada_national": 62.0,
+      "weighted_mean": 62.31,
+      "difference": 0.31
+    },
+    {
+      "variable": "parents_post_secondary",
+      "year": 2023,
+      "kolada_national": 63.8,
+      "weighted_mean": 63.77,
+      "difference": -0.03
+    },
+    {
+      "variable": "parents_post_secondary",
+      "year": 2024,
+      "kolada_national": 65.2,
+      "weighted_mean": 65.15,
+      "difference": -0.05
+    },
+    {
+      "variable": "parents_post_secondary",
+      "year": 2025,
+      "kolada_national": 66.4,
+      "weighted_mean": 66.36,
+      "difference": -0.04
+    },
+    {
+      "variable": "foreign_background",
+      "year": 2015,
+      "kolada_national": 23.0,
+      "weighted_mean": 22.28,
+      "difference": -0.72
+    },
+    {
+      "variable": "foreign_background",
+      "year": 2016,
+      "kolada_national": 24.0,
+      "weighted_mean": 24.02,
+      "difference": 0.02
+    },
+    {
+      "variable": "foreign_background",
+      "year": 2017,
+      "kolada_national": 25.0,
+      "weighted_mean": 24.66,
+      "difference": -0.34
+    },
+    {
+      "variable": "foreign_background",
+      "year": 2018,
+      "kolada_national": 25.0,
+      "weighted_mean": 25.35,
+      "difference": 0.35
+    },
+    {
+      "variable": "foreign_background",
+      "year": 2019,
+      "kolada_national": 26.0,
+      "weighted_mean": 26.15,
+      "difference": 0.15
+    },
+    {
+      "variable": "foreign_background",
+      "year": 2020,
+      "kolada_national": 26.11,
+      "weighted_mean": 26.35,
+      "difference": 0.24
+    },
+    {
+      "variable": "foreign_background",
+      "year": 2021,
+      "kolada_national": 28.0,
+      "weighted_mean": 26.62,
+      "difference": -1.38
+    },
+    {
+      "variable": "foreign_background",
+      "year": 2022,
+      "kolada_national": 27.0,
+      "weighted_mean": 27.24,
+      "difference": 0.24
+    },
+    {
+      "variable": "foreign_background",
+      "year": 2023,
+      "kolada_national": 27.1,
+      "weighted_mean": 27.14,
+      "difference": 0.04
+    },
+    {
+      "variable": "foreign_background",
+      "year": 2024,
+      "kolada_national": 27.1,
+      "weighted_mean": 27.1,
+      "difference": 0.0
+    },
+    {
+      "variable": "foreign_background",
+      "year": 2025,
+      "kolada_national": 27.0,
+      "weighted_mean": 27.04,
+      "difference": 0.04
+    }
+  ],
+  "max_abs_reconciliation_diff": {
+    "merit": 0.55,
+    "merit_home": 5.39,
+    "parents_post_secondary": 0.31,
+    "foreign_background": 1.38
+  },
+  "cohort_est": {
+    "min": 21.4,
+    "median": 185.3,
+    "max": 11015.3,
+    "municipalities_median_below_50": 15
+  },
+  "merit_change": {
+    "n": 2900,
+    "sd": 10.92,
+    "share_abs_gt_10": 0.287,
+    "n_abs_gt_25": 118,
+    "spearman_abs_change_vs_size": -0.41,
+    "by_size": [
+      {
+        "band": "<50",
+        "n": 154,
+        "sd_change": 17.7,
+        "p95_abs_change": 34.3,
+        "share_abs_gt_10": 0.539
+      },
+      {
+        "band": "50-99",
+        "n": 461,
+        "sd_change": 15.5,
+        "p95_abs_change": 31.5,
+        "share_abs_gt_10": 0.518
+      },
+      {
+        "band": "100-199",
+        "n": 919,
+        "sd_change": 11.8,
+        "p95_abs_change": 23.6,
+        "share_abs_gt_10": 0.381
+      },
+      {
+        "band": "200-499",
+        "n": 716,
+        "sd_change": 7.7,
+        "p95_abs_change": 15.3,
+        "share_abs_gt_10": 0.177
+      },
+      {
+        "band": "500+",
+        "n": 650,
+        "sd_change": 5.1,
+        "p95_abs_change": 10.1,
+        "share_abs_gt_10": 0.051
+      }
+    ],
+    "largest": [
+      {
+        "municipality": "1275",
+        "name": "Perstorp",
+        "year": 2018,
+        "cohort_est": 95.1,
+        "change": 52.2
+      },
+      {
+        "municipality": "2422",
+        "name": "Sorsele",
+        "year": 2020,
+        "cohort_est": 23.7,
+        "change": 50.4
+      },
+      {
+        "municipality": "1860",
+        "name": "Laxå",
+        "year": 2017,
+        "cohort_est": 59.8,
+        "change": -48.2
+      },
+      {
+        "municipality": "1783",
+        "name": "Hagfors",
+        "year": 2018,
+        "cohort_est": 104.3,
+        "change": 48.0
+      },
+      {
+        "municipality": "1982",
+        "name": "Fagersta",
+        "year": 2018,
+        "cohort_est": 156.6,
+        "change": 44.7
+      },
+      {
+        "municipality": "1275",
+        "name": "Perstorp",
+        "year": 2017,
+        "cohort_est": 89.1,
+        "change": -43.5
+      },
+      {
+        "municipality": "2510",
+        "name": "Jokkmokk",
+        "year": 2024,
+        "cohort_est": 38.1,
+        "change": -41.6
+      },
+      {
+        "municipality": "2422",
+        "name": "Sorsele",
+        "year": 2021,
+        "cohort_est": 24.4,
+        "change": -41.5
+      },
+      {
+        "municipality": "2326",
+        "name": "Berg",
+        "year": 2017,
+        "cohort_est": 79.7,
+        "change": -40.8
+      },
+      {
+        "municipality": "2403",
+        "name": "Bjurholm",
+        "year": 2024,
+        "cohort_est": 26.3,
+        "change": -40.4
+      }
+    ]
+  },
+  "population_agreement": {
+    "corr_merit_vs_home": 0.961,
+    "corr_merit_vs_municipal": 0.963,
+    "mean_home_minus_location_stockholm_county": 3.1,
+    "mean_home_minus_location_rest": 1.75
+  },
+  "covariate_correlations": {
+    "merit": {
+      "merit": 1.0,
+      "parents_post_secondary": 0.676,
+      "foreign_background": -0.187
+    },
+    "parents_post_secondary": {
+      "merit": 0.676,
+      "parents_post_secondary": 1.0,
+      "foreign_background": -0.24
+    },
+    "foreign_background": {
+      "merit": -0.187,
+      "parents_post_secondary": -0.24,
+      "foreign_background": 1.0
+    }
+  },
+  "salsa": {
+    "municipalities_with_units": {
+      "2015": 250,
+      "2016": 255,
+      "2017": 256,
+      "2018": 259,
+      "2019": 264,
+      "2020": 268,
+      "2021": 270,
+      "2022": 274,
+      "2023": 278,
+      "2024": 282,
+      "2025": 286
+    },
+    "mean_units": {
+      "2015": 3.5,
+      "2016": 3.7,
+      "2017": 3.8,
+      "2018": 4.0,
+      "2019": 4.2,
+      "2020": 4.3,
+      "2021": 4.5,
+      "2022": 4.7,
+      "2023": 4.8,
+      "2024": 5.0,
+      "2025": 5.2
+    },
+    "school_units_total": 4564
+  }
+}

@@ -43,3 +43,17 @@ def test_summarise_metadata():
     s = scb.summarise_metadata(meta)
     assert s["variables"][0]["n_values"] == 2 and s["variables"][1]["time"] is True
     assert s["variables"][1]["last"] == "2024"
+
+
+def test_px_to_frame_maps_codes_to_texts():
+    meta = {"variables": [
+        {"code": "Kon", "values": ["1", "2"], "valueTexts": ["flickor", "pojkar"]},
+        {"code": "Tid", "values": ["2014/15"], "valueTexts": ["2014/15"]}]}
+    result = {"columns": [{"code": "Kon", "type": "d"}, {"code": "Tid", "type": "t"},
+                          {"code": "X", "type": "c"}],
+              "data": [{"key": ["1", "2014/15"], "values": ["240.1"]},
+                       {"key": ["2", "2014/15"], "values": [".."]}]}
+    df = scb.px_to_frame(meta, result)
+    assert list(df["Kon"]) == ["flickor", "pojkar"]
+    assert df.loc[0, "X"] == 240.1 and df["X"].isna().iloc[1]
+    assert scb.school_year_to_spring("2014/15") == 2015

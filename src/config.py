@@ -68,6 +68,7 @@ FETCH_KPIS = [k for k in PRIORITY_KPIS if k not in SALSA_OU_KPIS]
 
 # SCB PxWeb search for grade-9 background by home municipality and cohort counts.
 SCB_START_PATHS = ["UF", "LE/LE0201"]
+SCB_RECONCILE_TABLE = "LE/LE0201/LE0201Utb/Tema42"
 SCB_TABLE_PATTERN = r"årskurs 9|åk 9|slutbetyg|meritvärde|grundskol|toppen"
 
 # A candidate KPI must mention grade 9 to be coverage-checked in the probe.

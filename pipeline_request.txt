@@ -1,5 +1,5 @@
 # One pipeline stage per line. Pushing a change to this file runs the
 # pipeline workflow in the portfolio-agent workspace (see PLAN.md).
-# Run 2 (M2): SCB search for home-municipality background + full Kolada fetch.
-probe_scb
-fetch
+# Run 3 (M3): external national check (SCB Tema42) + data-quality report and panel.
+reconcile
+quality
