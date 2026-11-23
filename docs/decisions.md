@@ -84,3 +84,12 @@ Primary model, municipality *i*, spring term *t*:
 ## D11 — Rule for changing the functional form (written in Run 4, before the expected-value model was fitted)
 - The primary model stays linear (D8) unless the diagnostics show clear curvature: a RESET test (fitted² added) with p < 0.01 **and** an increase in R² of at least 0.01 when a squared term for parents' education is added. If both hold, the squared term is added and logged here as a *diagnostic fix* with both versions reported; otherwise the linear model is kept and the RESET result is reported.
 - Heteroskedasticity by size is expected (D10) and handled in M6, not by changing the expected-value model.
+
+## D12 — *Post-result, diagnostic fix:* squared term for parents' education (D11 rule applied)
+- RESET p = 6 × 10⁻⁸ and R² rose from 0.519 to 0.544 (+0.025) with the squared term, so the D11 rule added it. The square is centred and scaled, `((parents − 50)/10)²`: the same model, but MixedLM hit a singular matrix with the raw square.
+- Effect: the curve is steeper at high parental education (Danderyd, Lidingö …). Both versions are in `reports/expected_value.json`.
+
+## D13 — *Post-result, diagnostic fix:* size-dependent noise is used for the municipality effects
+- Pre-registered (D10): homoskedastic mixed model primary, size-dependent noise as robustness.
+- Diagnostics: Breusch–Pagan p ≈ 2 × 10⁻³⁵; residual SD 16.9 points in municipalities under 50 pupils vs 7.9–8.2 above 200; likelihood-ratio statistic 864 for σ²(n) = c + d/n vs constant σ². A constant σ² understates the noise for small municipalities and overstates it for large ones, so their intervals would be wrong in opposite directions.
+- Change: effects, verdicts and rank intervals use the size-dependent model. The homoskedastic results are reported next to them (verdicts 70 above / 73 below vs 65 / 82; correlation of effects 0.994), so the change can be audited and does not drive the conclusion.

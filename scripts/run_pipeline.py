@@ -445,6 +445,12 @@ def stage_expected() -> None:
     print(json.dumps(out.get("salsa")))
 
 
+def _stockholm_title(eff) -> str:
+    s = eff[eff["county"] == config.STOCKHOLM_COUNTY]
+    n_above = int((s["verdict"] == "above").sum())
+    return f"Stockholm county: {n_above} of {len(s)} municipalities sit persistently above expected"
+
+
 def stage_persistence() -> None:
     """M6: persistent municipality effect vs year-to-year noise, rank intervals, decision rule."""
     import analysis
@@ -463,7 +469,7 @@ def stage_persistence() -> None:
                         title=f"After background, {sd['verdicts'].get('above', 0) + sd['verdicts'].get('below', 0)} "
                               f"of 290 municipalities differ persistently from expected")
     figures.rank_ranges(eff, config.FIGURES / "rank_intervals_stockholm.png",
-                        title="Stockholm county: most rank intervals span dozens of places")
+                        title=_stockholm_title(eff))
     try:
         import geopandas as gpd
 

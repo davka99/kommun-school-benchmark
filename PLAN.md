@@ -27,8 +27,8 @@ The build sandbox cannot reach these hosts or PyPI. `scripts/run_pipeline.py <st
 - [x] M2 Verify probe; freeze KPI list, covariates and analysis plan in `decisions.md`; full fetch 2015–2025
 - [x] M3 Data-quality report (`docs/data_quality.md`) + analysis dataset with tests
 - [x] M4 Descriptives: raw ranks, year-to-year rank stability, funnel plot, first map
-- [ ] M5 Expected-value model with diagnostics; reconciliation against published model values
-- [ ] M6 Mixed model: persistent effects, ICC/reliability, shrinkage, rank intervals, decision rule
+- [x] M5 Expected-value model with diagnostics; reconciliation against published model values
+- [x] M6 Mixed model: persistent effects, ICC/reliability, shrinkage, rank intervals, decision rule
 - [ ] M7 Spatial check, Stockholm county view, robustness checks
 - [ ] M8 Final README with real results, figures, README-number test, QA rerun, PR
 
