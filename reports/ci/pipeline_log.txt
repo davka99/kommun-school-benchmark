@@ -1,8 +1,3 @@
-== descriptives
-{"rank_stability_mean": 0.745, "top_decile_stay_mean": 0.735, "bottom_decile_stay_mean": 0.435, "share_changes_inside_band": 0.954, "funnel_outside95": 190}
-== expected
-{"r2_chosen": 0.544, "within_year_r2_chosen": 0.534, "reset_p_linear": 5.6790695413475633e-08, "d11_use_quadratic": true, "breusch_pagan_p": 1.8819291085829345e-35}
-{"rows": 2942, "corr_expected": 0.82, "corr_resid_vs_salsa_deviation": 0.751, "within_year_r2_salsa_only": 0.527, "within_year_r2_ours_same_rows": 0.552}
 == persistence
 /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/statsmodels/regression/mixed_linear_model.py:1634: UserWarning: Random effects covariance is singular
   warnings.warn(msg)
