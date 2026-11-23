@@ -24,7 +24,8 @@ def expected_value(p: pd.DataFrame, outcome: str = "merit", covars=tuple(COVARIA
     f_lin = models.formula(outcome, covars)
     m = models.fit_ols(d, f_lin)
     reset_p = models.reset_pvalue(m, d, f_lin)
-    f_quad = f_lin + " + I(parents_post_secondary ** 2)"
+    # Centred and scaled square: the same model space as x + x^2, better conditioned for MixedLM.
+    f_quad = f_lin + " + I(((parents_post_secondary - 50) / 10) ** 2)"
     mq = models.fit_ols(d, f_quad)
     gain = mq.rsquared - m.rsquared
     use_quad = bool(reset_p < 0.01 and gain >= 0.01)  # D11 rule
@@ -85,7 +86,15 @@ def _fixed_residuals(mixed) -> np.ndarray:
 def fit_mixed(d: pd.DataFrame, f: str):
     import statsmodels.formula.api as smf
 
-    return smf.mixedlm(f, d, groups=d["municipality"]).fit(reml=True, method="lbfgs")
+    last = None
+    for method in ("lbfgs", "bfgs", "powell"):
+        try:
+            m = smf.mixedlm(f, d, groups=d["municipality"]).fit(reml=True, method=method)
+            if np.isfinite(m.scale) and m.cov_re.iloc[0, 0] >= 0:
+                return m
+        except np.linalg.LinAlgError as exc:
+            last = exc
+    raise RuntimeError(f"MixedLM did not converge with any optimiser: {last}")
 
 
 def bootstrap_components(d: pd.DataFrame, f: str, mixed, reps: int, seed: int) -> dict:
