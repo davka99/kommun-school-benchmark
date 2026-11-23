@@ -9,7 +9,7 @@ Decision supported: whether a municipality's position justifies action (review, 
 
 ## Measure (primary)
 - **Outcome:** average merit value (genomsnittligt meritvärde, 17 subjects) of pupils leaving grade 9 in the spring term.
-- **Unit:** municipality × spring term. **Population:** pupils registered in the municipality (*hemkommun*), all school providers — the municipality is responsible for its residents' schooling whether the school is municipal or independent. Municipal schools only is a robustness check.
+- **Unit:** municipality × spring term. **Population:** pupils registered in the municipality (*hemkommun*), all school providers — the municipality is responsible for its residents' schooling whether the school is municipal or independent. Municipal schools only is a robustness check. *Amended in Run 1 (before outcome data): outcome and background must refer to the same pupils — see D1; if background exists only by school location, the primary population is pupils in schools located in the municipality (lägeskommun).*
 - **Window:** spring terms 2015–2025 (narrowed in M2 if the probe shows breaks).
 - **Expected value:** from a model of the outcome on pupil background (parents' education, newly arrived pupils, share of boys and similar) measured for the same pupils. The exact covariates are frozen in `decisions.md` in M2 from what the probe shows is available — before any residual or rank is computed.
 - **"Better than expected":** a municipality's persistent component (random intercept across years), not one year's residual.

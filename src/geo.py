@@ -64,6 +64,41 @@ def rank_deso_links(urls: list[str]) -> list[str]:
     return sorted(urls, key=key)
 
 
+def wfs_feature_types(capabilities_xml: str) -> list[str]:
+    """Feature type names from a WFS GetCapabilities document (any WFS version)."""
+    import xml.etree.ElementTree as ET
+
+    root = ET.fromstring(capabilities_xml)
+    names = []
+    for el in root.iter():
+        if el.tag.split("}")[-1] == "FeatureType":
+            for child in el:
+                if child.tag.split("}")[-1] == "Name" and child.text:
+                    names.append(child.text.strip())
+    return names
+
+
+def pick_deso_layer(names: list[str]) -> str | None:
+    """The most recent DeSO layer (e.g. 'stat:DeSO_2025'); None if there is none."""
+    cands = [n for n in names if re.search(r"deso", n, re.I) and not re.search(r"regso", n, re.I)]
+    if not cands:
+        return None
+
+    def year(n):
+        ys = [int(y) for y in re.findall(r"20\d{2}", n)]
+        return max(ys) if ys else 0
+
+    return sorted(cands, key=lambda n: (-year(n), n))[0]
+
+
+def wfs_getfeature_url(base: str, layer: str, srs: str = "EPSG:3006") -> str:
+    from urllib.parse import urlencode
+
+    q = {"service": "WFS", "version": "2.0.0", "request": "GetFeature", "typeNames": layer,
+         "outputFormat": "application/json", "srsName": srs}
+    return f"{base}?{urlencode(q)}"
+
+
 def dissolve_to_kommun(gdf, code_col: str):
     """Dissolve DeSO polygons to municipalities (geopandas GeoDataFrame in, out)."""
     from municipalities import kommun_from_deso

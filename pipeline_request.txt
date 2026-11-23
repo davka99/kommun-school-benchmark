@@ -1,4 +1,5 @@
 # One pipeline stage per line. Pushing a change to this file runs the
 # pipeline workflow in the portfolio-agent workspace (see PLAN.md).
 # Run 1: verify the sources before any full fetch.
+# Run 1b: coverage of the merit-value, background and model-value KPIs; SCB WFS geodata.
 probe

@@ -117,6 +117,26 @@ def stage_probe() -> None:
         return {"n_candidates": int(len(cand)), "n_checked": int(cov["kpi"].nunique()) if not cov.empty else 0,
                 "errors": errors}
 
+    @check("priority_coverage")
+    def _():
+        # One request per KPI for the whole window; coverage per KPI x year, both
+        # sexes combined, with ranges for unit checks. No model or residual (D4).
+        titles = state["kpis"].set_index("id")["title"].to_dict()
+        frames, errors = [], {}
+        for kpi_id in config.PRIORITY_KPIS:
+            try:
+                url = kolada.data_url(state["base"], [kpi_id], config.YEARS)
+                frames.append(kolada.coverage(kolada.parse_data(kolada.paginate(url, get))))
+            except Exception as exc:  # noqa: BLE001
+                errors[kpi_id] = str(exc)[:300]
+        cov = pd.concat(frames) if frames else pd.DataFrame(columns=["kpi"])
+        cov["title"] = cov["kpi"].map(titles)
+        cov.to_csv(out / "priority_coverage.csv", index=False)
+        wide = cov.pivot_table(index="kpi", columns="period", values="n_values", aggfunc="first")
+        wide.to_csv(out / "priority_coverage_wide.csv")
+        missing = sorted(set(config.PRIORITY_KPIS) - set(cov["kpi"]))
+        return {"n_kpis_with_data": int(cov["kpi"].nunique()), "kpis_without_data": missing, "errors": errors}
+
     @check("municipality_register")
     def _():
         from municipalities import is_kommun
@@ -132,7 +152,8 @@ def stage_probe() -> None:
     def _():
         import geopandas as gpd
 
-        from geo import dissolve_to_kommun, find_download_links, rank_deso_links
+        from geo import (dissolve_to_kommun, find_download_links, pick_deso_layer, rank_deso_links,
+                         wfs_feature_types, wfs_getfeature_url)
         from municipalities import is_kommun
 
         s = requests.Session()
@@ -161,6 +182,27 @@ def stage_probe() -> None:
                 break
             except Exception as exc:  # noqa: BLE001
                 tried[url] = str(exc)[:300]
+        if gdf is None:
+            # SCB's WFS: find the most recent DeSO layer and dissolve it.
+            try:
+                r = s.get(f"{config.SCB_WFS}?service=WFS&request=GetCapabilities", timeout=config.HTTP_TIMEOUT)
+                r.raise_for_status()
+                layers = wfs_feature_types(r.text)
+                (out / "scb_wfs_layers.txt").write_text("\n".join(layers) + "\n", encoding="utf-8")
+                layer = pick_deso_layer(layers)
+                if layer is None:
+                    raise RuntimeError(f"no DeSO layer among {len(layers)} WFS layers")
+                r = s.get(wfs_getfeature_url(config.SCB_WFS, layer), timeout=600)
+                r.raise_for_status()
+                fname = config.TMP / "deso_wfs.geojson"
+                fname.write_bytes(r.content)
+                raw = gpd.read_file(fname)
+                code_col = next(c for c in raw.columns if c.lower() in ("deso", "desokod", "deso_kod"))
+                gdf = dissolve_to_kommun(raw, code_col)
+                source = {"url": f"{config.SCB_WFS} layer {layer}", "n_deso": int(len(raw)),
+                          "crs": str(raw.crs), "columns": list(raw.columns)}
+            except Exception as exc:  # noqa: BLE001
+                tried["scb_wfs"] = str(exc)[:500]
         if gdf is None:
             raw = gpd.read_file(config.GEO_FALLBACK_URL)
             code_col = next(c for c in raw.columns if c.lower() in ("kom_kod", "kommunkod", "id", "kod"))
