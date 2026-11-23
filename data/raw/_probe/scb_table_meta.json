@@ -1,0 +1,661 @@
+{
+  "n_tables": 10,
+  "errors": [],
+  "tables": {
+    "UF/UF0514/UtbKostGrundGym": {
+      "title": "Kostnader för grundskola och gymnasieskola efter skolform, huvudman, kostnadsslag, tabellinnehåll och år",
+      "variables": [
+        {
+          "code": "Skolform",
+          "text": "skolform",
+          "n_values": 2,
+          "examples": [
+            "grundskola",
+            "gymnasieskola"
+          ],
+          "time": false,
+          "last": "gymnasieskola"
+        },
+        {
+          "code": "Huvman",
+          "text": "huvudman",
+          "n_values": 5,
+          "examples": [
+            "samtliga huvudmän",
+            "fristående huvudman",
+            "kommunal huvudman",
+            "regional huvudman",
+            "sameskola"
+          ],
+          "time": false,
+          "last": "sameskola"
+        },
+        {
+          "code": "Kostnadsslag",
+          "text": "kostnadsslag",
+          "n_values": 9,
+          "examples": [
+            "total kostnad",
+            "total kostnad exklusive skolskjutsar",
+            "undervisning",
+            "elevhälsa",
+            "lokaler/inventarier",
+            "skolmåltider"
+          ],
+          "time": false,
+          "last": "övriga kostnader"
+        },
+        {
+          "code": "ContentsCode",
+          "text": "tabellinnehåll",
+          "n_values": 4,
+          "examples": [
+            "total kostnad - löpande pris, mnkr",
+            "total kostnad - fast pris, mnkr",
+            "kostnad per barn/elev - löpande pris, kr",
+            "kostnad per barn/elev - fast pris, kr"
+          ],
+          "time": false,
+          "last": "kostnad per barn/elev - fast pris, kr"
+        },
+        {
+          "code": "Tid",
+          "text": "år",
+          "n_values": 18,
+          "examples": [
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012"
+          ],
+          "time": true,
+          "last": "2024"
+        }
+      ]
+    },
+    "UF/UF0514/UtbKostSarSpec": {
+      "title": "Kostnader för anpassad grundskola, specialskola och anpassad gymnasieskola efter skolform, kostnadsslag, tabellinnehåll och år",
+      "variables": [
+        {
+          "code": "Skolform",
+          "text": "skolform",
+          "n_values": 3,
+          "examples": [
+            "anpassad grundskola",
+            "anpassad gymnasieskola",
+            "specialskola"
+          ],
+          "time": false,
+          "last": "specialskola"
+        },
+        {
+          "code": "Kostnadsslag",
+          "text": "kostnadsslag",
+          "n_values": 9,
+          "examples": [
+            "total kostnad",
+            "undervisning",
+            "elevhälsa",
+            "lokaler/inventarier",
+            "skolmåltider",
+            "läromedel/utrustning/skolbibliotek"
+          ],
+          "time": false,
+          "last": "övriga kostnader"
+        },
+        {
+          "code": "ContentsCode",
+          "text": "tabellinnehåll",
+          "n_values": 4,
+          "examples": [
+            "total kostnad - löpande pris, mnkr",
+            "total kostnad - fast pris, mnkr",
+            "kostnad per barn/elev - löpande pris, kr",
+            "kostnad per barn/elev - fast pris, kr"
+          ],
+          "time": false,
+          "last": "kostnad per barn/elev - fast pris, kr"
+        },
+        {
+          "code": "Tid",
+          "text": "år",
+          "n_values": 18,
+          "examples": [
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012"
+          ],
+          "time": true,
+          "last": "2024"
+        }
+      ]
+    },
+    "LE/LE0201/LE0201Utb/Tema42": {
+      "title": "Meritvärde för elever som avslutat årskurs 9 (genomsnittlig betygspoäng) efter svensk och utländsk bakgrund, föräldrars utbildningsnivå, kön, tabellinnehåll och läsår",
+      "variables": [
+        {
+          "code": "SvUtlBakgrund",
+          "text": "svensk och utländsk bakgrund",
+          "n_values": 3,
+          "examples": [
+            "svensk bakgrund",
+            "utländsk bakgrund",
+            "totalt"
+          ],
+          "time": false,
+          "last": "totalt"
+        },
+        {
+          "code": "ForUtb",
+          "text": "föräldrars utbildningsnivå",
+          "n_values": 4,
+          "examples": [
+            "föräldrar med högst förgymnasial utbildningsnivå",
+            "föräldrar med högst gymnasial utbildningsnivå",
+            "föräldrar med eftergymnasial utbildningsnivå",
+            "totalt"
+          ],
+          "time": false,
+          "last": "totalt"
+        },
+        {
+          "code": "Kon",
+          "text": "kön",
+          "n_values": 2,
+          "examples": [
+            "flickor",
+            "pojkar"
+          ],
+          "time": false,
+          "last": "pojkar"
+        },
+        {
+          "code": "ContentsCode",
+          "text": "tabellinnehåll",
+          "n_values": 1,
+          "examples": [
+            "Antal"
+          ],
+          "time": false,
+          "last": "Antal"
+        },
+        {
+          "code": "Tid",
+          "text": "läsår",
+          "n_values": 11,
+          "examples": [
+            "2014/15",
+            "2015/16",
+            "2016/17",
+            "2017/18",
+            "2018/19",
+            "2019/20"
+          ],
+          "time": true,
+          "last": "2024/25"
+        }
+      ]
+    },
+    "LE/LE0201/LE0201Utb/Tema49": {
+      "title": "Genomsnittlig betygspoäng med slutbetyg efter föräldrars utbildningsnivå, svensk och utländsk bakgrund, kön, tabellinnehåll och läsår",
+      "variables": [
+        {
+          "code": "ForUtb",
+          "text": "föräldrars utbildningsnivå",
+          "n_values": 4,
+          "examples": [
+            "förgymnasial",
+            "gymnasial",
+            "eftergymnasial",
+            "totalt"
+          ],
+          "time": false,
+          "last": "totalt"
+        },
+        {
+          "code": "SvUtlBakgrund",
+          "text": "svensk och utländsk bakgrund",
+          "n_values": 3,
+          "examples": [
+            "svensk bakgrund",
+            "utländsk bakgrund",
+            "totalt"
+          ],
+          "time": false,
+          "last": "totalt"
+        },
+        {
+          "code": "Kon",
+          "text": "kön",
+          "n_values": 2,
+          "examples": [
+            "flickor",
+            "pojkar"
+          ],
+          "time": false,
+          "last": "pojkar"
+        },
+        {
+          "code": "ContentsCode",
+          "text": "tabellinnehåll",
+          "n_values": 1,
+          "examples": [
+            "Genomsnittlig betygspoäng med slutbetyg"
+          ],
+          "time": false,
+          "last": "Genomsnittlig betygspoäng med slutbetyg"
+        },
+        {
+          "code": "Tid",
+          "text": "läsår",
+          "n_values": 12,
+          "examples": [
+            "2013/14",
+            "2014/15",
+            "2015/16",
+            "2016/17",
+            "2017/18",
+            "2018/19"
+          ],
+          "time": true,
+          "last": "2024/25"
+        }
+      ]
+    },
+    "LE/LE0201/LE0201Utb/Tema425": {
+      "title": "Personal i grundskolan efter utbildning efter lärarkategori, kön, tabellinnehåll och år",
+      "variables": [
+        {
+          "code": "Lararkategori",
+          "text": "lärarkategori",
+          "n_values": 5,
+          "examples": [
+            "lärare",
+            "speciallärare",
+            "specialpedagog",
+            "totalt",
+            "därav förstelärare"
+          ],
+          "time": false,
+          "last": "därav förstelärare"
+        },
+        {
+          "code": "Kon",
+          "text": "kön",
+          "n_values": 2,
+          "examples": [
+            "kvinnor",
+            "män"
+          ],
+          "time": false,
+          "last": "män"
+        },
+        {
+          "code": "ContentsCode",
+          "text": "tabellinnehåll",
+          "n_values": 4,
+          "examples": [
+            "Antal årsarbetare",
+            "Könsfördelning i procent",
+            "Därav antal årsarbetare med pedagogisk högskoleexamen",
+            "Könsfördelning i procent för de med pedagogisk högskoleexamen"
+          ],
+          "time": false,
+          "last": "Könsfördelning i procent för de med pedagogisk högskoleexamen"
+        },
+        {
+          "code": "Tid",
+          "text": "år",
+          "n_values": 13,
+          "examples": [
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018"
+          ],
+          "time": true,
+          "last": "2025"
+        }
+      ]
+    },
+    "LE/LE0201/LE0201Ö/Tema343": {
+      "title": "Andel elever i årskurs 9 utsatta för kränkning via internet eller mobbning efter typ av kränkning/mobbning, utsatthet, kön, tabellinnehåll och år",
+      "variables": [
+        {
+          "code": "Krank",
+          "text": "typ av kränkning/mobbning",
+          "n_values": 3,
+          "examples": [
+            "utsatt för att någon skrivit kränkande saker på internet",
+            "utsatt för att någon lagt upp kränkande bilder/filmklipp på internet",
+            "utsatt för mobbning"
+          ],
+          "time": false,
+          "last": "utsatt för mobbning"
+        },
+        {
+          "code": "Utsatt",
+          "text": "utsatthet",
+          "n_values": 5,
+          "examples": [
+            "ja, oavsett hur många gånger",
+            "ja, ofta",
+            "ja, flera gånger",
+            "ja, någon gång",
+            "nej, aldrig"
+          ],
+          "time": false,
+          "last": "nej, aldrig"
+        },
+        {
+          "code": "Kon",
+          "text": "kön",
+          "n_values": 2,
+          "examples": [
+            "flickor",
+            "pojkar"
+          ],
+          "time": false,
+          "last": "pojkar"
+        },
+        {
+          "code": "ContentsCode",
+          "text": "tabellinnehåll",
+          "n_values": 3,
+          "examples": [
+            "Andel elever som uppgivit att de utsatts för kränkning",
+            "Konfidensintervall, nedre gräns",
+            "Konfidensintervall, övre gräns"
+          ],
+          "time": false,
+          "last": "Konfidensintervall, övre gräns"
+        },
+        {
+          "code": "Tid",
+          "text": "år",
+          "n_values": 1,
+          "examples": [
+            "2015"
+          ],
+          "time": true,
+          "last": "2015"
+        }
+      ]
+    },
+    "LE/LE0201/LE0201Ö/Tema344": {
+      "title": "Andel elever i årskurs 9 utsatta för brott efter brottstyp, utsatt för mobbning, kön, tabellinnehåll och år",
+      "variables": [
+        {
+          "code": "Brottstyp",
+          "text": "brottstyp",
+          "n_values": 6,
+          "examples": [
+            "utsatt för lindigare misshandel",
+            "utsatt för grövre misshandel",
+            "utsatt för hot",
+            "utsatt för rån",
+            "utsatt för sexuellt ofredande",
+            "utsatt för sexuellt tvång"
+          ],
+          "time": false,
+          "last": "utsatt för sexuellt tvång"
+        },
+        {
+          "code": "UtMobb",
+          "text": "utsatt för mobbning",
+          "n_values": 4,
+          "examples": [
+            "aldrig blivit mobbad",
+            "blivit mobbad ganska sällan",
+            "blivit mobbad ibland",
+            "blivit mobbad ofta"
+          ],
+          "time": false,
+          "last": "blivit mobbad ofta"
+        },
+        {
+          "code": "Kon",
+          "text": "kön",
+          "n_values": 2,
+          "examples": [
+            "flickor",
+            "pojkar"
+          ],
+          "time": false,
+          "last": "pojkar"
+        },
+        {
+          "code": "ContentsCode",
+          "text": "tabellinnehåll",
+          "n_values": 3,
+          "examples": [
+            "Andel",
+            "Konfidensintervall, nedre gräns",
+            "Konfidensintervall, övre gräns"
+          ],
+          "time": false,
+          "last": "Konfidensintervall, övre gräns"
+        },
+        {
+          "code": "Tid",
+          "text": "år",
+          "n_values": 1,
+          "examples": [
+            "2015"
+          ],
+          "time": true,
+          "last": "2015"
+        }
+      ]
+    },
+    "LE/LE0201/LE0201Ö/Tema616": {
+      "title": "Andel elever i årskurs 9 utsatta för kränkning via internet eller mobbning efter typ av kränkning/mobbning, utsatthet, kön, tabellinnehåll och år",
+      "variables": [
+        {
+          "code": "Krank",
+          "text": "typ av kränkning/mobbning",
+          "n_values": 3,
+          "examples": [
+            "utsatt för att någon skrivit kränkande saker på internet",
+            "utsatt för att någon lagt upp kränkande bilder/filmklipp på internet",
+            "utsatt för mobbning"
+          ],
+          "time": false,
+          "last": "utsatt för mobbning"
+        },
+        {
+          "code": "Utsatt",
+          "text": "utsatthet",
+          "n_values": 5,
+          "examples": [
+            "ja, oavsett hur många gånger",
+            "ja, ofta",
+            "ja, flera gånger",
+            "ja, någon gång",
+            "nej, aldrig"
+          ],
+          "time": false,
+          "last": "nej, aldrig"
+        },
+        {
+          "code": "Kon",
+          "text": "kön",
+          "n_values": 2,
+          "examples": [
+            "flickor",
+            "pojkar"
+          ],
+          "time": false,
+          "last": "pojkar"
+        },
+        {
+          "code": "ContentsCode",
+          "text": "tabellinnehåll",
+          "n_values": 3,
+          "examples": [
+            "Andel elever som uppgivit att de utsatts för kränkning",
+            "Konfidensintervall, nedre gräns",
+            "Konfidensintervall, övre gräns"
+          ],
+          "time": false,
+          "last": "Konfidensintervall, övre gräns"
+        },
+        {
+          "code": "Tid",
+          "text": "år",
+          "n_values": 1,
+          "examples": [
+            "2015"
+          ],
+          "time": true,
+          "last": "2015"
+        }
+      ]
+    },
+    "LE/LE0201/LE0201Ö/Tema617": {
+      "title": "Andel elever i årskurs 9 utsatta för brott efter brottstyp, utsatt för mobbning, kön, tabellinnehåll och år",
+      "variables": [
+        {
+          "code": "Brottstyp",
+          "text": "brottstyp",
+          "n_values": 6,
+          "examples": [
+            "utsatt för lindigare misshandel",
+            "utsatt för grövre misshandel",
+            "utsatt för hot",
+            "utsatt för rån",
+            "utsatt för sexuellt ofredande",
+            "utsatt för sexuellt tvång"
+          ],
+          "time": false,
+          "last": "utsatt för sexuellt tvång"
+        },
+        {
+          "code": "UtMobb",
+          "text": "utsatt för mobbning",
+          "n_values": 4,
+          "examples": [
+            "aldrig blivit mobbad",
+            "blivit mobbad ganska sällan",
+            "blivit mobbad ibland",
+            "blivit mobbad ofta"
+          ],
+          "time": false,
+          "last": "blivit mobbad ofta"
+        },
+        {
+          "code": "Kon",
+          "text": "kön",
+          "n_values": 2,
+          "examples": [
+            "flickor",
+            "pojkar"
+          ],
+          "time": false,
+          "last": "pojkar"
+        },
+        {
+          "code": "ContentsCode",
+          "text": "tabellinnehåll",
+          "n_values": 3,
+          "examples": [
+            "Andel",
+            "Konfidensintervall, nedre gräns",
+            "Konfidensintervall, övre gräns"
+          ],
+          "time": false,
+          "last": "Konfidensintervall, övre gräns"
+        },
+        {
+          "code": "Tid",
+          "text": "år",
+          "n_values": 1,
+          "examples": [
+            "2015"
+          ],
+          "time": true,
+          "last": "2015"
+        }
+      ]
+    },
+    "UF/UF0550/UF0550B/HistoriskTab15": {
+      "title": "Antal elever  i grundskolan (inkl. försöksskolan) efter skolår, inriktning skolår 9, kön, tabellinnehåll och år",
+      "variables": [
+        {
+          "code": "Skolar",
+          "text": "skolår",
+          "n_values": 10,
+          "examples": [
+            "alla skolår",
+            "skolår 1",
+            "skolår 2",
+            "skolår 3",
+            "skolår 4",
+            "skolår 5"
+          ],
+          "time": false,
+          "last": "skolår 9"
+        },
+        {
+          "code": "Inriktning9",
+          "text": "inriktning skolår 9",
+          "n_values": 17,
+          "examples": [
+            "alla inriktningar",
+            "allmän",
+            "allmän praktisk",
+            "detaljhandel och kontor",
+            "estetisk",
+            "gymnasieförberedande"
+          ],
+          "time": false,
+          "last": "övriga inriktningar"
+        },
+        {
+          "code": "Kon",
+          "text": "kön",
+          "n_values": 3,
+          "examples": [
+            "båda könen",
+            "pojkar",
+            "flickor"
+          ],
+          "time": false,
+          "last": "flickor"
+        },
+        {
+          "code": "ContentsCode",
+          "text": "tabellinnehåll",
+          "n_values": 1,
+          "examples": [
+            "Antal"
+          ],
+          "time": false,
+          "last": "Antal"
+        },
+        {
+          "code": "Tid",
+          "text": "år",
+          "n_values": 64,
+          "examples": [
+            "1960",
+            "1961",
+            "1962",
+            "1963",
+            "1964",
+            "1965"
+          ],
+          "time": true,
+          "last": "2023"
+        }
+      ]
+    }
+  }
+}
