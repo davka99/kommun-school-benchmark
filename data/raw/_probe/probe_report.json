@@ -1,0 +1,71 @@
+{
+  "started_utc": "2026-11-23T06:29:46.897891+00:00",
+  "checks": {
+    "kolada_api_version": {
+      "ok": true,
+      "base": "https://api.kolada.se/v3",
+      "tried": {
+        "https://api.kolada.se/v3": {
+          "ok": true,
+          "top_level_keys": [
+            "count",
+            "next_url",
+            "previous_url",
+            "values"
+          ]
+        }
+      }
+    },
+    "kpi_search": {
+      "ok": true,
+      "hits_per_term": {
+        "meritvärde": 9,
+        "behöriga till yrkesprogram": 7,
+        "modellberäknat": 7,
+        "eftergymnasial utbildning": 15,
+        "nyinvandrade": 18,
+        "utländsk bakgrund": 6,
+        "elever i åk 9": 189,
+        "elever i årskurs 9": 1,
+        "pojkar": 6
+      },
+      "n_unique_kpis": 221
+    },
+    "grade9_coverage": {
+      "ok": true,
+      "n_candidates": 40,
+      "n_checked": 40,
+      "errors": {}
+    },
+    "municipality_register": {
+      "ok": true,
+      "n_records": 312,
+      "n_kommun": 290,
+      "types": {
+        "K": 290,
+        "L": 22
+      }
+    },
+    "geodata": {
+      "ok": true,
+      "links_found": [],
+      "page_errors": {},
+      "download_errors": {},
+      "source": {
+        "url": "https://raw.githubusercontent.com/okfse/sweden-geojson/master/swedish_municipalities.geojson",
+        "fallback": true,
+        "crs": "EPSG:4326",
+        "columns": [
+          "lan_code",
+          "kom_namn",
+          "id",
+          "geometry",
+          "kommun"
+        ]
+      },
+      "n_kommun": 290
+    }
+  },
+  "critical_failed": [],
+  "finished_utc": "2026-11-23T06:30:48.899218+00:00"
+}

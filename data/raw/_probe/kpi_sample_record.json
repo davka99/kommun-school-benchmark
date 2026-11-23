@@ -1,0 +1,32 @@
+[
+  {
+    "id": "N15504",
+    "title": "Elever i åk. 9, meritvärde lägeskommun, genomsnitt (17 ämnen)",
+    "description": "Elevernas sammanlagda meritvärde dividerat med antal elever som fått godkänt betyg i minst ett ämne enligt det mål- och kunskapsrelaterade betygssystemet i årskurs 9. Betygen mäts före prövning. Uppgifterna avser elever i kommunens egna skolor eller fristående skolor i kommunen, oavsett folkbokföringsort. Uppgiften avser läsår. Meritvärdet för en elev utgörs av summan för de 17 bästa betygen i elevens slutbetyg  (E=10, D=12.5, C=15, B=17.5 och A=20). Det möjliga maxvärdet är 340 poäng. 2016 exkluderades elever med okänd bakgrund. Källa: Skolverket (Siris).",
+    "is_divided_by_gender": true,
+    "municipality_type": "K",
+    "auspice": "T",
+    "operating_area": "Grundskola åk 0-9 inkl förskoleklass",
+    "perspective": "Kvalitet och resultat",
+    "prel_publication_date": null,
+    "publication_date": "2027-09-24",
+    "publ_period": "2027",
+    "has_ou_data": true,
+    "search_score": null
+  },
+  {
+    "id": "N15505",
+    "title": "Elever i åk. 9, meritvärde kommunala skolor, genomsnitt (17 ämnen)",
+    "description": "Elevernas sammanlagda meritvärde dividerat med antal elever som fått betyg i minst ett ämne enligt det mål- och kunskapsrelaterade betygssystemet i årskurs 9. Betygen mäts före prövning. Uppgifterna avser elever i kommunens egna skolor, oavsett folkbokföringsort. Uppgiften avser elevresultat, vårterminen, för referensåret. Meritvärdet för en elev utgörs av summan för de 17 bästa betygen i elevens slutbetyg  (E=10, D=12.5, C=15, B=17.5 och A=20). Det möjliga maxvärdet är 340 poäng. 2016 exkluderades elever med okänd bakgrund. Källa: Skolverket (Siris).",
+    "is_divided_by_gender": true,
+    "municipality_type": "K",
+    "auspice": "E",
+    "operating_area": "Grundskola åk 0-9 inkl förskoleklass",
+    "perspective": "Kvalitet och resultat",
+    "prel_publication_date": null,
+    "publication_date": "2027-09-24",
+    "publ_period": "2027",
+    "has_ou_data": true,
+    "search_score": null
+  }
+]

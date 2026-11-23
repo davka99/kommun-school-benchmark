@@ -1,0 +1,86 @@
+[
+  {
+    "values": [
+      {
+        "gender": "M",
+        "count": 1,
+        "status": "",
+        "value": 95.2,
+        "isdeleted": false
+      },
+      {
+        "gender": "T",
+        "count": 1,
+        "status": "",
+        "value": 95.7,
+        "isdeleted": false
+      },
+      {
+        "gender": "K",
+        "count": 1,
+        "status": "",
+        "value": 96.4,
+        "isdeleted": false
+      }
+    ],
+    "kpi": "N02300",
+    "period": 2024,
+    "municipality": "0000"
+  },
+  {
+    "values": [
+      {
+        "gender": "T",
+        "count": 1,
+        "status": "",
+        "value": 98.0,
+        "isdeleted": false
+      },
+      {
+        "gender": "K",
+        "count": 1,
+        "status": "",
+        "value": 97.3,
+        "isdeleted": false
+      },
+      {
+        "gender": "M",
+        "count": 1,
+        "status": "",
+        "value": 98.6,
+        "isdeleted": false
+      }
+    ],
+    "kpi": "N02300",
+    "period": 2024,
+    "municipality": "0114"
+  },
+  {
+    "values": [
+      {
+        "gender": "T",
+        "count": 1,
+        "status": "",
+        "value": 97.0,
+        "isdeleted": false
+      },
+      {
+        "gender": "M",
+        "count": 1,
+        "status": "",
+        "value": 97.2,
+        "isdeleted": false
+      },
+      {
+        "gender": "K",
+        "count": 1,
+        "status": "",
+        "value": 96.8,
+        "isdeleted": false
+      }
+    ],
+    "kpi": "N02300",
+    "period": 2024,
+    "municipality": "0115"
+  }
+]
