@@ -148,6 +148,13 @@ def summarise(p: pd.DataFrame, raw: pd.DataFrame, ou: pd.DataFrame | None, scb: 
                         "school_units_total": int(ou["ou"].nunique()) if ou is not None else None}
     if scb is not None and len(scb):
         out["scb_national_by_sex"] = scb.to_dict(orient="records")
+        stats = {}
+        for sex, g in scb.sort_values("year").groupby("sex"):
+            stats[sex] = {"median_difference": round(float(g["difference"].median()), 2),
+                          "min_difference": round(float(g["difference"].min()), 2),
+                          "max_difference": round(float(g["difference"].max()), 2),
+                          "corr_yearly_changes": round(float(g["scb"].diff().corr(g["kolada"].diff())), 3)}
+        out["scb_comparison_stats"] = stats
     return out
 
 
@@ -237,6 +244,21 @@ def render_markdown(s: dict) -> str:
             "avslutat årskurs 9* (LE0201Utb/Tema42, Skolverket data).",
             "",
             _table(s["scb_national_by_sex"], ["year", "sex", "scb", "kolada", "difference"]),
+        ]
+        st = s["scb_comparison_stats"]
+        lines += [
+            f"- **The level check does not pass:** Kolada is higher every year, by a median of "
+            f"{st['K']['median_difference']} points for girls and {st['M']['median_difference']} for boys "
+            f"(range {min(v['min_difference'] for v in st.values())}–{max(v['max_difference'] for v in st.values())}).",
+            f"- **The year pattern matches** for girls (correlation of yearly changes {st['K']['corr_yearly_changes']}) "
+            f"and less well for boys ({st['M']['corr_yearly_changes']}), mainly because of SCB's 2016 value for boys.",
+            "- A gap this stable points to a definition difference, not a data error. The most likely one is the "
+            "denominator: Skolverket's merit value in Kolada averages pupils with grades in at least one subject, "
+            "while a table of *all* pupils who left grade 9 would include pupils without any grade (often newly "
+            "arrived) at zero points. **Not verified** — SCB's table notes were not available through the API.",
+            "- Impact: none on the analysis, which only compares municipalities within Kolada's definition, and "
+            "Kolada's municipal values add up to its national value (internal check above). The README will "
+            "state that the level is Skolverket's Kolada definition.",
         ]
     lines += [
         "",

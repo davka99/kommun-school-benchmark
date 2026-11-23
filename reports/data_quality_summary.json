@@ -833,5 +833,19 @@
       "kolada": 220.2,
       "difference": 7.3
     }
-  ]
+  ],
+  "scb_comparison_stats": {
+    "K": {
+      "median_difference": 8.84,
+      "min_difference": 8.41,
+      "max_difference": 10.44,
+      "corr_yearly_changes": 0.958
+    },
+    "M": {
+      "median_difference": 7.3,
+      "min_difference": 6.64,
+      "max_difference": 14.69,
+      "corr_yearly_changes": 0.453
+    }
+  }
 }

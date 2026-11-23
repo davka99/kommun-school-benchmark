@@ -92,6 +92,10 @@ Eligibility for vocational programmes is suppressed for 4–14 municipalities a 
 | 2025 | K | 228.79 | 237.2 | 8.41 |
 | 2025 | M | 212.9 | 220.2 | 7.3 |
 
+- **The level check does not pass:** Kolada is higher every year, by a median of 8.84 points for girls and 7.3 for boys (range 6.64–14.69).
+- **The year pattern matches** for girls (correlation of yearly changes 0.958) and less well for boys (0.453), mainly because of SCB's 2016 value for boys.
+- A gap this stable points to a definition difference, not a data error. The most likely one is the denominator: Skolverket's merit value in Kolada averages pupils with grades in at least one subject, while a table of *all* pupils who left grade 9 would include pupils without any grade (often newly arrived) at zero points. **Not verified** — SCB's table notes were not available through the API.
+- Impact: none on the analysis, which only compares municipalities within Kolada's definition, and Kolada's municipal values add up to its national value (internal check above). The README will state that the level is Skolverket's Kolada definition.
 
 ## 5. Size and year-to-year movement (raw merit value)
 - Estimated grade-9 cohort (pupils in grades 1–9 ÷ 9; Kolada has no grade-9 count): median 185.3, range 21.4–11015.3. 15 municipalities have a median cohort under 50 pupils.
