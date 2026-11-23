@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+# Large downloads (SCB DeSO geopackage) are never committed; only the
+# dissolved, simplified municipality layer is.
+data/tmp/
+*.zip
+*.gpkg
