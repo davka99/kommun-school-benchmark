@@ -1,9 +1,9 @@
 == probe
-Skipping field geo_point_2d: unsupported OGR type: 3
 {
   "kolada_api_version": true,
   "kpi_search": true,
   "grade9_coverage": true,
+  "priority_coverage": true,
   "municipality_register": true,
   "geodata": true
 }

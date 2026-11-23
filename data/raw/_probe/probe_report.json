@@ -1,5 +1,5 @@
 {
-  "started_utc": "2026-11-23T06:29:46.897891+00:00",
+  "started_utc": "2026-11-23T06:33:15.555261+00:00",
   "checks": {
     "kolada_api_version": {
       "ok": true,
@@ -27,14 +27,24 @@
         "utländsk bakgrund": 6,
         "elever i åk 9": 189,
         "elever i årskurs 9": 1,
-        "pojkar": 6
+        "pojkar": 6,
+        "föräldrar": 9,
+        "SALSA": 4,
+        "åk 9, antal": 7,
+        "elever i åk 9 antal": 7
       },
-      "n_unique_kpis": 221
+      "n_unique_kpis": 224
     },
     "grade9_coverage": {
       "ok": true,
-      "n_candidates": 40,
-      "n_checked": 40,
+      "n_candidates": 10,
+      "n_checked": 10,
+      "errors": {}
+    },
+    "priority_coverage": {
+      "ok": true,
+      "n_kpis_with_data": 28,
+      "kpis_without_data": [],
       "errors": {}
     },
     "municipality_register": {
@@ -52,20 +62,27 @@
       "page_errors": {},
       "download_errors": {},
       "source": {
-        "url": "https://raw.githubusercontent.com/okfse/sweden-geojson/master/swedish_municipalities.geojson",
-        "fallback": true,
-        "crs": "EPSG:4326",
+        "url": "https://geodata.scb.se/geoserver/stat/wfs layer stat:DeSO_2025",
+        "n_deso": 6160,
+        "crs": "EPSG:3006",
         "columns": [
-          "lan_code",
-          "kom_namn",
           "id",
-          "geometry",
-          "kommun"
+          "objectid",
+          "objektidentitet",
+          "objekttyp",
+          "desokod",
+          "regsokod",
+          "lanskod",
+          "kommunkod",
+          "version",
+          "ansvarig_organisation",
+          "referensdatum",
+          "geometry"
         ]
       },
       "n_kommun": 290
     }
   },
   "critical_failed": [],
-  "finished_utc": "2026-11-23T06:30:48.899218+00:00"
+  "finished_utc": "2026-11-23T06:40:35.034945+00:00"
 }
