@@ -29,7 +29,7 @@ The build sandbox cannot reach these hosts or PyPI. `scripts/run_pipeline.py <st
 - [x] M4 Descriptives: raw ranks, year-to-year rank stability, funnel plot, first map
 - [x] M5 Expected-value model with diagnostics; reconciliation against published model values
 - [x] M6 Mixed model: persistent effects, ICC/reliability, shrinkage, rank intervals, decision rule
-- [ ] M7 Spatial check, Stockholm county view, robustness checks
+- [x] M7 Spatial check, Stockholm county view, robustness checks
 - [ ] M8 Final README with real results, figures, README-number test, QA rerun, PR
 
 Max 15 build runs.
