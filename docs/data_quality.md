@@ -65,6 +65,34 @@ Eligibility for vocational programmes is suppressed for 4–14 municipalities a 
 - Home municipality (`merit_home`): largest gap 5.39 points, in 2017, where Kolada's national value (234.4) is far from both the municipal values and the other series. Treated as an error in the national row; it does not affect the analysis, which never uses national rows.
 - Background shares: largest gap 0.31 pp (parents' education) and 1.38 pp (foreign background).
 
+**External:** Kolada's national merit value by sex against SCB's table *Meritvärde för elever som avslutat årskurs 9* (LE0201Utb/Tema42, Skolverket data).
+
+| year | sex | scb | kolada | difference |
+|---|---|---|---|---|
+| 2015 | K | 229.42 | 238.0 | 8.58 |
+| 2015 | M | 205.41 | 212.1 | 6.69 |
+| 2016 | K | 232.16 | 242.6 | 10.44 |
+| 2016 | M | 201.91 | 216.6 | 14.69 |
+| 2017 | K | 231.96 | 240.8 | 8.84 |
+| 2017 | M | 201.36 | 208.0 | 6.64 |
+| 2018 | K | 234.2 | 243.2 | 9.0 |
+| 2018 | M | 208.3 | 215.3 | 7.0 |
+| 2019 | K | 234.29 | 243.3 | 9.01 |
+| 2019 | M | 209.79 | 217.0 | 7.21 |
+| 2020 | K | 235.75 | 244.9 | 9.15 |
+| 2020 | M | 210.88 | 218.2 | 7.32 |
+| 2021 | K | 235.41 | 244.4 | 8.99 |
+| 2021 | M | 212.91 | 220.3 | 7.39 |
+| 2022 | K | 231.58 | 240.3 | 8.72 |
+| 2022 | M | 211.44 | 218.8 | 7.36 |
+| 2023 | K | 229.69 | 238.2 | 8.51 |
+| 2023 | M | 211.94 | 219.3 | 7.36 |
+| 2024 | K | 228.41 | 236.9 | 8.49 |
+| 2024 | M | 211.64 | 218.9 | 7.26 |
+| 2025 | K | 228.79 | 237.2 | 8.41 |
+| 2025 | M | 212.9 | 220.2 | 7.3 |
+
+
 ## 5. Size and year-to-year movement (raw merit value)
 - Estimated grade-9 cohort (pupils in grades 1–9 ÷ 9; Kolada has no grade-9 count): median 185.3, range 21.4–11015.3. 15 municipalities have a median cohort under 50 pupils.
 - 2,900 consecutive-year changes: SD 10.92 points; 29% move more than 10 points and 118 more than 25. Larger municipalities move less (Spearman correlation between |change| and size -0.41).

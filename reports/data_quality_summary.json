@@ -677,5 +677,161 @@
       "2025": 5.2
     },
     "school_units_total": 4564
-  }
+  },
+  "scb_national_by_sex": [
+    {
+      "year": 2015,
+      "sex": "K",
+      "scb": 229.42,
+      "kolada": 238.0,
+      "difference": 8.58
+    },
+    {
+      "year": 2015,
+      "sex": "M",
+      "scb": 205.41,
+      "kolada": 212.1,
+      "difference": 6.69
+    },
+    {
+      "year": 2016,
+      "sex": "K",
+      "scb": 232.16,
+      "kolada": 242.6,
+      "difference": 10.44
+    },
+    {
+      "year": 2016,
+      "sex": "M",
+      "scb": 201.91,
+      "kolada": 216.6,
+      "difference": 14.69
+    },
+    {
+      "year": 2017,
+      "sex": "K",
+      "scb": 231.96,
+      "kolada": 240.8,
+      "difference": 8.84
+    },
+    {
+      "year": 2017,
+      "sex": "M",
+      "scb": 201.36,
+      "kolada": 208.0,
+      "difference": 6.64
+    },
+    {
+      "year": 2018,
+      "sex": "K",
+      "scb": 234.2,
+      "kolada": 243.2,
+      "difference": 9.0
+    },
+    {
+      "year": 2018,
+      "sex": "M",
+      "scb": 208.3,
+      "kolada": 215.3,
+      "difference": 7.0
+    },
+    {
+      "year": 2019,
+      "sex": "K",
+      "scb": 234.29,
+      "kolada": 243.3,
+      "difference": 9.01
+    },
+    {
+      "year": 2019,
+      "sex": "M",
+      "scb": 209.79,
+      "kolada": 217.0,
+      "difference": 7.21
+    },
+    {
+      "year": 2020,
+      "sex": "K",
+      "scb": 235.75,
+      "kolada": 244.9,
+      "difference": 9.15
+    },
+    {
+      "year": 2020,
+      "sex": "M",
+      "scb": 210.88,
+      "kolada": 218.2,
+      "difference": 7.32
+    },
+    {
+      "year": 2021,
+      "sex": "K",
+      "scb": 235.41,
+      "kolada": 244.4,
+      "difference": 8.99
+    },
+    {
+      "year": 2021,
+      "sex": "M",
+      "scb": 212.91,
+      "kolada": 220.3,
+      "difference": 7.39
+    },
+    {
+      "year": 2022,
+      "sex": "K",
+      "scb": 231.58,
+      "kolada": 240.3,
+      "difference": 8.72
+    },
+    {
+      "year": 2022,
+      "sex": "M",
+      "scb": 211.44,
+      "kolada": 218.8,
+      "difference": 7.36
+    },
+    {
+      "year": 2023,
+      "sex": "K",
+      "scb": 229.69,
+      "kolada": 238.2,
+      "difference": 8.51
+    },
+    {
+      "year": 2023,
+      "sex": "M",
+      "scb": 211.94,
+      "kolada": 219.3,
+      "difference": 7.36
+    },
+    {
+      "year": 2024,
+      "sex": "K",
+      "scb": 228.41,
+      "kolada": 236.9,
+      "difference": 8.49
+    },
+    {
+      "year": 2024,
+      "sex": "M",
+      "scb": 211.64,
+      "kolada": 218.9,
+      "difference": 7.26
+    },
+    {
+      "year": 2025,
+      "sex": "K",
+      "scb": 228.79,
+      "kolada": 237.2,
+      "difference": 8.41
+    },
+    {
+      "year": 2025,
+      "sex": "M",
+      "scb": 212.9,
+      "kolada": 220.2,
+      "difference": 7.3
+    }
+  ]
 }
