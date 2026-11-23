@@ -123,24 +123,40 @@
   ],
   "morans_i": {
     "persistent_effect_primary": {
-      "I": 0.313,
+      "I": 0.323,
       "expected_I": -0.0035,
       "p_permutation": 0.001,
       "permutations": 999,
       "islands_linked": [
         "0980"
       ],
-      "mean_neighbours": 5.4
+      "mean_neighbours": 5.52,
+      "components": 1,
+      "n": 290
     },
     "raw_merit_last_year": {
-      "I": 0.41,
+      "I": 0.408,
       "expected_I": -0.0035,
       "p_permutation": 0.001,
       "permutations": 999,
       "islands_linked": [
         "0980"
       ],
-      "mean_neighbours": 5.4
+      "mean_neighbours": 5.52,
+      "components": 1,
+      "n": 290
+    },
+    "persistent_effect_salsa_covariate": {
+      "I": 0.508,
+      "expected_I": -0.0035,
+      "p_permutation": 0.001,
+      "permutations": 999,
+      "islands_linked": [
+        "0980"
+      ],
+      "mean_neighbours": 5.47,
+      "components": 1,
+      "n": 287
     }
   }
 }
