@@ -1,16 +1,4 @@
-== reconcile
-      SvUtlBakgrund                                            ForUtb      Kon      Tid  00000368
-0   svensk bakgrund  föräldrar med högst förgymnasial utbildningsnivå  flickor  2014/15    175.62
-1   svensk bakgrund  föräldrar med högst förgymnasial utbildningsnivå  flickor  2015/16    181.75
-2   svensk bakgrund  föräldrar med högst förgymnasial utbildningsnivå  flickor  2016/17    180.57
-3   svensk bakgrund  föräldrar med högst förgymnasial utbildningsnivå  flickor  2017/18    182.90
-4   svensk bakgrund  föräldrar med högst förgymnasial utbildningsnivå  flickor  2018/19    186.30
-5   svensk bakgrund  föräldrar med högst förgymnasial utbildningsnivå  flickor  2019/20    177.35
-6   svensk bakgrund  föräldrar med högst förgymnasial utbildningsnivå  flickor  2020/21    177.66
-7   svensk bakgrund  föräldrar med högst förgymnasial utbildningsnivå  flickor  2021/22    167.92
-8   svensk bakgrund  föräldrar med högst förgymnasial utbildningsnivå  flickor  2022/23    165.22
-9   svensk bakgrund  föräldrar med högst förgymnasial utbildningsnivå  flickor  2023/24    161.20
-10  svensk bakgrund  föräldrar med högst förgymnasial utbildningsnivå  flickor  2024/25    160.41
-11  svensk bakgrund  föräldrar med högst förgymnasial utbildningsnivå   pojkar  2014/15    160.56
 == quality
 {"panel_rows": 3190, "range_violations": {"elig_vocational": 0, "parents_post_secondary": 0, "foreign_background": 0, "merit": 0, "merit_home": 0, "merit_municipal": 0, "merit_excl_new": 0, "pupils_1_9_nonpositive": 0}, "max_abs_reconciliation_diff": {"merit": 0.55, "merit_home": 5.39, "parents_post_secondary": 0.31, "foreign_background": 1.38}}
+== descriptives
+{"rank_stability_mean": 0.745, "top_decile_stay_mean": 0.735, "bottom_decile_stay_mean": 0.435, "share_changes_inside_band": 0.954, "funnel_outside95": 190}
