@@ -406,7 +406,7 @@ def stage_descriptives() -> None:
         if g["merit"].isna().any():
             raise SystemExit(f"map: {int(g['merit'].isna().sum())} municipalities without a value")
         figures.choropleth(g, "merit", config.FIGURES / f"map_merit_{y}.png",
-                           title=f"Raw merit value {y}: mostly a map of pupil background (adjusted in M5–M6)",
+                           title=f"Raw merit value {y} by municipality, before adjusting for pupil background",
                            label=f"Average merit value, grade 9, {y} (points)")
     except ImportError:
         print("geopandas not installed: map skipped")

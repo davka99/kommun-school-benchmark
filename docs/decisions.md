@@ -80,3 +80,7 @@ Primary model, municipality *i*, spring term *t*:
 - **Rank stability (M4):** Spearman correlation of raw and residual ranks between consecutive years.
 - **Spatial (M7):** Moran's I on empirical-Bayes effects, queen contiguity, 999 permutations; Gotland (no land neighbours) is linked to its nearest neighbour by centroid.
 - **Robustness (M7):** home municipality; municipal schools; excluding newly arrived (N15566); without 2020–21; SALSA-average covariate; size-dependent noise.
+
+## D11 — Rule for changing the functional form (written in Run 4, before the expected-value model was fitted)
+- The primary model stays linear (D8) unless the diagnostics show clear curvature: a RESET test (fitted² added) with p < 0.01 **and** an increase in R² of at least 0.01 when a squared term for parents' education is added. If both hold, the squared term is added and logged here as a *diagnostic fix* with both versions reported; otherwise the linear model is kept and the RESET result is reported.
+- Heteroskedasticity by size is expected (D10) and handled in M6, not by changing the expected-value model.
