@@ -24,7 +24,7 @@ The build sandbox cannot reach these hosts or PyPI. `scripts/run_pipeline.py <st
 
 ## Milestones (one per build run)
 - [x] M1 Scaffold, Kolada client + parsers with tests, workflows, source probe (KPI candidates, coverage, municipality register, geodata)
-- [ ] M2 Verify probe; freeze KPI list, covariates and analysis plan in `decisions.md`; full fetch 2015–2025
+- [x] M2 Verify probe; freeze KPI list, covariates and analysis plan in `decisions.md`; full fetch 2015–2025
 - [ ] M3 Data-quality report (`docs/data_quality.md`) + analysis dataset with tests
 - [ ] M4 Descriptives: raw ranks, year-to-year rank stability, funnel plot, first map
 - [ ] M5 Expected-value model with diagnostics; reconciliation against published model values
