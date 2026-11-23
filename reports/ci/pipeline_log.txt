@@ -1,2 +1,0 @@
-== quality
-{"panel_rows": 3190, "range_violations": {"elig_vocational": 0, "parents_post_secondary": 0, "foreign_background": 0, "merit": 0, "merit_home": 0, "merit_municipal": 0, "merit_excl_new": 0, "pupils_1_9_nonpositive": 0}, "max_abs_reconciliation_diff": {"merit": 0.55, "merit_home": 5.39, "parents_post_secondary": 0.31, "foreign_background": 1.38}}
