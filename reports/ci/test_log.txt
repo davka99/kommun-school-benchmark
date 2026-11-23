@@ -25,4 +25,4 @@ tests/test_analysis_statsmodels.py::test_persistence_runs_and_returns_consistent
     warnings.warn(msg)
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-======================== 64 passed, 4 warnings in 2.83s ========================
+======================== 64 passed, 4 warnings in 2.85s ========================
