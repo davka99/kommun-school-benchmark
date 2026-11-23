@@ -23,7 +23,7 @@ The build sandbox cannot reach these hosts or PyPI. `scripts/run_pipeline.py <st
 - Robustness: municipal schools only, excluding 2020–21, eligibility as outcome, alternative covariate sets, weighting by cohort size.
 
 ## Milestones (one per build run)
-- [ ] M1 Scaffold, Kolada client + parsers with tests, workflows, source probe (KPI candidates, coverage, municipality register, geodata)
+- [x] M1 Scaffold, Kolada client + parsers with tests, workflows, source probe (KPI candidates, coverage, municipality register, geodata)
 - [ ] M2 Verify probe; freeze KPI list, covariates and analysis plan in `decisions.md`; full fetch 2015–2025
 - [ ] M3 Data-quality report (`docs/data_quality.md`) + analysis dataset with tests
 - [ ] M4 Descriptives: raw ranks, year-to-year rank stability, funnel plot, first map

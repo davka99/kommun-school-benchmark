@@ -30,3 +30,11 @@ Each entry: what, why, alternatives, expected impact. Entries made **after** res
 - **What:** SCB publishes DeSO (demographic statistical areas) as open geodata (CC0). DeSO codes start with the municipality code, so dissolving by `code[:4]` gives municipality polygons from an official source.
 - **Alternative:** community GeoJSON (okfse/sweden-geojson) as a fallback if the SCB file cannot be found; recorded in the probe report if used.
 - **Simplification:** 200 m tolerance in SWEREF 99 TM, for figures only — no analysis uses areas.
+
+## Probe findings that M2 must act on (Run 1, coverage only — no model, no residual)
+- **Kolada API v3** answered (keys `count`, `values`, `next_url`, `previous_url`); v2 not needed.
+- **Merit value** is available for all 290 municipalities in every year 2015–2025 for school location (N15504), municipal schools (N15505) and home municipality (N15507; 289 in 2019). Independent schools in the municipality (N15506) exist for only 117–133 municipalities.
+- **Background KPIs** are by school location and cover grades 1–9: parents with post-secondary education (N15816, 290/290 every year), foreign background (N15818, 290/290). Newly arrived/unknown background *in grade 9* (N15819) has gaps (153 in 2015, ~230 from 2020, none in 2025). Newly arrived grades 1–9 by home municipality (N15901) covers 284–290.
+- **No grade-9 cohort count** at municipality level in Kolada; pupils in grades 1–9 (N15807, N15829) are a size proxy (÷ 9).
+- **Published model values:** SALSA KPIs (U15413–U15416) have no municipality-level values (school-unit data only); Kolada's own model (N15090/N15091) exists only for 2025 and only for eligibility.
+- **Geodata:** SCB WFS layer `stat:DeSO_2025` (6,160 DeSO, SWEREF 99 TM) dissolves to exactly 290 municipalities (D6). The SCB web pages have no direct file links; the WFS is used and the community fallback is not needed.
