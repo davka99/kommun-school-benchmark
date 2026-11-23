@@ -7,7 +7,7 @@ on:
       stages:
         description: "Space-separated stages (see scripts/run_pipeline.py)"
         required: true
-        default: "probe"
+        default: "quality descriptives expected persistence robustness"
 
 permissions:
   contents: write

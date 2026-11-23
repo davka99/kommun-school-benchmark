@@ -8,7 +8,7 @@
 | `reports/persistence.json`, `reports/robustness.json`, `reports/descriptives.json` | byte-identical |
 | `reports/expected_value.json` | identical except p-values in the 13th–15th significant digit (floating-point noise in the linear algebra) |
 | `reports/municipality_effects.csv`, `robustness_effects.csv` | identical except a handful of values in the 4th decimal (same cause); no verdict or rank changed |
-| `docs/data_quality.md` | one row differed: two changes tie at −40.4 points and the unstable sort picked a different one. Fixed with a stable sort (municipality code, then year); rerun in run 2 of this milestone |
+| `docs/data_quality.md` | one row differed: two changes tie at −40.4 points and the unstable sort picked a different one. Fixed with a stable sort (municipality code, then year); a second rerun (run 45170543760) reproduced the report byte for byte |
 | figures | regenerated; no visible change |
 
 All 36 numbers quoted in the README are recomputed from `reports/` by `scripts/check_readme.py`, which runs as a test.
@@ -35,4 +35,4 @@ What the brief said would *not* answer the question is avoided: ranks are never 
 2. **Municipality-level background (grades 1–9) is too crude; Skolverket's SALSA uses pupil-level data.**
    Tested directly: SALSA's grade-9 expected values correlate 0.82 with ours and the residuals 0.75. With SALSA as the only covariate, 156 municipalities differ persistently (147 in the primary), the effects correlate 0.82 with the primary, and Stockholm county is still 24 of 26 above. The noise conclusions (ICC, thresholds) change little.
 3. **Cohort size is estimated and cohorts are not independent draws, so the noise thresholds are wrong.**
-   The thresholds in the README are not model outputs but observed 95th percentiles of year-to-year changes by size band, so they don't depend on the noise model or the size estimate. The model-based version (wider by 10–30 %) is in `persistence.json` for comparison, and the residual autocorrelation (0.15) that explains the gap is reported.
+   The thresholds in the README are not model outputs but observed 95th percentiles of year-to-year changes by size band, so they don't depend on the noise model or the size estimate. The model-based version (wider by 9–35 %) is in `persistence.json` for comparison, and the residual autocorrelation (0.15) that explains the gap is reported.
