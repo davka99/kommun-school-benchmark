@@ -157,6 +157,9 @@ def scb_comparison(tema42: pd.DataFrame, raw: pd.DataFrame) -> pd.DataFrame:
 
     t = tema42.copy()
     dims = {"SvUtlBakgrund", "ForUtb", "Kon", "Tid"}
+    missing = dims - set(t.columns)
+    if missing:
+        raise ValueError(f"Tema42 lacks {sorted(missing)} (was the variable eliminated by the query?)")
     value_col = [c for c in t.columns if c not in dims]
     if len(value_col) != 1:
         raise ValueError(f"expected one value column in Tema42, got {value_col}")

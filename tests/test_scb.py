@@ -57,3 +57,10 @@ def test_px_to_frame_maps_codes_to_texts():
     assert list(df["Kon"]) == ["flickor", "pojkar"]
     assert df.loc[0, "X"] == 240.1 and df["X"].isna().iloc[1]
     assert scb.school_year_to_spring("2014/15") == 2015
+
+
+def test_select_all_query_lists_every_variable():
+    meta = {"variables": [{"code": "SvUtlBakgrund"}, {"code": "Kon"}, {"code": "Tid"}]}
+    q = scb.select_all_query(meta)
+    assert [x["code"] for x in q["query"]] == ["SvUtlBakgrund", "Kon", "Tid"]
+    assert all(x["selection"] == {"filter": "all", "values": ["*"]} for x in q["query"])

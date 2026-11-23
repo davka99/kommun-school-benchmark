@@ -1,5 +1,6 @@
 # One pipeline stage per line. Pushing a change to this file runs the
 # pipeline workflow in the portfolio-agent workspace (see PLAN.md).
 # Run 3 (M3): external national check (SCB Tema42) + data-quality report and panel.
+# Rerun: select every Tema42 variable explicitly (an empty query eliminated one).
 reconcile
 quality

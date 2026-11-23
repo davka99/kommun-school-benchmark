@@ -113,3 +113,9 @@ def test_scb_comparison_filters_totals_and_maps_sex():
     ])
     m = quality.scb_comparison(tema, raw)
     assert list(m["sex"]) == ["K", "M"] and list(m["difference"]) == [0.5, 0.0]
+
+
+def test_scb_comparison_fails_clearly_if_variable_eliminated():
+    tema = pd.DataFrame([{"ForUtb": "totalt", "Kon": "flickor", "Tid": "2023/24", "V": None}])
+    with pytest.raises(ValueError, match="SvUtlBakgrund"):
+        quality.scb_comparison(tema, pd.DataFrame(columns=["kpi", "municipality", "period", "gender", "value"]))

@@ -84,3 +84,14 @@ def school_year_to_spring(label: str) -> int:
     """'2014/15' -> 2015 (the spring term in which grade 9 ends)."""
     a, b = str(label).split("/")
     return int(a) + 1
+
+
+def select_all_query(meta: dict) -> dict:
+    """PxWeb v1 query selecting every value of every variable.
+
+    An empty query lets PxWeb *eliminate* optional variables (it summed away
+    'SvUtlBakgrund' in Tema42 and returned empty means), so every variable is listed.
+    """
+    return {"query": [{"code": v["code"], "selection": {"filter": "all", "values": ["*"]}}
+                      for v in meta["variables"]],
+            "response": {"format": "json"}}

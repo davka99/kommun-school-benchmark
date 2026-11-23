@@ -325,10 +325,12 @@ def stage_reconcile() -> None:
     meta = get(url)
     import requests
 
-    r = requests.post(url, json={"query": [], "response": {"format": "json"}}, timeout=config.HTTP_TIMEOUT,
+    r = requests.post(url, json=scb.select_all_query(meta), timeout=config.HTTP_TIMEOUT,
                       headers={"User-Agent": config.USER_AGENT})
     r.raise_for_status()
     df = scb.px_to_frame(meta, r.json())
+    if df.select_dtypes("number").notna().sum().sum() == 0:
+        raise SystemExit("reconcile: SCB returned no numeric values")
     out = config.RAW / "scb"
     out.mkdir(parents=True, exist_ok=True)
     df.to_csv(out / "tema42_merit_national.csv", index=False)
@@ -358,8 +360,15 @@ def stage_quality() -> None:
     config.PROCESSED.mkdir(parents=True, exist_ok=True)
     panel.to_csv(config.PROCESSED / "panel.csv", index=False, lineterminator="\n", float_format="%.6g")
     scb_path = config.RAW / "scb" / "tema42_merit_national.csv"
-    scb_cmp = quality.scb_comparison(pd.read_csv(scb_path), raw) if scb_path.exists() else None
+    scb_cmp, scb_error = None, None
+    if scb_path.exists():
+        try:
+            scb_cmp = quality.scb_comparison(pd.read_csv(scb_path), raw)
+        except Exception as exc:  # noqa: BLE001 - optional external check; recorded, not hidden
+            scb_error = f"{type(exc).__name__}: {exc}"
     summary = quality.summarise(panel, raw, ou, scb_cmp)
+    if scb_error:
+        summary["scb_error"] = scb_error
     _write_json(config.REPORTS / "data_quality_summary.json", summary)
     (ROOT / "docs" / "data_quality.md").write_text(quality.render_markdown(summary), encoding="utf-8")
     print(json.dumps({k: summary[k] for k in ("panel_rows", "range_violations", "max_abs_reconciliation_diff")}))
