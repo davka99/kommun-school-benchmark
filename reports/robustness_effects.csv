@@ -1,0 +1,291 @@
+municipality,primary,verdict|primary,homoskedastic noise,verdict|homoskedastic noise,linear background (no square),verdict|linear background (no square),home municipality,verdict|home municipality,municipal schools only,verdict|municipal schools only,excl. newly arrived pupils,verdict|excl. newly arrived pupils,without 2020–2021,verdict|without 2020–2021,SALSA expected value as covariate,verdict|SALSA expected value as covariate
+0114,13.5847,above,12.3458,above,12.1032,above,11.1594,above,3.6700,above,13.2735,above,12.7574,above,15.0536,above
+0115,0.4400,not distinguishable,0.3616,not distinguishable,1.5145,not distinguishable,5.0430,above,3.3326,above,-0.2884,not distinguishable,0.7691,not distinguishable,5.7850,above
+0117,8.7158,above,8.0970,above,8.7440,above,13.7950,above,8.8711,above,8.6549,above,7.4738,above,13.7276,above
+0120,5.4596,above,5.0323,above,6.1139,above,10.9677,above,2.7232,not distinguishable,6.8472,above,5.1193,above,10.6895,above
+0123,7.7401,above,7.0211,above,6.5607,above,8.3092,above,5.4380,above,7.0212,above,6.5814,above,12.2930,above
+0125,9.2419,above,8.6113,above,11.1087,above,11.2529,above,8.7045,above,10.6033,above,8.4099,above,16.6664,above
+0126,10.4463,above,9.4332,above,10.1528,above,10.0820,above,7.4329,above,9.3792,above,9.9658,above,17.6016,above
+0127,11.5483,above,10.4279,above,9.2837,above,11.8975,above,12.1108,above,8.0544,above,10.5216,above,11.9692,above
+0128,8.7652,above,8.3156,above,8.1438,above,10.7584,above,12.3601,above,7.5945,above,7.9325,above,7.4397,above
+0136,2.7293,above,2.6378,not distinguishable,1.4056,not distinguishable,9.6441,above,2.9305,above,0.2800,not distinguishable,1.9119,not distinguishable,2.1253,not distinguishable
+0138,7.6969,above,7.0190,above,7.9007,above,8.9060,above,4.0875,above,8.0488,above,7.4569,above,13.1853,above
+0139,13.2344,above,12.5063,above,11.5973,above,13.2312,above,15.4748,above,11.5675,above,13.1803,above,12.0902,above
+0140,10.7710,above,10.6879,above,10.3766,above,9.4870,above,12.2937,above,10.5444,above,10.7729,above,13.9981,above
+0160,7.7283,above,6.9769,above,14.1852,above,9.5355,above,9.4712,above,3.4119,above,7.4064,above,23.8535,above
+0162,13.2438,above,12.4298,above,22.0944,above,11.6794,above,14.2873,above,7.8946,above,12.0627,above,28.6244,above
+0163,16.8979,above,15.2730,above,19.0601,above,17.2175,above,20.3491,above,14.2296,above,16.3556,above,23.7968,above
+0180,13.6144,above,12.1510,above,14.9998,above,11.2433,above,13.9098,above,12.5943,above,12.9361,above,23.4390,above
+0181,13.5261,above,12.2240,above,11.2039,above,11.8669,above,12.4445,above,8.4611,above,13.1507,above,9.8071,above
+0182,17.8916,above,16.1284,above,22.5522,above,14.5701,above,17.0341,above,15.0850,above,17.3725,above,28.1380,above
+0183,15.0660,above,13.0854,above,14.7191,above,12.0073,above,-4.2630,below,15.2209,above,12.6531,above,21.3494,above
+0184,-0.9844,not distinguishable,-0.8385,not distinguishable,0.7888,not distinguishable,13.3279,above,1.9652,not distinguishable,-3.4913,below,-0.8414,not distinguishable,8.7125,above
+0186,13.9094,above,12.7674,above,21.1251,above,12.7267,above,14.4082,above,9.8957,above,12.8843,above,30.8763,above
+0187,5.7968,above,5.7202,above,10.5016,above,4.8100,above,7.9458,above,3.9433,not distinguishable,3.5593,not distinguishable,23.0459,above
+0188,7.4031,above,6.9065,above,6.8486,above,7.0560,above,3.1096,above,8.4943,above,7.5625,above,4.3300,above
+0191,14.2112,above,13.0158,above,12.1083,above,12.9092,above,8.4664,above,13.4605,above,11.7334,above,9.8812,above
+0192,7.5719,above,7.0401,above,6.5503,above,7.8843,above,9.3604,above,5.9256,above,6.7294,above,3.4052,not distinguishable
+0305,5.3685,above,5.0726,above,4.4982,above,5.7637,above,0.9320,not distinguishable,5.3439,above,5.6662,above,5.2226,above
+0319,-12.4105,below,-13.0141,below,-13.1463,below,-10.9526,below,-10.9227,below,-10.4689,below,-11.7739,below,-13.8681,below
+0330,-6.3649,below,-5.8435,below,-4.2771,below,-3.0895,not distinguishable,-4.3712,below,-7.1515,below,-5.7398,below,0.6657,not distinguishable
+0331,-3.4477,not distinguishable,-3.2568,not distinguishable,-3.0483,not distinguishable,-3.1846,not distinguishable,-3.1729,not distinguishable,-5.3257,below,-1.6204,not distinguishable,-4.6927,below
+0360,-5.7251,below,-5.4681,below,-5.9187,below,-5.4848,below,-4.9805,below,-6.5593,below,-5.6248,below,-8.9677,below
+0380,4.4075,above,3.9476,not distinguishable,5.2541,above,4.3686,above,0.0412,not distinguishable,4.7018,above,3.9313,above,10.1924,above
+0381,1.8227,not distinguishable,1.6014,not distinguishable,0.4916,not distinguishable,2.5089,not distinguishable,-2.4534,not distinguishable,1.5176,not distinguishable,1.9040,not distinguishable,-0.3133,not distinguishable
+0382,-4.9900,below,-4.7285,below,-4.9726,below,-3.8439,below,-4.8675,below,-5.3374,below,-5.1629,below,-7.5612,below
+0428,-12.1519,below,-12.2183,below,-10.0651,below,-6.7291,below,-12.0139,below,-8.6931,below,-10.9181,below,-5.7612,below
+0461,-4.4288,not distinguishable,-4.6796,below,-5.3008,below,-2.7607,not distinguishable,-6.1274,below,-4.4673,not distinguishable,-2.6205,not distinguishable,-1.9620,not distinguishable
+0480,-3.8329,below,-3.4836,not distinguishable,-5.1326,below,-3.8016,below,-17.1839,below,-3.2726,below,-3.8217,below,-13.0232,below
+0481,-7.2935,below,-7.6014,below,-7.9680,below,-2.5791,not distinguishable,-5.8437,below,-8.5897,below,-7.1892,below,-5.0330,not distinguishable
+0482,3.4492,not distinguishable,3.5764,not distinguishable,4.6609,above,5.4233,above,-0.9115,not distinguishable,-1.4592,not distinguishable,3.6422,not distinguishable,1.0105,not distinguishable
+0483,-1.1875,not distinguishable,-1.1382,not distinguishable,-2.2167,not distinguishable,-3.5975,below,-5.4923,below,-3.4173,below,-1.1323,not distinguishable,-12.1108,below
+0484,6.0225,above,5.4296,above,4.1440,above,3.6425,above,1.5846,not distinguishable,5.8553,above,5.7041,above,4.4061,above
+0486,2.2954,not distinguishable,2.1333,not distinguishable,1.5036,not distinguishable,1.4240,not distinguishable,-17.3481,below,2.3551,not distinguishable,2.8962,not distinguishable,2.8241,not distinguishable
+0488,8.5278,above,8.8870,above,7.8844,above,7.2478,above,10.3014,above,9.1535,above,8.6145,above,12.1041,above
+0509,4.6898,not distinguishable,5.5454,above,4.8193,not distinguishable,4.2358,not distinguishable,5.3765,not distinguishable,5.6613,not distinguishable,4.0709,not distinguishable,3.3871,not distinguishable
+0512,5.9521,not distinguishable,7.9239,above,5.6794,not distinguishable,6.5959,not distinguishable,6.9357,not distinguishable,9.0050,above,4.8977,not distinguishable,8.6611,above
+0513,-2.8584,not distinguishable,-3.0691,not distinguishable,-3.4040,not distinguishable,-3.5319,not distinguishable,-2.0581,not distinguishable,-2.6605,not distinguishable,-1.4455,not distinguishable,-4.9199,not distinguishable
+0560,2.9240,not distinguishable,3.0915,not distinguishable,3.0330,not distinguishable,3.7169,not distinguishable,3.3586,not distinguishable,2.6478,not distinguishable,3.2947,not distinguishable,,
+0561,-3.7899,not distinguishable,-3.8066,not distinguishable,-4.3923,not distinguishable,-3.6190,not distinguishable,-3.1140,not distinguishable,-3.7827,not distinguishable,-4.8916,not distinguishable,-6.7919,below
+0562,-3.3505,not distinguishable,-3.2755,not distinguishable,-4.3005,below,-0.6189,not distinguishable,-1.7283,not distinguishable,-3.4879,not distinguishable,-3.3295,not distinguishable,-5.8325,below
+0563,1.1816,not distinguishable,1.2823,not distinguishable,2.0607,not distinguishable,-0.1103,not distinguishable,1.5233,not distinguishable,-0.8603,not distinguishable,2.9634,not distinguishable,-2.0091,not distinguishable
+0580,-2.5381,below,-2.2969,not distinguishable,-2.5039,below,-3.9974,below,-2.7528,below,-2.8032,below,-3.1771,below,0.0856,not distinguishable
+0581,5.1575,above,4.5510,not distinguishable,3.6489,above,3.7391,above,-0.2303,not distinguishable,4.2250,above,3.7790,above,4.5012,above
+0582,0.8462,not distinguishable,1.0344,not distinguishable,0.2405,not distinguishable,3.7945,not distinguishable,2.2758,not distinguishable,2.0127,not distinguishable,2.6259,not distinguishable,-0.8038,not distinguishable
+0583,0.9204,not distinguishable,0.8600,not distinguishable,-0.3211,not distinguishable,0.3933,not distinguishable,0.0765,not distinguishable,-0.5279,not distinguishable,1.1890,not distinguishable,-3.4736,below
+0584,7.0999,above,8.2509,above,6.6051,above,6.5049,above,8.2276,above,7.3877,above,6.6230,not distinguishable,5.9506,above
+0586,-5.8938,below,-5.4597,below,-6.9724,below,-6.3593,below,-4.2086,below,-7.1059,below,-5.9401,below,-7.4190,below
+0604,-0.1053,not distinguishable,-0.0029,not distinguishable,-0.8406,not distinguishable,0.8199,not distinguishable,1.5614,not distinguishable,0.2546,not distinguishable,0.0521,not distinguishable,0.1802,not distinguishable
+0617,2.5627,not distinguishable,2.8316,not distinguishable,2.9387,not distinguishable,0.1083,not distinguishable,4.2013,not distinguishable,0.3186,not distinguishable,2.3584,not distinguishable,1.9930,not distinguishable
+0642,0.1608,not distinguishable,-0.0227,not distinguishable,-0.3403,not distinguishable,-0.2829,not distinguishable,0.7327,not distinguishable,0.7100,not distinguishable,-1.0102,not distinguishable,-4.4068,not distinguishable
+0643,-4.9549,below,-4.9862,below,-4.5072,below,-5.4667,below,-3.3045,not distinguishable,-3.8075,not distinguishable,-5.2564,below,1.9538,not distinguishable
+0662,2.2340,not distinguishable,2.0899,not distinguishable,2.3833,not distinguishable,1.2439,not distinguishable,3.4434,not distinguishable,-0.4668,not distinguishable,1.7043,not distinguishable,-1.1426,not distinguishable
+0665,-4.0167,not distinguishable,-3.7037,not distinguishable,-5.1551,below,-4.7293,below,-2.0662,not distinguishable,-2.2705,not distinguishable,-4.3835,not distinguishable,-3.1940,not distinguishable
+0680,0.3171,not distinguishable,0.3275,not distinguishable,-0.3237,not distinguishable,0.1129,not distinguishable,2.3246,not distinguishable,-0.4600,not distinguishable,0.2946,not distinguishable,2.5035,above
+0682,1.4543,not distinguishable,1.2925,not distinguishable,0.1179,not distinguishable,0.1182,not distinguishable,3.9055,above,1.4653,not distinguishable,1.6624,not distinguishable,-1.0983,not distinguishable
+0683,6.6616,above,6.2345,above,5.2273,above,5.4972,above,9.2118,above,5.5583,above,6.0045,above,6.1063,above
+0684,5.9972,above,6.0022,above,5.1132,above,5.2899,above,6.9590,above,6.4972,above,4.3594,not distinguishable,2.3794,not distinguishable
+0685,-4.8772,below,-4.6339,not distinguishable,-6.0461,below,-5.5883,below,-2.8360,not distinguishable,-5.9701,below,-4.9547,below,-7.7488,below
+0686,-2.2695,not distinguishable,-2.1942,not distinguishable,-3.5638,not distinguishable,0.6385,not distinguishable,3.0564,not distinguishable,0.4916,not distinguishable,-1.0991,not distinguishable,-0.8843,not distinguishable
+0687,8.4970,above,8.2196,above,7.2840,above,7.8335,above,10.5188,above,9.8494,above,9.3423,above,6.5837,above
+0760,5.9428,above,6.4312,above,6.9134,above,5.3326,above,7.1996,above,6.2583,above,6.4455,above,8.1850,above
+0761,-15.0015,below,-14.8867,below,-16.1832,below,-14.3100,below,-12.4797,below,-12.4816,below,-12.3558,below,-12.0995,below
+0763,1.0955,not distinguishable,1.0387,not distinguishable,1.7928,not distinguishable,-1.3320,not distinguishable,-2.6422,not distinguishable,3.2222,not distinguishable,0.2752,not distinguishable,1.1534,not distinguishable
+0764,-4.2410,below,-4.0151,not distinguishable,-5.3680,below,-2.7445,not distinguishable,-1.9872,not distinguishable,-0.9455,not distinguishable,-3.8044,not distinguishable,-4.4201,below
+0765,-6.6921,below,-6.1944,below,-8.3458,below,-7.6063,below,-3.5793,not distinguishable,-5.9453,below,-5.4781,below,-3.2236,not distinguishable
+0767,0.9950,not distinguishable,1.0014,not distinguishable,0.9982,not distinguishable,-0.8222,not distinguishable,2.4601,not distinguishable,-0.5360,not distinguishable,0.0683,not distinguishable,-1.2821,not distinguishable
+0780,-2.7501,below,-2.5685,not distinguishable,-3.2273,below,-4.1395,below,-3.3185,below,-2.5643,below,-2.9754,below,-1.0657,not distinguishable
+0781,-0.5959,not distinguishable,-0.5543,not distinguishable,-2.0132,not distinguishable,-1.0610,not distinguishable,0.6244,not distinguishable,1.0235,not distinguishable,-0.9205,not distinguishable,-3.8409,below
+0821,-1.2666,not distinguishable,-1.6115,not distinguishable,0.0721,not distinguishable,-4.1332,not distinguishable,-0.0915,not distinguishable,2.3716,not distinguishable,-1.7137,not distinguishable,-4.8545,not distinguishable
+0834,-0.1251,not distinguishable,0.2462,not distinguishable,-0.6226,not distinguishable,-0.0806,not distinguishable,0.7019,not distinguishable,1.2314,not distinguishable,0.1726,not distinguishable,-0.5699,not distinguishable
+0840,-5.6136,below,-5.7316,below,-4.9290,below,-5.8179,below,-6.3112,below,-4.1973,below,-3.7810,not distinguishable,-1.5881,not distinguishable
+0860,-1.3479,not distinguishable,-1.1671,not distinguishable,-1.6611,not distinguishable,-1.8718,not distinguishable,0.9512,not distinguishable,-0.3351,not distinguishable,-0.1145,not distinguishable,-1.8116,not distinguishable
+0861,-2.8944,not distinguishable,-2.9740,not distinguishable,-3.5581,not distinguishable,-3.0515,not distinguishable,-1.5213,not distinguishable,-2.1081,not distinguishable,-3.4608,not distinguishable,-4.2471,not distinguishable
+0862,-7.7636,below,-8.1937,below,-8.1017,below,-7.7115,below,-6.5035,below,-6.8075,below,-6.7803,below,-8.3347,below
+0880,2.0908,not distinguishable,1.7304,not distinguishable,1.9425,not distinguishable,1.7636,not distinguishable,3.5945,above,3.3992,above,1.7493,not distinguishable,5.6616,above
+0881,0.3101,not distinguishable,0.3317,not distinguishable,-0.9342,not distinguishable,-0.6624,not distinguishable,2.4275,not distinguishable,1.8939,not distinguishable,0.0853,not distinguishable,0.1740,not distinguishable
+0882,2.1750,not distinguishable,2.0552,not distinguishable,0.9022,not distinguishable,1.0106,not distinguishable,4.1956,above,1.5835,not distinguishable,2.9769,not distinguishable,-2.3238,not distinguishable
+0883,1.2341,not distinguishable,1.2092,not distinguishable,0.2145,not distinguishable,0.7725,not distinguishable,3.1730,not distinguishable,2.2019,not distinguishable,1.5013,not distinguishable,3.6659,above
+0884,1.3347,not distinguishable,1.3019,not distinguishable,0.4686,not distinguishable,0.5933,not distinguishable,2.7747,not distinguishable,-0.1812,not distinguishable,0.5169,not distinguishable,-0.2779,not distinguishable
+0885,7.1115,above,7.2317,above,6.9219,above,7.5280,above,8.0510,above,6.9081,above,5.3393,not distinguishable,7.3300,above
+0980,-0.0338,not distinguishable,0.0472,not distinguishable,-0.7678,not distinguishable,0.6684,not distinguishable,-1.0352,not distinguishable,2.4698,above,-0.1569,not distinguishable,2.5363,not distinguishable
+1060,5.6110,above,5.6630,above,4.8343,above,2.7565,not distinguishable,7.6082,above,2.7070,not distinguishable,5.5224,above,1.1361,not distinguishable
+1080,-13.4523,below,-12.2456,below,-12.8726,below,-14.4625,below,-15.9215,below,-13.0775,below,-13.5198,below,-8.7821,below
+1081,-9.6146,below,-9.0493,below,-11.2067,below,-9.1927,below,-7.5375,below,-6.6458,below,-9.1071,below,-9.7148,below
+1082,-5.6903,below,-5.3709,below,-6.8917,below,-7.0382,below,-6.4493,below,-4.7874,below,-6.0938,below,-5.0654,below
+1083,-6.1043,below,-6.0077,below,-6.9890,below,-6.1155,below,-4.8432,below,-5.5594,below,-4.0978,not distinguishable,-6.8497,below
+1214,-13.6581,below,-13.3338,below,-14.8800,below,-3.4295,not distinguishable,-9.8617,below,-12.8287,below,-12.4730,below,-16.1467,below
+1230,3.0349,not distinguishable,2.6522,not distinguishable,4.9946,above,3.8253,above,5.4451,above,0.7551,not distinguishable,2.4236,not distinguishable,13.4355,above
+1231,1.0223,not distinguishable,1.1921,not distinguishable,-1.0057,not distinguishable,5.8569,above,5.1505,above,2.3173,not distinguishable,0.6329,not distinguishable,2.5443,not distinguishable
+1233,10.2316,above,9.5149,above,14.2526,above,9.0875,above,11.2123,above,8.1429,above,10.2099,above,22.2879,above
+1256,-9.8863,below,-9.5070,below,-9.8163,below,-10.2991,below,-8.3006,below,-6.5907,below,-8.1423,below,-10.2545,below
+1257,-4.6228,not distinguishable,-4.7253,below,-4.2357,not distinguishable,-3.5164,not distinguishable,-6.8004,below,-2.8711,not distinguishable,-5.5342,not distinguishable,-6.4081,below
+1260,3.5764,not distinguishable,3.4609,not distinguishable,4.5116,above,4.9324,above,4.7687,above,-2.5452,not distinguishable,2.5344,not distinguishable,-5.7629,not distinguishable
+1261,3.4268,above,3.1464,not distinguishable,4.8243,above,4.7159,above,3.0745,not distinguishable,4.0346,above,3.7140,above,8.1950,above
+1262,6.2271,above,5.6189,above,14.5407,above,5.1541,above,8.0603,above,3.8940,above,4.5490,above,23.9150,above
+1263,1.6738,not distinguishable,1.5494,not distinguishable,1.8385,not distinguishable,2.4555,not distinguishable,3.8447,above,1.2932,not distinguishable,2.1466,not distinguishable,6.3697,above
+1264,5.8644,above,5.7619,above,5.2877,above,7.8773,above,6.9177,above,5.4644,above,6.9647,above,1.6048,not distinguishable
+1265,-4.7252,below,-4.5206,not distinguishable,-4.7091,below,2.7223,not distinguishable,-3.1459,not distinguishable,-4.8601,below,-3.3512,not distinguishable,-7.2475,below
+1266,-1.8002,not distinguishable,-1.7706,not distinguishable,-2.8239,not distinguishable,0.4825,not distinguishable,-3.7785,not distinguishable,-0.8963,not distinguishable,-2.1440,not distinguishable,-4.6714,below
+1267,-6.1587,below,-5.9116,below,-6.3249,below,-2.8425,not distinguishable,-5.1726,below,-5.0844,below,-5.9253,below,-2.2664,not distinguishable
+1270,-13.6164,below,-13.7982,below,-12.6966,below,-7.6944,below,-13.4401,below,-17.0071,below,-12.3165,below,-17.4790,below
+1272,-4.5997,not distinguishable,-4.4965,not distinguishable,-5.3478,below,-4.6023,below,-3.1683,not distinguishable,-4.4403,below,-4.3780,not distinguishable,-4.7742,below
+1273,0.6354,not distinguishable,0.8030,not distinguishable,-0.0946,not distinguishable,2.0204,not distinguishable,2.2650,not distinguishable,0.0677,not distinguishable,0.5120,not distinguishable,-3.2641,not distinguishable
+1275,-4.6560,not distinguishable,-4.9414,below,-3.6102,not distinguishable,-2.7690,not distinguishable,-3.4493,not distinguishable,-2.5692,not distinguishable,-2.3864,not distinguishable,-4.9619,not distinguishable
+1276,-3.2480,not distinguishable,-3.1984,not distinguishable,-3.4542,not distinguishable,-2.8830,not distinguishable,-2.6228,not distinguishable,-3.7758,not distinguishable,-1.5998,not distinguishable,-5.6817,below
+1277,-0.8470,not distinguishable,-0.8897,not distinguishable,-1.2746,not distinguishable,-2.1292,not distinguishable,0.9845,not distinguishable,-1.7717,not distinguishable,-2.6448,not distinguishable,-3.5225,not distinguishable
+1278,4.8761,above,4.8858,above,4.1495,not distinguishable,3.4142,not distinguishable,7.1081,above,6.2874,above,4.4269,not distinguishable,8.4088,above
+1280,8.6164,above,7.6410,above,6.5058,above,6.4026,above,8.3742,above,7.1636,above,7.3877,above,10.6605,above
+1281,3.7275,above,3.3392,not distinguishable,9.1494,above,1.4734,not distinguishable,4.1013,above,-0.4754,not distinguishable,3.1466,above,15.5431,above
+1282,16.5698,above,15.2787,above,14.9392,above,14.4108,above,14.1351,above,13.1721,above,14.9607,above,12.8176,above
+1283,11.1291,above,10.0252,above,9.4173,above,9.5187,above,11.0634,above,9.1900,above,10.2564,above,14.0690,above
+1284,2.1762,not distinguishable,2.1218,not distinguishable,2.9702,not distinguishable,1.9437,not distinguishable,4.3878,above,2.0329,not distinguishable,3.1961,not distinguishable,4.4945,not distinguishable
+1285,0.9136,not distinguishable,0.8626,not distinguishable,-0.4832,not distinguishable,1.6710,not distinguishable,3.5522,above,2.3286,not distinguishable,0.8223,not distinguishable,2.2483,not distinguishable
+1286,9.1458,above,8.6514,above,9.3626,above,6.8069,above,8.3932,above,9.0530,above,9.0543,above,11.9236,above
+1287,10.2834,above,9.5591,above,9.0128,above,9.0737,above,9.5886,above,9.2455,above,9.8295,above,11.6497,above
+1290,-4.8676,below,-4.4173,not distinguishable,-6.3807,below,-5.2937,below,-2.6182,below,-4.5991,below,-4.6635,below,-5.0732,below
+1291,3.5959,not distinguishable,3.4240,not distinguishable,2.4776,not distinguishable,3.5002,not distinguishable,1.0783,not distinguishable,5.2904,above,2.9612,not distinguishable,-4.1002,below
+1292,-1.6460,not distinguishable,-1.4257,not distinguishable,-2.2629,not distinguishable,-1.8134,not distinguishable,0.7498,not distinguishable,-0.8318,not distinguishable,-1.2724,not distinguishable,2.8051,not distinguishable
+1293,-2.4328,not distinguishable,-2.2636,not distinguishable,-3.8374,below,-3.2956,below,-4.9081,below,-0.1528,not distinguishable,-3.1764,below,-4.8644,below
+1315,1.0182,not distinguishable,1.1238,not distinguishable,1.6317,not distinguishable,-2.9853,not distinguishable,-0.0404,not distinguishable,1.2714,not distinguishable,-0.6630,not distinguishable,-2.6960,not distinguishable
+1380,-0.2952,not distinguishable,-0.3018,not distinguishable,-1.1929,not distinguishable,-1.4307,not distinguishable,-1.7451,not distinguishable,-0.3663,not distinguishable,-1.1607,not distinguishable,-2.1712,not distinguishable
+1381,-3.4993,not distinguishable,-3.2567,not distinguishable,-4.5213,below,-3.4752,below,-1.6445,not distinguishable,-1.8466,not distinguishable,-3.4405,not distinguishable,-2.2214,not distinguishable
+1382,4.5582,above,4.1638,not distinguishable,3.4126,above,4.4446,above,1.4916,not distinguishable,4.9025,above,4.2808,above,-3.0465,below
+1383,-1.7404,not distinguishable,-1.5248,not distinguishable,-1.8419,not distinguishable,-2.7146,below,-0.3807,not distinguishable,-1.6393,not distinguishable,-0.6424,not distinguishable,2.2972,not distinguishable
+1384,-0.0957,not distinguishable,-0.0803,not distinguishable,2.0965,not distinguishable,-0.1245,not distinguishable,-0.2820,not distinguishable,0.7624,not distinguishable,-0.3559,not distinguishable,4.8824,above
+1401,-0.4234,not distinguishable,-0.3255,not distinguishable,2.6838,not distinguishable,-1.2331,not distinguishable,-1.6745,not distinguishable,-0.7960,not distinguishable,0.0195,not distinguishable,7.0620,above
+1402,-2.5665,not distinguishable,-2.3097,not distinguishable,-0.4770,not distinguishable,-1.6104,not distinguishable,-0.2896,not distinguishable,-3.1326,below,-2.8553,not distinguishable,3.3377,above
+1407,-0.3987,not distinguishable,-0.4589,not distinguishable,-0.2274,not distinguishable,1.2961,not distinguishable,0.7386,not distinguishable,2.1999,not distinguishable,0.2844,not distinguishable,4.0554,not distinguishable
+1415,-5.3765,below,-5.0659,below,-5.4556,below,-4.6126,below,-3.8048,below,-3.3539,below,-5.1664,below,-4.2509,below
+1419,-1.1370,not distinguishable,-1.0855,not distinguishable,-1.5964,not distinguishable,-1.2944,not distinguishable,0.5130,not distinguishable,0.9368,not distinguishable,0.2264,not distinguishable,3.5256,not distinguishable
+1421,-0.6093,not distinguishable,-0.6426,not distinguishable,-1.4623,not distinguishable,-1.5219,not distinguishable,-0.6797,not distinguishable,1.3997,not distinguishable,-0.2276,not distinguishable,1.0167,not distinguishable
+1427,3.7544,not distinguishable,4.1420,not distinguishable,3.3423,not distinguishable,4.6856,not distinguishable,4.7505,not distinguishable,4.9996,not distinguishable,3.4900,not distinguishable,4.6770,not distinguishable
+1430,-13.5420,below,-13.9256,below,-14.1591,below,-11.8328,below,-12.7200,below,-11.7756,below,-12.4815,below,-15.3275,below
+1435,-4.4663,not distinguishable,-4.3725,not distinguishable,-5.2504,below,-5.9401,below,-3.3032,not distinguishable,-3.3577,not distinguishable,-5.0602,not distinguishable,-5.2284,below
+1438,4.1137,not distinguishable,4.9554,above,3.8195,not distinguishable,6.0903,not distinguishable,4.8958,not distinguishable,5.2840,not distinguishable,4.0005,not distinguishable,3.6616,not distinguishable
+1439,-5.4040,not distinguishable,-6.0483,below,-5.0596,not distinguishable,-7.6793,below,-5.1950,not distinguishable,-5.7406,not distinguishable,-4.9100,not distinguishable,-5.3453,not distinguishable
+1440,-3.8248,below,-3.7999,not distinguishable,-4.5820,below,-3.5203,below,-3.7624,below,-4.5883,below,-4.5680,below,-2.8027,not distinguishable
+1441,-9.7503,below,-8.9392,below,-7.5202,below,-10.3377,below,-8.8897,below,-9.8262,below,-10.3752,below,-0.4145,not distinguishable
+1442,-8.7463,below,-8.6618,below,-9.8921,below,-7.9528,below,-7.1852,below,-6.9332,below,-9.2738,below,-7.2709,below
+1443,3.6438,not distinguishable,3.8032,not distinguishable,3.1372,not distinguishable,4.4878,not distinguishable,5.0159,not distinguishable,4.8767,above,4.5165,not distinguishable,6.2765,above
+1444,7.5618,above,8.6663,above,7.2117,above,7.1443,above,8.4562,above,7.9612,above,7.5821,above,9.3132,above
+1445,1.5445,not distinguishable,1.8700,not distinguishable,2.4690,not distinguishable,1.3816,not distinguishable,1.2458,not distinguishable,0.2538,not distinguishable,-0.0660,not distinguishable,-3.3366,not distinguishable
+1446,2.0105,not distinguishable,2.2615,not distinguishable,1.2922,not distinguishable,1.6151,not distinguishable,3.4777,not distinguishable,1.7290,not distinguishable,1.6300,not distinguishable,2.0398,not distinguishable
+1447,-8.0199,below,-9.2888,below,-5.6906,not distinguishable,-7.4226,below,-7.8881,below,-8.5941,below,-8.3311,below,-9.8184,below
+1452,0.1936,not distinguishable,0.1776,not distinguishable,-0.2359,not distinguishable,-0.0479,not distinguishable,1.6088,not distinguishable,-0.0098,not distinguishable,0.2551,not distinguishable,-0.1287,not distinguishable
+1460,6.6305,above,7.2022,above,6.8056,above,5.7235,above,7.9218,above,9.4363,above,6.8606,above,4.9697,not distinguishable
+1461,0.1919,not distinguishable,0.2221,not distinguishable,0.6745,not distinguishable,-1.5789,not distinguishable,1.4047,not distinguishable,-3.6054,not distinguishable,-0.4908,not distinguishable,-0.8794,not distinguishable
+1462,-10.5104,below,-10.3169,below,-10.7423,below,-6.8678,below,-12.2130,below,-11.5921,below,-11.6751,below,-9.7830,below
+1463,-0.9048,not distinguishable,-0.8468,not distinguishable,-1.7934,not distinguishable,0.6631,not distinguishable,0.7283,not distinguishable,-0.1362,not distinguishable,-0.2005,not distinguishable,-1.5366,not distinguishable
+1465,-4.5746,not distinguishable,-4.7504,below,-2.4883,not distinguishable,-5.6989,below,-4.6608,not distinguishable,-7.6431,below,-5.3219,not distinguishable,-5.5220,not distinguishable
+1466,-1.2261,not distinguishable,-1.1444,not distinguishable,-1.9368,not distinguishable,-0.5169,not distinguishable,-0.2032,not distinguishable,-0.1295,not distinguishable,-1.2050,not distinguishable,-7.7440,below
+1470,-0.0530,not distinguishable,-0.0466,not distinguishable,-0.2376,not distinguishable,-0.3163,not distinguishable,0.5168,not distinguishable,-0.8199,not distinguishable,0.2576,not distinguishable,-1.3523,not distinguishable
+1471,-4.3973,not distinguishable,-4.4255,not distinguishable,-5.2795,below,-1.0653,not distinguishable,-3.1041,not distinguishable,-1.2538,not distinguishable,-3.5497,not distinguishable,-5.2854,not distinguishable
+1472,1.4627,not distinguishable,1.4379,not distinguishable,0.8078,not distinguishable,0.4752,not distinguishable,2.8270,not distinguishable,2.5464,not distinguishable,0.0215,not distinguishable,1.4231,not distinguishable
+1473,-10.4903,below,-11.0151,below,-10.5858,below,-9.4740,below,-9.6108,below,-8.3615,below,-10.1228,below,-13.5078,below
+1480,0.3758,not distinguishable,0.3332,not distinguishable,-0.4201,not distinguishable,-1.7326,below,-5.7783,below,0.3283,not distinguishable,-0.3576,not distinguishable,3.0512,above
+1481,-4.9679,below,-4.5272,not distinguishable,-2.5724,below,-3.4435,below,-2.4912,not distinguishable,-4.9477,below,-5.2101,below,4.0309,above
+1482,-0.2429,not distinguishable,-0.1626,not distinguishable,-0.0670,not distinguishable,-1.0148,not distinguishable,0.6035,not distinguishable,0.0274,not distinguishable,-0.0472,not distinguishable,1.3872,not distinguishable
+1484,1.7649,not distinguishable,1.7900,not distinguishable,0.7086,not distinguishable,1.5401,not distinguishable,3.5140,not distinguishable,2.6045,not distinguishable,2.1343,not distinguishable,0.6736,not distinguishable
+1485,-4.5924,below,-4.2639,not distinguishable,-5.7828,below,-5.5977,below,-3.7682,below,-4.7197,below,-4.1102,below,-1.7081,not distinguishable
+1486,10.1908,above,9.9833,above,9.6627,above,9.2761,above,12.0764,above,8.9836,above,8.1562,above,9.4168,above
+1487,-7.1027,below,-6.5100,below,-8.4873,below,-6.3880,below,-9.7387,below,-5.0865,below,-7.0619,below,-5.3685,below
+1488,3.6159,above,3.3001,not distinguishable,2.0889,not distinguishable,1.9158,not distinguishable,3.2037,above,3.0429,above,3.5750,above,2.5608,not distinguishable
+1489,-4.5921,below,-4.1544,not distinguishable,-4.4187,below,-4.5494,below,-5.5525,below,-3.1412,below,-4.8931,below,-1.8102,not distinguishable
+1490,6.2433,above,5.7068,above,4.5887,above,4.5210,above,3.4813,above,4.2374,above,5.3482,above,5.9881,above
+1491,-2.1080,not distinguishable,-1.9831,not distinguishable,-3.1277,not distinguishable,-2.3218,not distinguishable,-0.5781,not distinguishable,-2.4513,not distinguishable,-1.9323,not distinguishable,-1.8873,not distinguishable
+1492,3.3657,not distinguishable,3.1902,not distinguishable,2.2302,not distinguishable,1.9923,not distinguishable,5.3718,above,1.9481,not distinguishable,2.5801,not distinguishable,-3.8137,not distinguishable
+1493,-5.7650,below,-5.4294,below,-6.8338,below,-6.3130,below,-9.1372,below,-4.7671,below,-5.3759,below,-6.2415,below
+1494,-5.1919,below,-4.7772,below,-5.9715,below,-5.5587,below,-5.7535,below,-3.3106,below,-4.7718,below,-5.3828,below
+1495,-4.3432,below,-4.2616,not distinguishable,-5.4407,below,-4.8038,below,-5.6098,below,-4.7005,below,-4.0808,not distinguishable,-16.6199,below
+1496,-5.0400,below,-4.5157,not distinguishable,-5.8565,below,-4.6532,below,-2.6811,not distinguishable,-4.8094,below,-5.3651,below,-2.9796,below
+1497,-0.4124,not distinguishable,-0.2861,not distinguishable,-0.9265,not distinguishable,-1.3026,not distinguishable,0.8923,not distinguishable,0.1477,not distinguishable,-1.3255,not distinguishable,0.8944,not distinguishable
+1498,-0.3755,not distinguishable,-0.2389,not distinguishable,-0.5839,not distinguishable,-2.4422,not distinguishable,0.3174,not distinguishable,-1.5052,not distinguishable,0.0558,not distinguishable,,
+1499,-3.4538,below,-3.2359,not distinguishable,-4.6882,below,-4.2573,below,0.1092,not distinguishable,-1.6755,not distinguishable,-2.9892,not distinguishable,-6.3608,below
+1715,-14.2705,below,-14.4462,below,-15.2174,below,-11.2520,below,-13.2635,below,-11.5989,below,-11.1841,below,-15.8041,below
+1730,4.8758,not distinguishable,5.5862,above,6.4905,above,3.3495,not distinguishable,5.2783,not distinguishable,1.4105,not distinguishable,4.8459,not distinguishable,-2.8691,not distinguishable
+1737,11.0398,above,11.5727,above,12.0565,above,10.1247,above,11.3032,above,10.8606,above,9.6287,above,7.6580,above
+1760,20.8688,above,26.7097,above,22.9843,above,4.3553,not distinguishable,5.5659,not distinguishable,16.4365,above,18.8413,above,15.8228,above
+1761,-8.9344,below,-8.1913,below,-4.5203,below,-7.4933,below,-6.8555,below,-9.0088,below,-8.8381,below,5.2711,above
+1762,3.8593,not distinguishable,5.0128,above,5.0084,not distinguishable,3.1545,not distinguishable,4.1154,not distinguishable,1.5711,not distinguishable,4.0419,not distinguishable,0.4066,not distinguishable
+1763,-8.4040,below,-8.4488,below,-9.2462,below,-7.5599,below,-7.1157,below,-6.4111,below,-7.2890,below,-6.5632,below
+1764,-4.7912,not distinguishable,-5.2764,below,-3.3162,not distinguishable,-3.0599,not distinguishable,-5.2827,not distinguishable,-4.5579,not distinguishable,-6.3207,below,-7.1705,below
+1765,10.6364,above,11.3020,above,11.8800,above,9.6221,above,11.0626,above,8.9811,above,9.8092,above,5.3235,above
+1766,0.0809,not distinguishable,0.1322,not distinguishable,-0.7635,not distinguishable,0.9006,not distinguishable,1.2317,not distinguishable,1.3107,not distinguishable,-1.1208,not distinguishable,-1.2944,not distinguishable
+1780,-4.4758,below,-4.0927,not distinguishable,-3.5826,below,-6.5273,below,-7.7293,below,-5.1213,below,-4.7131,below,5.2354,above
+1781,-8.8227,below,-8.4231,below,-10.1415,below,-8.6997,below,-6.7578,below,-5.6519,below,-8.2080,below,-8.7191,not distinguishable
+1782,13.8892,above,14.2563,above,17.6260,above,9.8860,above,13.7010,above,5.8808,above,12.8744,above,9.5728,above
+1783,-1.7344,not distinguishable,-1.8393,not distinguishable,-0.6095,not distinguishable,-1.5379,not distinguishable,-1.5553,not distinguishable,-2.3604,not distinguishable,-1.4007,not distinguishable,-7.7253,below
+1784,-1.3794,not distinguishable,-1.2883,not distinguishable,-2.4054,not distinguishable,-1.8044,not distinguishable,-5.4406,below,-0.7219,not distinguishable,-2.3741,not distinguishable,-14.5301,below
+1785,0.2642,not distinguishable,0.2818,not distinguishable,0.5959,not distinguishable,0.0761,not distinguishable,1.0126,not distinguishable,0.6358,not distinguishable,-0.3448,not distinguishable,-3.3139,not distinguishable
+1814,-9.7017,below,-9.6428,below,-10.5051,below,-2.3836,not distinguishable,-8.9590,below,-8.1931,below,-9.4139,below,-8.9247,below
+1860,-6.4155,not distinguishable,-7.5194,below,-5.8308,not distinguishable,-1.4232,not distinguishable,-5.6504,not distinguishable,-0.1579,not distinguishable,-5.6818,not distinguishable,-5.7701,not distinguishable
+1861,-8.8367,below,-8.2090,below,-9.0616,below,-5.9518,below,-7.6181,below,-10.1697,below,-6.7416,below,-11.7357,below
+1862,-3.2750,not distinguishable,-3.4402,not distinguishable,-2.7556,not distinguishable,-5.6858,below,-2.7011,not distinguishable,-7.1166,below,-2.7564,not distinguishable,-6.9268,below
+1863,0.2472,not distinguishable,0.2706,not distinguishable,2.5274,not distinguishable,1.3024,not distinguishable,0.7284,not distinguishable,-1.2040,not distinguishable,0.3031,not distinguishable,-2.0716,not distinguishable
+1864,-9.6925,below,-12.5292,below,-8.9295,below,-10.3238,below,-9.3330,below,-12.4756,below,-9.7449,below,-9.7539,below
+1880,-2.8669,below,-2.5170,not distinguishable,-3.8993,below,-5.3057,below,-10.9064,below,-3.4040,below,-3.1344,below,-1.9057,not distinguishable
+1881,-1.2395,not distinguishable,-1.1649,not distinguishable,-2.1731,not distinguishable,0.3437,not distinguishable,0.3705,not distinguishable,-1.0527,not distinguishable,-2.2108,not distinguishable,0.4121,not distinguishable
+1882,-5.2575,below,-5.4799,below,-4.5196,not distinguishable,-5.1093,below,-5.5485,below,-7.1172,below,-3.1014,not distinguishable,-10.8035,below
+1883,-2.1487,not distinguishable,-1.9501,not distinguishable,-3.2271,not distinguishable,-2.6653,not distinguishable,-0.3034,not distinguishable,-0.3428,not distinguishable,-1.5756,not distinguishable,-5.2000,below
+1884,-5.8727,below,-5.9354,below,-6.9952,below,-6.0424,below,-4.1247,not distinguishable,-6.4882,below,-6.4240,below,-7.5547,below
+1885,-5.8916,below,-5.7041,below,-5.9747,below,-5.2791,below,-4.6827,below,-6.4006,below,-6.7512,below,-9.0397,below
+1904,-7.5336,not distinguishable,-9.7820,below,-6.2790,not distinguishable,-4.1888,not distinguishable,-7.5744,not distinguishable,-8.6047,below,-6.1618,not distinguishable,-9.8108,below
+1907,7.1514,above,7.2711,above,7.6974,above,5.8032,above,7.5930,above,2.7864,not distinguishable,7.7624,above,1.5398,not distinguishable
+1960,-12.2798,below,-12.8283,below,-13.0489,below,-10.2342,below,-10.9590,below,-13.7775,below,-10.0520,below,-4.6345,not distinguishable
+1961,0.7885,not distinguishable,0.5612,not distinguishable,0.2206,not distinguishable,2.3264,not distinguishable,2.1658,not distinguishable,0.6814,not distinguishable,1.5597,not distinguishable,-5.9477,below
+1962,-7.1857,below,-7.6949,below,-5.9023,not distinguishable,-6.2232,below,-6.8238,below,-5.7228,not distinguishable,-5.8163,not distinguishable,-8.5654,below
+1980,0.3670,not distinguishable,0.2984,not distinguishable,-0.7904,not distinguishable,-0.3690,not distinguishable,-8.0115,below,-0.1718,not distinguishable,0.0222,not distinguishable,2.9396,above
+1981,-1.5098,not distinguishable,-1.0827,not distinguishable,-2.4646,not distinguishable,-2.3966,not distinguishable,0.1363,not distinguishable,-3.7673,below,0.1026,not distinguishable,-4.3190,not distinguishable
+1982,-7.4935,below,-7.5201,below,-8.0188,below,-8.8899,below,-7.3840,below,-8.3752,below,-9.4036,below,-9.0982,below
+1983,-1.2646,not distinguishable,-1.2202,not distinguishable,-1.8046,not distinguishable,-3.4219,below,0.5025,not distinguishable,-5.2079,below,-1.7047,not distinguishable,-5.8571,below
+1984,3.4336,not distinguishable,3.4990,not distinguishable,2.4105,not distinguishable,4.3891,above,5.1776,above,3.3826,not distinguishable,3.8443,not distinguishable,1.2748,not distinguishable
+2021,-1.9381,not distinguishable,-2.1152,not distinguishable,-0.3829,not distinguishable,-0.5503,not distinguishable,-2.3282,not distinguishable,-1.4079,not distinguishable,-4.1023,not distinguishable,-3.5515,not distinguishable
+2023,14.0204,above,14.7483,above,14.9951,above,12.1933,above,14.2979,above,12.5193,above,13.6751,above,11.4326,above
+2026,-0.6937,not distinguishable,-0.5619,not distinguishable,-1.2807,not distinguishable,-0.4793,not distinguishable,-0.0580,not distinguishable,-0.6690,not distinguishable,0.6232,not distinguishable,-2.4379,not distinguishable
+2029,0.8625,not distinguishable,0.8302,not distinguishable,0.1780,not distinguishable,0.7757,not distinguishable,-0.0913,not distinguishable,2.5801,not distinguishable,0.6793,not distinguishable,-1.8775,not distinguishable
+2031,-0.9248,not distinguishable,-1.0088,not distinguishable,-1.5504,not distinguishable,-1.9453,not distinguishable,-0.1559,not distinguishable,-1.0529,not distinguishable,-1.3104,not distinguishable,-0.5980,not distinguishable
+2034,-0.0609,not distinguishable,-0.1233,not distinguishable,-0.0783,not distinguishable,-0.8624,not distinguishable,0.5987,not distinguishable,-1.9463,not distinguishable,0.4710,not distinguishable,-3.3709,not distinguishable
+2039,2.5759,not distinguishable,2.8890,not distinguishable,3.7805,not distinguishable,1.1649,not distinguishable,2.0990,not distinguishable,0.1335,not distinguishable,3.8064,not distinguishable,0.2980,not distinguishable
+2061,2.8462,not distinguishable,2.8480,not distinguishable,3.2344,not distinguishable,4.4089,not distinguishable,3.0148,not distinguishable,3.0796,not distinguishable,2.3461,not distinguishable,-0.3830,not distinguishable
+2062,-11.0529,below,-10.7019,below,-11.8793,below,-11.8570,below,-9.4929,below,-9.4700,below,-12.0590,below,-10.0380,below
+2080,-3.7265,below,-3.3818,not distinguishable,-3.7173,below,-4.3516,below,-6.6795,below,-3.5701,below,-3.7888,below,-2.7882,below
+2081,-5.6230,below,-5.1238,below,-6.8757,below,-6.9141,below,-5.6802,below,-5.9475,below,-5.8737,below,-7.1652,below
+2082,-6.6795,below,-6.8427,below,-7.4309,below,-4.0000,not distinguishable,-5.9438,below,-5.7185,below,-5.3988,not distinguishable,-8.4971,below
+2083,-6.6495,below,-6.5167,below,-6.3632,below,-5.0393,below,-9.2317,below,-6.2589,below,-6.8054,below,-12.6108,below
+2084,-5.0989,below,-4.7761,below,-5.5004,below,-5.4495,below,-3.6026,not distinguishable,-4.5717,below,-4.1008,not distinguishable,-7.8848,below
+2085,-4.1481,below,-4.0877,not distinguishable,-5.1855,below,-6.8129,below,-2.2459,not distinguishable,-3.8852,below,-4.4020,below,-6.4727,below
+2101,0.4389,not distinguishable,1.1371,not distinguishable,0.6655,not distinguishable,0.2139,not distinguishable,1.0256,not distinguishable,0.7033,not distinguishable,1.9402,not distinguishable,-1.9624,not distinguishable
+2104,5.0061,not distinguishable,5.3858,above,6.3671,above,3.5494,not distinguishable,5.0544,not distinguishable,2.5007,not distinguishable,4.8309,not distinguishable,0.9658,not distinguishable
+2121,3.2056,not distinguishable,3.2714,not distinguishable,3.4173,not distinguishable,2.2188,not distinguishable,3.6315,not distinguishable,5.3438,above,2.8779,not distinguishable,5.1720,above
+2132,-5.9975,below,-6.4988,below,-5.7151,below,-4.9007,not distinguishable,-4.6718,not distinguishable,-7.9505,below,-6.6433,below,-9.3853,not distinguishable
+2161,2.4709,not distinguishable,2.2447,not distinguishable,2.9437,not distinguishable,0.8656,not distinguishable,0.6327,not distinguishable,0.4806,not distinguishable,3.2297,not distinguishable,-3.2389,not distinguishable
+2180,-6.9919,below,-6.3366,below,-8.0742,below,-8.6804,below,-11.8625,below,-6.5473,below,-6.7674,below,-0.9906,not distinguishable
+2181,-4.7928,below,-4.4665,not distinguishable,-6.0541,below,-4.4222,below,-4.8830,below,-4.4938,below,-5.5978,below,-8.1739,below
+2182,5.0650,above,4.8200,above,4.8696,above,4.1411,above,7.1048,above,4.6410,above,4.1579,above,2.2702,not distinguishable
+2183,-5.1602,below,-4.8894,below,-6.1219,below,-5.2339,below,-22.8083,below,-3.8077,below,-5.0935,below,-3.8500,below
+2184,-7.8174,below,-7.2474,below,-8.7136,below,-8.0519,below,-6.3262,below,-7.9168,below,-7.3054,below,-4.9142,below
+2260,-4.7802,not distinguishable,-5.2278,below,-4.3101,not distinguishable,-4.5457,not distinguishable,-6.0780,below,-2.3507,not distinguishable,-3.1339,not distinguishable,-6.7691,below
+2262,-5.2899,below,-5.1083,below,-6.0513,below,-2.8341,not distinguishable,-4.3422,below,-4.3077,below,-5.4567,below,-6.6831,below
+2280,-2.3730,not distinguishable,-2.2927,not distinguishable,-3.8072,below,-2.0690,not distinguishable,-0.5867,not distinguishable,2.2077,not distinguishable,-4.1358,below,-2.8423,not distinguishable
+2281,-6.5679,below,-5.9500,below,-7.1767,below,-7.4846,below,-18.1537,below,-5.8607,below,-6.7007,below,-5.9876,below
+2282,-4.5117,below,-4.6124,not distinguishable,-4.3715,below,-3.4065,not distinguishable,-3.7406,not distinguishable,-2.9373,not distinguishable,-3.0562,not distinguishable,-5.6426,below
+2283,-8.9721,below,-8.7119,below,-9.6258,below,-9.6133,below,-7.7578,below,-7.9617,below,-7.7325,below,-6.1773,below
+2284,-6.8626,below,-6.2046,below,-7.2376,below,-7.3497,below,-3.7061,below,-5.9515,below,-5.6427,below,-4.2192,below
+2303,-3.8167,not distinguishable,-4.3744,not distinguishable,-2.6934,not distinguishable,-1.8270,not distinguishable,-3.9527,not distinguishable,-1.4353,not distinguishable,-4.3528,not distinguishable,-5.9250,not distinguishable
+2305,-2.0824,not distinguishable,-2.2326,not distinguishable,-1.7722,not distinguishable,-0.5947,not distinguishable,-1.5666,not distinguishable,-0.3648,not distinguishable,-1.5018,not distinguishable,-5.7380,not distinguishable
+2309,-7.4228,below,-7.1885,below,-7.6151,below,-7.2843,below,-5.7948,below,-6.0061,below,-7.1640,below,2.9006,not distinguishable
+2313,-4.5168,not distinguishable,-4.7398,below,-4.6720,not distinguishable,-3.8087,not distinguishable,-3.7822,not distinguishable,-4.9767,below,-4.7555,not distinguishable,-8.4308,below
+2321,-8.2144,below,-8.3014,below,-8.3946,below,-8.7034,below,-6.3316,below,-5.0957,below,-4.7450,not distinguishable,-3.8529,not distinguishable
+2326,2.4646,not distinguishable,2.9154,not distinguishable,2.1396,not distinguishable,3.7618,not distinguishable,3.2560,not distinguishable,6.3077,above,1.5535,not distinguishable,2.7878,not distinguishable
+2361,5.0227,not distinguishable,5.3233,above,5.1975,not distinguishable,4.7648,not distinguishable,5.6542,above,7.5515,above,6.1067,above,1.9451,not distinguishable
+2380,-1.5210,not distinguishable,-1.4145,not distinguishable,-1.2049,not distinguishable,-2.5106,below,-2.6862,not distinguishable,-0.5178,not distinguishable,-1.6081,not distinguishable,3.5289,above
+2401,3.6449,not distinguishable,4.0103,not distinguishable,4.2976,not distinguishable,1.7021,not distinguishable,3.6508,not distinguishable,1.7299,not distinguishable,6.8129,above,1.4487,not distinguishable
+2403,-5.1335,not distinguishable,-7.7413,below,-5.6305,not distinguishable,-6.1081,not distinguishable,-4.7157,not distinguishable,-5.6513,not distinguishable,-4.7085,not distinguishable,-1.7961,not distinguishable
+2404,-2.4782,not distinguishable,-2.7045,not distinguishable,-3.1653,not distinguishable,-0.8899,not distinguishable,-1.6174,not distinguishable,-3.0495,not distinguishable,-0.9908,not distinguishable,-3.3407,not distinguishable
+2409,3.7478,not distinguishable,4.1453,not distinguishable,3.2650,not distinguishable,3.3766,not distinguishable,4.4793,not distinguishable,5.3020,not distinguishable,5.0433,not distinguishable,1.7142,not distinguishable
+2417,6.2382,not distinguishable,7.7742,above,6.5284,not distinguishable,5.1883,not distinguishable,6.8361,not distinguishable,9.2167,above,4.4607,not distinguishable,8.4369,above
+2418,-5.4649,not distinguishable,-7.3132,below,-5.7540,not distinguishable,-6.7643,not distinguishable,-5.2027,not distinguishable,-4.1761,not distinguishable,-3.7124,not distinguishable,-7.8135,below
+2421,-1.3315,not distinguishable,-1.5592,not distinguishable,-1.8758,not distinguishable,-2.1871,not distinguishable,-0.4635,not distinguishable,1.6198,not distinguishable,-1.1818,not distinguishable,-4.1527,not distinguishable
+2422,3.7364,not distinguishable,5.6648,above,4.2932,not distinguishable,4.0623,not distinguishable,4.1576,not distinguishable,9.1494,above,1.7042,not distinguishable,,
+2425,4.4225,not distinguishable,6.9760,above,5.5436,not distinguishable,1.3690,not distinguishable,4.5061,not distinguishable,1.9075,not distinguishable,4.3833,not distinguishable,5.4039,not distinguishable
+2460,-3.2120,not distinguishable,-3.5551,not distinguishable,-3.8373,not distinguishable,-1.9973,not distinguishable,-2.0474,not distinguishable,-1.5522,not distinguishable,-1.4477,not distinguishable,-0.6244,not distinguishable
+2462,4.5333,not distinguishable,4.8101,above,5.0966,not distinguishable,2.6212,not distinguishable,3.4709,not distinguishable,2.5074,not distinguishable,4.2179,not distinguishable,1.5188,not distinguishable
+2463,1.6362,not distinguishable,2.5540,not distinguishable,2.2206,not distinguishable,0.6528,not distinguishable,1.8591,not distinguishable,0.3661,not distinguishable,1.7033,not distinguishable,-3.3339,not distinguishable
+2480,-9.2325,below,-8.2901,below,-6.2930,below,-10.4599,below,-9.7284,below,-9.5247,below,-9.4650,below,0.8758,not distinguishable
+2481,-1.1173,not distinguishable,-1.2454,not distinguishable,-2.0999,not distinguishable,-2.2650,not distinguishable,0.2814,not distinguishable,1.0434,not distinguishable,-0.0649,not distinguishable,-0.6653,not distinguishable
+2482,-3.9880,below,-3.6505,not distinguishable,-4.6433,below,-3.5302,below,-2.0436,not distinguishable,-1.8012,not distinguishable,-3.5912,below,-2.0642,not distinguishable
+2505,6.7297,above,7.8598,above,7.2395,above,5.3471,not distinguishable,6.7762,above,5.1317,not distinguishable,5.3626,not distinguishable,1.7854,not distinguishable
+2506,2.6965,not distinguishable,4.2907,not distinguishable,2.6152,not distinguishable,3.1087,not distinguishable,3.1192,not distinguishable,3.6637,not distinguishable,0.6369,not distinguishable,3.2735,not distinguishable
+2510,8.0228,above,9.9790,above,7.9144,above,7.3357,above,11.5315,above,6.8285,not distinguishable,7.6299,not distinguishable,2.5671,not distinguishable
+2513,2.2880,not distinguishable,2.7335,not distinguishable,3.0076,not distinguishable,2.4396,not distinguishable,-2.2932,not distinguishable,3.3621,not distinguishable,2.4746,not distinguishable,3.1952,not distinguishable
+2514,-2.6351,not distinguishable,-2.5011,not distinguishable,-3.4627,not distinguishable,-2.5825,not distinguishable,-0.7477,not distinguishable,-1.9147,not distinguishable,-2.9988,not distinguishable,-5.1022,below
+2518,4.7039,not distinguishable,6.0633,above,5.0159,not distinguishable,4.0366,not distinguishable,2.1003,not distinguishable,7.7242,above,1.4083,not distinguishable,7.4406,not distinguishable
+2521,10.3350,above,12.1842,above,12.0265,above,10.6083,above,10.3820,above,11.1400,above,10.6154,above,6.7415,above
+2523,8.6466,above,8.6627,above,8.6820,above,7.8664,above,4.2648,not distinguishable,9.9432,above,8.2614,above,0.2404,not distinguishable
+2560,7.7332,above,8.4110,above,8.9380,above,5.8282,above,8.0944,above,3.9105,not distinguishable,8.2124,above,3.5850,not distinguishable
+2580,-6.5000,below,-5.8814,below,-5.2060,below,-7.3485,below,-5.6131,below,-5.8457,below,-5.7018,below,0.5266,not distinguishable
+2581,-0.8305,not distinguishable,-0.7470,not distinguishable,-1.2690,not distinguishable,-1.5735,not distinguishable,0.6657,not distinguishable,1.7375,not distinguishable,0.1325,not distinguishable,-0.6854,not distinguishable
+2582,-4.1095,below,-3.9051,not distinguishable,-4.9962,below,-3.0075,not distinguishable,-7.5667,below,-0.8171,not distinguishable,-4.4187,below,-7.3001,below
+2583,-5.1329,not distinguishable,-5.6434,below,-4.4465,not distinguishable,-10.1842,below,-3.7426,not distinguishable,-13.2136,below,-5.2840,not distinguishable,-7.6585,below
+2584,2.8171,not distinguishable,2.6806,not distinguishable,2.0656,not distinguishable,2.1619,not distinguishable,-0.1992,not distinguishable,2.6987,not distinguishable,3.7540,not distinguishable,-2.2385,not distinguishable

@@ -1,0 +1,146 @@
+{
+  "variants": [
+    {
+      "variant": "primary",
+      "rows": 3190,
+      "municipalities": 290,
+      "tau": 6.91,
+      "icc_homoskedastic": 0.407,
+      "threshold_change_100_pupils": 28.1,
+      "above": 65,
+      "below": 82,
+      "spearman_with_primary": 1.0,
+      "primary_above_still_above": "65/65",
+      "primary_below_still_below": "82/82",
+      "stockholm_county_above": "24/26",
+      "stockholm_county_mean_effect": 9.86
+    },
+    {
+      "variant": "homoskedastic noise",
+      "rows": 3190,
+      "municipalities": 290,
+      "tau": 6.96,
+      "icc_homoskedastic": 0.407,
+      "threshold_change_100_pupils": 23.3,
+      "above": 70,
+      "below": 73,
+      "spearman_with_primary": 0.997,
+      "primary_above_still_above": "58/65",
+      "primary_below_still_below": "60/82",
+      "stockholm_county_above": "23/26",
+      "stockholm_county_mean_effect": 9.05
+    },
+    {
+      "variant": "linear background (no square)",
+      "rows": 3190,
+      "municipalities": 290,
+      "tau": 7.34,
+      "icc_homoskedastic": 0.433,
+      "threshold_change_100_pupils": 28.0,
+      "above": 67,
+      "below": 88,
+      "spearman_with_primary": 0.984,
+      "primary_above_still_above": "62/65",
+      "primary_below_still_below": "79/82",
+      "stockholm_county_above": "23/26",
+      "stockholm_county_mean_effect": 10.84
+    },
+    {
+      "variant": "home municipality",
+      "rows": 3189,
+      "municipalities": 290,
+      "tau": 6.44,
+      "icc_homoskedastic": 0.397,
+      "threshold_change_100_pupils": 26.3,
+      "above": 66,
+      "below": 84,
+      "spearman_with_primary": 0.951,
+      "primary_above_still_above": "59/65",
+      "primary_below_still_below": "70/82",
+      "stockholm_county_above": "26/26",
+      "stockholm_county_mean_effect": 10.82
+    },
+    {
+      "variant": "municipal schools only",
+      "rows": 3190,
+      "municipalities": 290,
+      "tau": 7.11,
+      "icc_homoskedastic": 0.4,
+      "threshold_change_100_pupils": 28.4,
+      "above": 68,
+      "below": 78,
+      "spearman_with_primary": 0.921,
+      "primary_above_still_above": "55/65",
+      "primary_below_still_below": "68/82",
+      "stockholm_county_above": "23/26",
+      "stockholm_county_mean_effect": 8.77
+    },
+    {
+      "variant": "excl. newly arrived pupils",
+      "rows": 3189,
+      "municipalities": 290,
+      "tau": 6.44,
+      "icc_homoskedastic": 0.417,
+      "threshold_change_100_pupils": 26.5,
+      "above": 68,
+      "below": 87,
+      "spearman_with_primary": 0.953,
+      "primary_above_still_above": "57/65",
+      "primary_below_still_below": "75/82",
+      "stockholm_county_above": "22/26",
+      "stockholm_county_mean_effect": 8.33
+    },
+    {
+      "variant": "without 2020–2021",
+      "rows": 2610,
+      "municipalities": 290,
+      "tau": 6.64,
+      "icc_homoskedastic": 0.379,
+      "threshold_change_100_pupils": 28.6,
+      "above": 59,
+      "below": 73,
+      "spearman_with_primary": 0.987,
+      "primary_above_still_above": "57/65",
+      "primary_below_still_below": "70/82",
+      "stockholm_county_above": "22/26",
+      "stockholm_county_mean_effect": 9.09
+    },
+    {
+      "variant": "SALSA expected value as covariate",
+      "rows": 2942,
+      "municipalities": 287,
+      "tau": 8.55,
+      "icc_homoskedastic": 0.571,
+      "threshold_change_100_pupils": 25.4,
+      "above": 71,
+      "below": 85,
+      "spearman_with_primary": 0.817,
+      "primary_above_still_above": "51/65",
+      "primary_below_still_below": "57/82",
+      "stockholm_county_above": "24/26",
+      "stockholm_county_mean_effect": 15.07
+    }
+  ],
+  "morans_i": {
+    "persistent_effect_primary": {
+      "I": 0.313,
+      "expected_I": -0.0035,
+      "p_permutation": 0.001,
+      "permutations": 999,
+      "islands_linked": [
+        "0980"
+      ],
+      "mean_neighbours": 5.4
+    },
+    "raw_merit_last_year": {
+      "I": 0.41,
+      "expected_I": -0.0035,
+      "p_permutation": 0.001,
+      "permutations": 999,
+      "islands_linked": [
+        "0980"
+      ],
+      "mean_neighbours": 5.4
+    }
+  }
+}
