@@ -1,4 +1,5 @@
 # One pipeline stage per line. Pushing a change to this file runs the
 # pipeline workflow in the portfolio-agent workspace (see PLAN.md).
 # Run 7 (M7): robustness variants, Stockholm county table, Moran's I.
+# Rerun: buffered contiguity weights (D14).
 robustness

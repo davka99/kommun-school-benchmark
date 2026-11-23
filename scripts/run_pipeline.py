@@ -522,9 +522,9 @@ def stage_robustness() -> None:
             "persistent_effect_primary": robustness.morans_i(g, "eb_mean", seed=config.SEED),
             "raw_merit_last_year": robustness.morans_i(g, "merit", seed=config.SEED),
         }
+        # SALSA variant: 3 municipalities have no SALSA school units and are left out of this one check.
         gs = g.dropna(subset=["eb_salsa"])
-        if len(gs) == len(g):
-            out["morans_i"]["persistent_effect_salsa_covariate"] = robustness.morans_i(gs, "eb_salsa", seed=config.SEED)
+        out["morans_i"]["persistent_effect_salsa_covariate"] = robustness.morans_i(gs, "eb_salsa", seed=config.SEED)
     except ImportError:
         print("geopandas/esda not installed: spatial check skipped")
     _write_json(config.REPORTS / "robustness.json", out)

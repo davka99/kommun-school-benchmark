@@ -93,3 +93,6 @@ Primary model, municipality *i*, spring term *t*:
 - Pre-registered (D10): homoskedastic mixed model primary, size-dependent noise as robustness.
 - Diagnostics: Breusch–Pagan p ≈ 2 × 10⁻³⁵; residual SD 16.9 points in municipalities under 50 pupils vs 7.9–8.2 above 200; likelihood-ratio statistic 864 for σ²(n) = c + d/n vs constant σ². A constant σ² understates the noise for small municipalities and overstates it for large ones, so their intervals would be wrong in opposite directions.
 - Change: effects, verdicts and rank intervals use the size-dependent model. The homoskedastic results are reported next to them (verdicts 70 above / 73 below vs 65 / 82; correlation of effects 0.994), so the change can be audited and does not drive the conclusion.
+
+## D14 — *Post-result, diagnostic fix:* buffered contiguity for Moran's I
+- The first robustness run built queen contiguity on the simplified (200 m) municipality layer and libpysal reported **69 disconnected components** — simplification opens slivers between neighbours, so many real neighbours were not linked. Weights are now "fuzzy" contiguity: polygons that touch after a 500 m buffer are neighbours; Gotland is linked to its nearest neighbour. The number of components is reported with each Moran's I. The first result (I = 0.31 for the persistent effects) is kept in this log for comparison.

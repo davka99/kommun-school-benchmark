@@ -72,22 +72,36 @@ def run(p: pd.DataFrame, primary_f: str, stockholm: str = "01") -> tuple[dict, p
     return {"variants": rows}, wide
 
 
-def morans_i(gdf, value_col: str, permutations: int = 999, seed: int = 0) -> dict:
-    """Moran's I with queen contiguity; islands (Gotland) get their nearest neighbour."""
-    import esda
+def spatial_weights(gdf, buffer_m: float = 500.0):
+    """Contiguity with a small buffer, row-standardised.
+
+    The municipality layer is simplified (200 m) for drawing, which opens slivers
+    between neighbours: plain queen contiguity split Sweden into 69 disconnected
+    components (Run 7). Polygons that touch after a 500 m buffer are neighbours.
+    Islands (Gotland) are linked to their nearest neighbour by centroid.
+    """
     from libpysal import weights
+    from libpysal.weights.util import attach_islands
 
     g = gdf.reset_index(drop=True)
-    w = weights.Queen.from_dataframe(g, use_index=False, silence_warnings=True)
+    w = weights.fuzzy_contiguity(g, buffering=True, buffer=buffer_m, silence_warnings=True)
     islands = list(w.islands)
     if islands:
         knn = weights.KNN.from_dataframe(g, k=1, use_index=False)
-        from libpysal.weights.util import attach_islands
-
         w = attach_islands(w, knn)
     w.transform = "r"
+    return w, islands
+
+
+def morans_i(gdf, value_col: str, permutations: int = 999, seed: int = 0) -> dict:
+    """Moran's I on `value_col` with buffered contiguity weights."""
+    import esda
+
+    g = gdf.reset_index(drop=True)
+    w, islands = spatial_weights(g)
     np.random.seed(seed)
     mi = esda.Moran(g[value_col].to_numpy(), w, permutations=permutations)
     return {"I": round(float(mi.I), 3), "expected_I": round(float(mi.EI), 4), "p_permutation": float(mi.p_sim),
             "permutations": permutations, "islands_linked": [g.loc[i, "kommun"] for i in islands],
-            "mean_neighbours": round(float(w.mean_neighbors), 2)}
+            "mean_neighbours": round(float(w.mean_neighbors), 2), "components": int(w.n_components),
+            "n": int(len(g))}
