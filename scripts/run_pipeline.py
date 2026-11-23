@@ -20,6 +20,9 @@ Stages
   quality  M3, offline. data/processed/panel.csv (290 municipalities x years),
          reports/data_quality_summary.json and docs/data_quality.md.
 
+  descriptives  M4, offline. Rank stability, top/bottom churn, cohort-noise model
+         (change^2 = a + b/n), funnel limits; reports/descriptives.json + figures.
+
 Network access is only needed for `probe`, `probe_scb`, `fetch` and `reconcile`. The build
 sandbox cannot reach the sources, so these stages run in GitHub Actions.
 """
@@ -374,8 +377,45 @@ def stage_quality() -> None:
     print(json.dumps({k: summary[k] for k in ("panel_rows", "range_violations", "max_abs_reconciliation_diff")}))
 
 
+def stage_descriptives() -> None:
+    """M4 (offline): rank stability, churn, cohort-noise model, funnel, figures and a first map."""
+    import pandas as pd
+
+    import descriptives
+    import figures
+
+    p = pd.read_csv(config.PROCESSED / "panel.csv", dtype={"municipality": str, "county": str})
+    s = descriptives.summarise(p, year=config.YEARS[-1], seed=config.SEED)
+    _write_json(config.REPORTS / "descriptives.json", s)
+    config.FIGURES.mkdir(parents=True, exist_ok=True)
+    a, b = s["noise_model"]["point"]["a"], s["noise_model"]["point"]["b"]
+    bands = s["change_95_band_by_cohort"]
+    figures.changes_vs_size(
+        descriptives.demeaned_changes(p), a, b, config.FIGURES / "changes_vs_size.png",
+        title=f"With 100 pupils a year, a {bands['100']:.0f}-point swing is within cohort noise; "
+              f"with 1,000, {bands['1000']:.0f}")
+    figures.funnel_plot(descriptives.funnel(p, "merit", s["funnel_year"], s["noise_model"]["point"]["pupil_sd"]),
+                        s["funnel_year"], config.FIGURES / f"funnel_{s['funnel_year']}.png")
+    try:
+        import geopandas as gpd
+
+        g = gpd.read_file(config.RAW / "geo" / "kommuner.geojson").to_crs(3006)
+        y = config.YEARS[-1]
+        g = g.merge(p[p["year"] == y][["municipality", "merit"]], left_on="kommun", right_on="municipality",
+                    how="left")
+        if g["merit"].isna().any():
+            raise SystemExit(f"map: {int(g['merit'].isna().sum())} municipalities without a value")
+        figures.choropleth(g, "merit", config.FIGURES / f"map_merit_{y}.png",
+                           title=f"Raw merit value {y}: mostly a map of pupil background (adjusted in M5–M6)",
+                           label=f"Average merit value, grade 9, {y} (points)")
+    except ImportError:
+        print("geopandas not installed: map skipped")
+    print(json.dumps({k: s[k] for k in ("rank_stability_mean", "top_decile_stay_mean", "bottom_decile_stay_mean",
+                                        "share_changes_inside_band", "funnel_outside95")}))
+
+
 STAGES = {"probe": stage_probe, "probe_scb": stage_probe_scb, "fetch": stage_fetch,
-          "reconcile": stage_reconcile, "quality": stage_quality}
+          "reconcile": stage_reconcile, "quality": stage_quality, "descriptives": stage_descriptives}
 
 
 def main(argv: list[str]) -> None:
