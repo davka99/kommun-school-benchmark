@@ -9,7 +9,13 @@ Stages
          works, data/raw/geo/kommuner.geojson. Every check is recorded in
          data/raw/_probe/probe_report.json; the stage fails if a critical check fails.
 
-Network access is only needed for `probe` (and the later `fetch`). The build
+  probe_scb  M2. Walks SCB's PxWeb tree for grade-9 tables (background by home
+         municipality, cohort counts) and records their variables.
+  fetch  M2. Every KPI in config.FETCH_KPIS for config.YEARS, all genders, to
+         data/raw/kolada/kolada_long.csv.gz (+ fetch_manifest.json), and
+         school-unit SALSA values with their municipality to salsa_school_units.csv.gz.
+
+Network access is only needed for `probe`, `probe_scb` and `fetch`. The build
 sandbox cannot reach the sources, so these stages run in GitHub Actions.
 """
 
@@ -229,7 +235,83 @@ def stage_probe() -> None:
         raise SystemExit(f"probe: critical checks failed: {critical_failed}")
 
 
-STAGES = {"probe": stage_probe}
+def _write_csv_gz(df, path: Path) -> None:
+    """Deterministic gzip (fixed header time) so reruns give identical files."""
+    import gzip
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "wb") as raw, gzip.GzipFile(fileobj=raw, mode="wb", mtime=0, filename="") as gz:
+        gz.write(df.to_csv(index=False, lineterminator="\n").encode("utf-8"))
+
+
+def stage_probe_scb() -> None:
+    """M2: look for grade-9 background by home municipality and grade-9 counts in SCB's database."""
+    import scb
+
+    get = kolada.make_getter(timeout=config.HTTP_TIMEOUT, user_agent=config.USER_AGENT)
+    out = config.PROBE_DIR
+    tables, errors = scb.browse(get, config.SCB_START_PATHS, config.SCB_TABLE_PATTERN,
+                                max_depth=4, max_requests=200)
+    import pandas as pd
+
+    pd.DataFrame(tables, columns=["path", "text"]).to_csv(out / "scb_tables.csv", index=False)
+    metas = {}
+    for t in tables[:25]:
+        try:
+            metas[t["path"]] = scb.summarise_metadata(get(f"{scb.SCB_BASE}/{t['path']}"))
+        except Exception as exc:  # noqa: BLE001
+            metas[t["path"]] = {"error": str(exc)[:300]}
+    _write_json(out / "scb_table_meta.json", {"n_tables": len(tables), "errors": errors, "tables": metas})
+    print(f"SCB: {len(tables)} matching tables, {len(errors)} errors")
+
+
+def stage_fetch() -> None:
+    """M2: download every KPI in config.FETCH_KPIS for config.YEARS (all genders),
+    and school-unit SALSA values with the unit register (for reconciliation)."""
+    import pandas as pd
+
+    get = kolada.make_getter(timeout=config.HTTP_TIMEOUT, user_agent=config.USER_AGENT)
+    base, _ = _detect_base(get)
+    frames, per_kpi = [], {}
+    for kpi_id in config.FETCH_KPIS:
+        df = kolada.parse_data(kolada.paginate(kolada.data_url(base, [kpi_id], config.YEARS), get))
+        if df.empty:
+            raise SystemExit(f"fetch: no data for {kpi_id}")
+        frames.append(df)
+        t = df[df["gender"] == "T"]
+        per_kpi[kpi_id] = {"rows": int(len(df)),
+                           "values_T_per_year": t.groupby("period")["value"].count().astype(int).to_dict()}
+    data = pd.concat(frames).sort_values(["kpi", "municipality", "period", "gender"]).reset_index(drop=True)
+    kdir = config.RAW / "kolada"
+    _write_csv_gz(data, kdir / "kolada_long.csv.gz")
+
+    titles = pd.read_csv(config.PROBE_DIR / "kpi_candidates.csv").set_index("id")["title"].to_dict()
+    manifest = {"fetched_utc": datetime.now(timezone.utc).isoformat(), "api": base, "years": config.YEARS,
+                "kpis": {k: {"title": titles.get(k), **v} for k, v in per_kpi.items()},
+                "n_rows": int(len(data))}
+
+    # School-unit SALSA (Skolverket's model values) -> reconciliation in M5. Not critical.
+    try:
+        ou = kolada.parse_ou_data(kolada.paginate(kolada.ou_data_url(base, config.SALSA_OU_KPIS, config.YEARS), get))
+        munis = pd.read_csv(config.PROBE_DIR / "municipalities.csv", dtype=str)
+        from municipalities import is_kommun
+
+        regs = []
+        for m in sorted(munis.loc[munis["id"].map(is_kommun), "id"]):
+            regs.append(kolada.parse_ou_register(kolada.paginate(kolada.ou_register_url(base, m), get)))
+        reg = pd.concat(regs)
+        ou = ou[ou["ou"].isin(reg["ou"])].merge(reg[["ou", "municipality"]], on="ou", how="left")
+        _write_csv_gz(ou.sort_values(["kpi", "ou", "period", "gender"]), kdir / "salsa_school_units.csv.gz")
+        counts = ou[ou["value"].notna()].groupby(["kpi", "period"]).size()
+        manifest["salsa_ou"] = {"rows": int(len(ou)), "units": int(ou["ou"].nunique()),
+                                "per_kpi_year": {f"{k}_{p}": int(n) for (k, p), n in counts.items()}}
+    except Exception as exc:  # noqa: BLE001
+        manifest["salsa_ou"] = {"error": f"{type(exc).__name__}: {exc}"[:500]}
+    _write_json(kdir / "fetch_manifest.json", manifest)
+    print(json.dumps({k: v["values_T_per_year"] for k, v in manifest["kpis"].items()})[:3000])
+
+
+STAGES = {"probe": stage_probe, "probe_scb": stage_probe_scb, "fetch": stage_fetch}
 
 
 def main(argv: list[str]) -> None:

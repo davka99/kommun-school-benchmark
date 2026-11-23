@@ -61,6 +61,15 @@ PRIORITY_KPIS = [
     # pupil counts
     "N15807", "N15809", "N15829",
 ]
+# Downloaded in M2 (the U154xx SALSA KPIs have no municipality-level values; they are
+# fetched as school-unit data instead).
+SALSA_OU_KPIS = ["U15413", "U15414", "U15415", "U15416"]
+FETCH_KPIS = [k for k in PRIORITY_KPIS if k not in SALSA_OU_KPIS]
+
+# SCB PxWeb search for grade-9 background by home municipality and cohort counts.
+SCB_START_PATHS = ["UF", "LE/LE0201"]
+SCB_TABLE_PATTERN = r"årskurs 9|åk 9|slutbetyg|meritvärde|grundskol|toppen"
+
 # A candidate KPI must mention grade 9 to be coverage-checked in the probe.
 GRADE9_MARKERS = ["åk 9", "årskurs 9", "åk. 9", "år 9"]
 MAX_COVERAGE_CHECKS = 10

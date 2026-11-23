@@ -181,3 +181,44 @@ def coverage(data: pd.DataFrame, gender: str = "T") -> pd.DataFrame:
     )
     out["statuses"] = out.set_index(["kpi", "period"]).index.map(status).fillna("")
     return out
+
+
+OU_DATA_COLUMNS = ["kpi", "ou", "period", "gender", "value", "status"]
+
+
+def ou_data_url(base: str, kpi_ids: Iterable[str], years: Iterable[int]) -> str:
+    k = ",".join(kpi_ids)
+    y = ",".join(str(int(v)) for v in years)
+    return f"{base}/oudata/kpi/{k}/year/{y}"
+
+
+def ou_register_url(base: str, municipality: str) -> str:
+    return f"{base}/ou?municipality={municipality}"
+
+
+def parse_ou_data(payloads: Iterable[dict]) -> pd.DataFrame:
+    """Organisational-unit (school) values: one row per kpi x ou x period x gender."""
+    rows = []
+    for p in payloads:
+        for rec in p["values"]:
+            for key in ("kpi", "ou", "period", "values"):
+                if key not in rec:
+                    raise KoladaSchemaError(f"ou record without '{key}': {sorted(rec)}")
+            for val in rec["values"]:
+                rows.append({"kpi": str(rec["kpi"]), "ou": str(rec["ou"]), "period": int(rec["period"]),
+                             "gender": val.get("gender"), "value": val.get("value"),
+                             "status": val.get("status") or ""})
+    df = pd.DataFrame(rows, columns=OU_DATA_COLUMNS)
+    df["value"] = pd.to_numeric(df["value"], errors="coerce")
+    return df
+
+
+def parse_ou_register(payloads: Iterable[dict]) -> pd.DataFrame:
+    rows = []
+    for p in payloads:
+        for v in p["values"]:
+            if "id" not in v or "municipality" not in v:
+                raise KoladaSchemaError(f"ou record without id/municipality: {sorted(v)}")
+            rows.append({"ou": str(v["id"]), "municipality": str(v["municipality"]).zfill(4),
+                         "title": v.get("title")})
+    return pd.DataFrame(rows, columns=["ou", "municipality", "title"]).drop_duplicates("ou")

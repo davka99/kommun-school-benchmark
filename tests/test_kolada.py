@@ -122,3 +122,18 @@ def test_urls_are_encoded():
         "https://api.kolada.se/v2/kpi?title=meritv%C3%A4rde%20%C3%A5k%209"
     assert kolada.data_url("https://api.kolada.se/v2", ["N1", "N2"], [2015, 2024]) == \
         "https://api.kolada.se/v2/data/kpi/N1,N2/year/2015,2024"
+
+
+def test_parse_ou_data_and_register():
+    page = {"values": [{"kpi": "U15416", "ou": "V15E018000101", "period": 2024,
+                        "values": [{"gender": "T", "value": 4.2, "status": ""}]},
+                       {"kpi": "U15416", "ou": "V15E018000102", "period": 2024,
+                        "values": [{"gender": "T", "value": None, "status": "Missing"}]}]}
+    df = kolada.parse_ou_data([page])
+    assert len(df) == 2 and df["value"].isna().sum() == 1
+    reg = kolada.parse_ou_register([{"values": [{"id": "V15E018000101", "municipality": 180, "title": "Skola A"}]}])
+    assert reg.loc[0, "municipality"] == "0180"
+    with pytest.raises(kolada.KoladaSchemaError):
+        kolada.parse_ou_data([{"values": [{"kpi": "U1", "period": 2024, "values": []}]}])
+    assert kolada.ou_data_url("https://api.kolada.se/v3", ["U1"], [2024]) == \
+        "https://api.kolada.se/v3/oudata/kpi/U1/year/2024"
