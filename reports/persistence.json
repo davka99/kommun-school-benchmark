@@ -1,0 +1,129 @@
+{
+  "formula": "merit ~ parents_post_secondary + foreign_background + C(year) + I(((parents_post_secondary - 50) / 10) ** 2)",
+  "homoskedastic": {
+    "tau": 6.96,
+    "sigma": 8.39,
+    "icc": 0.407,
+    "reliability_1y": 0.407,
+    "reliability_3y": 0.674,
+    "bootstrap_ci95": {
+      "tau": [
+        6.322,
+        7.599
+      ],
+      "sigma": [
+        8.189,
+        8.584
+      ],
+      "icc": [
+        0.36,
+        0.454
+      ],
+      "reps": 200,
+      "seed": 20261123
+    },
+    "verdicts": {
+      "not distinguishable": 147,
+      "below": 73,
+      "above": 70
+    }
+  },
+  "size_dependent": {
+    "tau": 6.91,
+    "c": 4.55,
+    "d": 9830.1,
+    "implied_pupil_sd": 99.1,
+    "size_free_noise_sd": 2.13,
+    "converged": true,
+    "lr_vs_homoskedastic": 863.7,
+    "noise_sd_by_cohort": {
+      "30": 18.23,
+      "50": 14.18,
+      "100": 10.14,
+      "200": 7.33,
+      "500": 4.92,
+      "1000": 3.79
+    },
+    "reliability_1y_by_cohort": {
+      "30": 0.126,
+      "50": 0.192,
+      "100": 0.317,
+      "200": 0.471,
+      "500": 0.664,
+      "1000": 0.769
+    },
+    "reliability_3y_by_cohort": {
+      "30": 0.301,
+      "50": 0.416,
+      "100": 0.582,
+      "200": 0.728,
+      "500": 0.856,
+      "1000": 0.909
+    },
+    "change_threshold_by_cohort": {
+      "30": 50.5,
+      "50": 39.3,
+      "100": 28.1,
+      "200": 20.3,
+      "500": 13.6,
+      "1000": 10.5
+    },
+    "verdicts": {
+      "not distinguishable": 143,
+      "below": 82,
+      "above": 65
+    }
+  },
+  "expected_false_positives_if_no_differences": 14.5,
+  "rank_interval_width_median": 102,
+  "rank_interval_width_quartiles": [
+    65,
+    140
+  ],
+  "n_rank_interval_within_top_decile": 12,
+  "n_rank_interval_within_bottom_decile": 6,
+  "n_with_p_top_decile_over_90": 16,
+  "last_year": 2025,
+  "spearman_last_year_resid_vs_eb": 0.657,
+  "top_decile_last_year_also_eb_top_decile": "15/29",
+  "bottom_decile_last_year_also_eb_bottom_decile": "14/29",
+  "lag1_autocorr_within_residual": 0.155,
+  "change_check_by_size": [
+    {
+      "band": "<50",
+      "n": 154,
+      "observed_p95_abs_change": 35.525,
+      "model_threshold_mean": 47.775,
+      "share_inside_model_threshold": 1.0
+    },
+    {
+      "band": "50-99",
+      "n": 461,
+      "observed_p95_abs_change": 29.8,
+      "model_threshold_mean": 32.669,
+      "share_inside_model_threshold": 0.972
+    },
+    {
+      "band": "100-199",
+      "n": 919,
+      "observed_p95_abs_change": 21.985,
+      "model_threshold_mean": 23.95,
+      "share_inside_model_threshold": 0.968
+    },
+    {
+      "band": "200-499",
+      "n": 716,
+      "observed_p95_abs_change": 13.523,
+      "model_threshold_mean": 16.814,
+      "share_inside_model_threshold": 0.98
+    },
+    {
+      "band": "500+",
+      "n": 650,
+      "observed_p95_abs_change": 9.059,
+      "model_threshold_mean": 11.033,
+      "share_inside_model_threshold": 0.982
+    }
+  ],
+  "corr_eb_homo_vs_size_dependent": 0.994
+}

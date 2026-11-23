@@ -1,2 +1,2 @@
-{"run_id": "45168395601", "sha": "8d286412b50185956faa189564254899a9c0aa58", "stages": "descriptives expected persistence ",
- "tests": "success", "pipeline": "failure", "finished_utc": "2026-11-23T11:48:25Z"}
+{"run_id": "45168573241", "sha": "aab2dba6ec2b8b1b3d201b6539396a8f0f0c9052", "stages": "descriptives expected persistence ",
+ "tests": "success", "pipeline": "success", "finished_utc": "2026-11-23T11:51:01Z"}
