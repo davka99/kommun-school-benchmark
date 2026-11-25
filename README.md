@@ -2,7 +2,11 @@
 
 Every year Sweden's 290 municipalities are ranked on how their grade-9 pupils do, and education committees react when their municipality moves. This project separates what is persistent from what is noise: about half of the municipalities really do differ from what their pupils' background predicts, but a single year's result — and especially a single year's *change* — is mostly noise, above all in small municipalities.
 
+**In plain words:** newspapers rank Sweden's municipalities on grade-9 results every year. After taking into account how educated the pupils' parents are, about half of the municipalities really do better or worse than expected year after year. But a single year's ranking, and above all a single year's rise or fall, is mostly chance, especially in small municipalities where one class decides the result.
+
 ![Persistent difference from expected merit value for all 290 municipalities, with 95 % intervals](reports/figures/persistent_effects.png)
+
+*How to read it: each vertical line is one municipality, sorted from furthest below to furthest above what its pupils' background predicts. The dot is the best estimate of its lasting difference, the line the 95 % uncertainty range. Blue and red lines lie entirely above or below zero; grey lines cross zero, so those municipalities cannot be told apart from expected.*
 
 ## Business question
 Education committees (utbildningsnämnder) and school directors see their municipality ranked on grade-9 results every year (SKR *Öppna jämförelser*, Skolverket SALSA, local press). **Which municipalities do consistently better or worse than their pupils' background predicts, and how large must a one-year change be before it is more than noise?**
@@ -19,6 +23,8 @@ All figures are real data, 290 municipalities × spring terms 2015–2025 (3,190
 7. **Robust to the analysis choices:** across eight specifications, 132–156 municipalities differ persistently, and the effects correlate 0.82–1.00 with the primary estimate.
 
 ![One-year change in merit value against municipality size, with the 95 % band expected from cohort noise](reports/figures/changes_vs_size.png)
+
+*How to read it: each dot is one municipality in one year; up means its result improved from the year before. The grey band is how much results jump by chance alone, given how many pupils finish grade 9. Small municipalities (left) jump far more than large ones (right). The band is the fitted noise model; the table below uses the observed changes in each size group, so its numbers differ slightly (±22 for 100–199 pupils, 23 points at exactly 100).*
 
 ## Recommendation
 For an education committee reading this year's ranking:
