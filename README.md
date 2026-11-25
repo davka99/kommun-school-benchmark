@@ -38,11 +38,12 @@ For an education committee reading this year's ranking:
 
 ## Approach
 1. **Brief and pre-registration** (`docs/brief.md`, `docs/decisions.md`): outcome, population, covariates and the analysis plan were written down before any model was fitted. Every later change is logged as a diagnostic fix with its evidence (D11–D14).
-2. **Data quality** (`docs/data_quality.md`): coverage, suppression, rounding, an internal reconciliation (municipalities add up to the national figure within 0.55 points) and an external one against SCB (a stable level gap, reported as a definition difference).
+2. **Data quality** (`docs/data_quality.md`): coverage, suppression, rounding, an internal reconciliation (municipalities add up to the national figure within 0.55 points) and an external one against SCB. SCB's national series is 7–9 points lower every year; the gap is explained: SCB's table is the 16-subject merit value and Kolada's the 17-subject value, and both match Skolverket's published national figures to the decimal.
 3. **Descriptives:** rank stability between years (Spearman 0.70–0.81) and a cohort-noise model, change² = a + b/n.
 4. **Expected value:** OLS of merit value on parents' education (with a centred square) and foreign background + year fixed effects, standard errors clustered by municipality. Checked against Skolverket's SALSA: expected values correlate 0.82, residuals 0.75.
 5. **Persistent vs noise:** random-intercept model (statsmodels MixedLM) and a likelihood with size-dependent noise σ²(n) = c + d/n; empirical-Bayes effects, parametric bootstrap, 10,000 simulated rank draws.
 6. **Robustness and space:** eight specifications (home municipality, municipal schools, excluding newly arrived pupils, without 2020–21, SALSA covariate …) and Moran's I with buffered contiguity weights.
+7. **SQL and BI layer:** the results are loaded into a SQLite star schema (`sql/01_schema.sql`) and the decision rules are written as SQL views (`sql/02_views.sql`): verdict counts, county summary, this year's change against the noise band, and a municipality card. Tests check that the SQL reproduces the Python results. The views are exported to `reports/bi/` for a Power BI report; the data model, DAX measures and page layout are in [docs/powerbi.md](docs/powerbi.md).
 
 ## Data
 | Source | Content | Access |
@@ -50,6 +51,7 @@ For an education committee reading this year's ranking:
 | [Kolada](https://www.kolada.se) (RKA), API v3 | Merit value (17 subjects) by school location, home municipality and municipal schools; parents' education, foreign background, pupil counts (Skolverket/SCB data); SALSA values for 4,564 school units | Open API, no key |
 | [SCB open geodata – DeSO](https://www.scb.se/vara-tjanster/oppna-data/oppna-geodata/demografiska-statistikomraden-deso/) | DeSO 2025 polygons via SCB's WFS, dissolved to the 290 municipalities | Open, CC0 |
 | [SCB Statistical Database](https://www.statistikdatabasen.scb.se) table LE0201Utb/Tema42 | National merit value by sex, for reconciliation | Open API |
+| Skolverket's national statistics (PDF reports, 2020–2024) | Published national merit values, 16 and 17 subjects, for reconciliation (`data/reference/`) | Public reports |
 
 - **Population:** pupils in schools located in the municipality (*lägeskommun*), because Kolada publishes pupil background only for that population (D7).
 - **Nothing is simulated** except where labelled: rank intervals and the bootstrap are model-based simulations; tests use synthetic data.
@@ -63,7 +65,7 @@ Python 3.12. The data is already in `data/`; every network step can be rerun.
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 python -m pytest
-python scripts/run_pipeline.py quality descriptives expected persistence robustness
+python scripts/run_pipeline.py quality descriptives expected persistence robustness bi
 ```
 
 **Windows (PowerShell)**
@@ -71,7 +73,7 @@ python scripts/run_pipeline.py quality descriptives expected persistence robustn
 py -3.12 -m venv .venv; .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 python -m pytest
-python scripts/run_pipeline.py quality descriptives expected persistence robustness
+python scripts/run_pipeline.py quality descriptives expected persistence robustness bi
 ```
 
 To download the data again: `python scripts/run_pipeline.py probe fetch reconcile` (a few minutes; the school-unit register is fetched municipality by municipality). Seeds are fixed in `src/config.py`. `python scripts/check_readme.py` recomputes the numbers in this README from `reports/`.
@@ -80,10 +82,12 @@ To download the data again: `python scripts/run_pipeline.py probe fetch reconcil
 ```
 data/raw/            Kolada extract, SALSA school units, SCB table, municipality map, probe output
 data/processed/      panel.csv (290 × 11 years), expected_values.csv
-docs/                brief, decisions log, data-quality report, QA
-reports/             results as JSON/CSV, figures/
+data/reference/      Skolverket's published national merit values (with sources)
+docs/                brief, decisions log, data-quality report, QA, Power BI specification
+reports/             results as JSON/CSV, figures/, bi/ (star schema and views for Power BI)
+sql/                 SQLite schema and the views behind the BI layer
 scripts/             run_pipeline.py (all stages), check_readme.py
-src/                 Kolada/SCB clients, dataset, quality, descriptives, models, analysis, robustness, figures
+src/                 Kolada/SCB clients, dataset, quality, descriptives, models, analysis, robustness, figures, bi
 tests/               pytest (unit tests, simulated-data checks, end-to-end on a synthetic panel)
 ```
 
@@ -91,12 +95,12 @@ tests/               pytest (unit tests, simulated-data checks, end-to-end on a 
 - **Not value added.** Background is measured at municipality level (grades 1–9), not per pupil, and income, the type of post-secondary education and school choice are not in the model. Residuals contain those as well as anything the schools do.
 - **Grading is not standardised.** Merit value is based on teachers' grades, which can differ between schools and regions; part of a persistent effect may be grading practice.
 - **Cohort size is estimated** from grades 1–9; the noise model and decision thresholds inherit that approximation.
-- **The level differs from SCB's national table** by 7–9 points (likely a different denominator; not verified). Comparisons between municipalities use one definition throughout.
+- **Merit value is the 17-subject measure** (Skolverket's headline figure, incl. modern languages). SCB's 16-subject series is 7–9 points lower; municipalities where fewer pupils take a modern language are slightly disadvantaged by the 17-subject measure.
 - **Simplifying assumptions in the uncertainty:** rank intervals ignore uncertainty in the variance parameters and fixed effects; residuals have a small positive year-to-year correlation (0.15), so the thresholds use observed changes rather than the model.
 - **Covariate choices are fixed:** see D8 for what was left out and why.
 
 ## Technology
-Python 3.12 · pandas · statsmodels (OLS with clustered SEs, MixedLM) · SciPy (custom likelihood) · geopandas · libpysal/esda (Moran's I) · matplotlib · pytest · GitHub Actions (tests and the full pipeline).
+Python 3.12 · SQL (SQLite) · Power BI (specification) · pandas · statsmodels (OLS with clustered SEs, MixedLM) · SciPy (custom likelihood) · geopandas · libpysal/esda (Moran's I) · matplotlib · pytest · GitHub Actions (tests and the full pipeline).
 
 ## License
 Code: MIT. Data: Kolada and SCB open data; see the sources above for their terms.

@@ -94,7 +94,27 @@ Eligibility for vocational programmes is suppressed for 4–14 municipalities a 
 
 - **The level check does not pass:** Kolada is higher every year, by a median of 8.84 points for girls and 7.3 for boys (range 6.64–14.69).
 - **The year pattern matches** for girls (correlation of yearly changes 0.958) and less well for boys (0.453), mainly because of SCB's 2016 value for boys.
-- A gap this stable points to a definition difference, not a data error. The most likely one is the denominator: Skolverket's merit value in Kolada averages pupils with grades in at least one subject, while a table of *all* pupils who left grade 9 would include pupils without any grade (often newly arrived) at zero points. **Not verified** — SCB's table notes were not available through the API.
+- A gap this stable points to a definition difference, not a data error.
+
+**Why the levels differ (verified):** SCB's table is the merit value for **16 subjects**; Kolada (N15504) is the merit value for **17 subjects** (16 + modern languages), the figure Skolverket headlines. Combining SCB's values for girls and boys with the girls' share implied by Kolada reproduces Skolverket's published 16-subject national averages, and Kolada's total equals the published 17-subject averages (`data/reference/skolverket_published_merit.csv`, with sources):
+
+| year | girls_share | scb_combined | skolverket_16 | kolada_total | skolverket_17 |
+|---|---|---|---|---|---|
+| 2015 | 0.486 | 217.1 |  | 224.7 |  |
+| 2016 | 0.485 | 216.6 |  | 229.2 |  |
+| 2017 | 0.473 | 215.8 |  | 223.5 |  |
+| 2018 | 0.48 | 220.7 |  | 228.7 |  |
+| 2019 | 0.487 | 221.7 |  | 229.8 |  |
+| 2020 | 0.483 | 222.9 | 222.9 | 231.1 | 231.1 |
+| 2021 | 0.49 | 223.9 | 223.9 | 232.1 | 232.1 |
+| 2022 | 0.484 | 221.2 | 221.2 | 229.2 | 229.2 |
+| 2023 | 0.487 | 220.6 |  | 228.5 |  |
+| 2024 | 0.483 | 219.7 |  | 227.6 | 227.6 |
+| 2025 | 0.488 | 220.7 |  | 228.5 |  |
+
+
+- Largest difference to a published value: 0.0 points (16 subjects) and 0.0 points (17 subjects).
+- The gap is larger for girls, consistent with more girls having a modern-language grade. The 2016 value is an outlier (gap 12.6 points); Skolverket published the 2016 results both with and without pupils of unknown background, which may explain it. Not verified.
 - Impact: none on the analysis, which only compares municipalities within Kolada's definition, and Kolada's municipal values add up to its national value (internal check above). The README will state that the level is Skolverket's Kolada definition.
 
 ## 5. Size and year-to-year movement (raw merit value)

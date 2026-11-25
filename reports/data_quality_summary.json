@@ -847,5 +847,99 @@
       "max_difference": 14.69,
       "corr_yearly_changes": 0.453
     }
+  },
+  "scb_explained": {
+    "rows": [
+      {
+        "year": 2015,
+        "girls_share": 0.486,
+        "kolada_total": 224.7,
+        "scb_combined": 217.1,
+        "skolverket_17": null,
+        "skolverket_16": null
+      },
+      {
+        "year": 2016,
+        "girls_share": 0.485,
+        "kolada_total": 229.2,
+        "scb_combined": 216.6,
+        "skolverket_17": null,
+        "skolverket_16": null
+      },
+      {
+        "year": 2017,
+        "girls_share": 0.473,
+        "kolada_total": 223.5,
+        "scb_combined": 215.8,
+        "skolverket_17": null,
+        "skolverket_16": null
+      },
+      {
+        "year": 2018,
+        "girls_share": 0.48,
+        "kolada_total": 228.7,
+        "scb_combined": 220.7,
+        "skolverket_17": null,
+        "skolverket_16": null
+      },
+      {
+        "year": 2019,
+        "girls_share": 0.487,
+        "kolada_total": 229.8,
+        "scb_combined": 221.7,
+        "skolverket_17": null,
+        "skolverket_16": null
+      },
+      {
+        "year": 2020,
+        "girls_share": 0.483,
+        "kolada_total": 231.1,
+        "scb_combined": 222.9,
+        "skolverket_17": 231.1,
+        "skolverket_16": 222.9
+      },
+      {
+        "year": 2021,
+        "girls_share": 0.49,
+        "kolada_total": 232.1,
+        "scb_combined": 223.9,
+        "skolverket_17": 232.1,
+        "skolverket_16": 223.9
+      },
+      {
+        "year": 2022,
+        "girls_share": 0.484,
+        "kolada_total": 229.2,
+        "scb_combined": 221.2,
+        "skolverket_17": 229.2,
+        "skolverket_16": 221.2
+      },
+      {
+        "year": 2023,
+        "girls_share": 0.487,
+        "kolada_total": 228.5,
+        "scb_combined": 220.6,
+        "skolverket_17": null,
+        "skolverket_16": null
+      },
+      {
+        "year": 2024,
+        "girls_share": 0.483,
+        "kolada_total": 227.6,
+        "scb_combined": 219.7,
+        "skolverket_17": 227.6,
+        "skolverket_16": null
+      },
+      {
+        "year": 2025,
+        "girls_share": 0.488,
+        "kolada_total": 228.5,
+        "scb_combined": 220.7,
+        "skolverket_17": null,
+        "skolverket_16": null
+      }
+    ],
+    "max_abs_diff_16": 0.0,
+    "max_abs_diff_17": 0.0
   }
 }

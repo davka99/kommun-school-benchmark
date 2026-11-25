@@ -96,3 +96,24 @@ Primary model, municipality *i*, spring term *t*:
 
 ## D14 — *Post-result, diagnostic fix:* buffered contiguity for Moran's I
 - The first robustness run built queen contiguity on the simplified (200 m) municipality layer and libpysal reported **69 disconnected components** — simplification opens slivers between neighbours, so many real neighbours were not linked. Weights are now "fuzzy" contiguity: polygons that touch after a 500 m buffer are neighbours; Gotland is linked to its nearest neighbour. The number of components is reported with each Moran's I. The first result (I = 0.31 for the persistent effects) is kept in this log for comparison; with the buffered weights (1 component, 5.5 neighbours on average) I = 0.32.
+
+## D15 — SCB level gap explained (after publication)
+The external check in `docs/data_quality.md` left a 7–9 point gap to SCB's national table
+unexplained (denominator suspected, not verified). It is now explained: SCB's
+LE0201Utb/Tema42 is the **16-subject** merit value, Kolada's N15504 the **17-subject**
+value. Weighting SCB's girls and boys by the girls' share implied by Kolada reproduces
+Skolverket's published 16-subject national averages for 2020–2022 exactly (222.9, 223.9,
+221.2), and Kolada's total equals the published 17-subject averages (231.1, 232.1, 229.2,
+227.6). Sources are in `data/reference/skolverket_published_merit.csv`. The denominator
+hypothesis is withdrawn. No analysis result changes; the outcome stays the 17-subject
+value, Skolverket's headline measure.
+
+## D16 — SQL/BI layer (after publication)
+The decision rules from the README are also written in SQL (`sql/02_views.sql`) on a star
+schema loaded from the committed results, and exported to `reports/bi/` for Power BI
+(`docs/powerbi.md`). SQLite is used so that it runs anywhere without a server; `sqrt()` is
+registered from Python because not every SQLite build has math functions. The noise-band
+view follows `src/descriptives.py` exactly (change demeaned by the year's mean change,
+band from this year's cohort), and `tests/test_sql_layer.py` checks that the SQL gives the
+same counts and shares as the Python results. The report itself (.pbix/.pbip) is not in
+the repository: it needs Power BI Desktop.

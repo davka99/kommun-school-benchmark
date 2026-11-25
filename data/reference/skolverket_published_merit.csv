@@ -1,0 +1,8 @@
+year,subjects,value,source,note
+2020,17,231.1,https://skolverket.se/download/18.22df6cdd172a07d4e642228/1600768070605/pdf7301.pdf,published national average merit value
+2021,17,232.1,https://www.skolverket.se/download/18.37d3246617bea4cb5c71080/1632812530083/pdf8633.pdf,published national average merit value
+2021,16,223.9,https://www.skolverket.se/download/18.37d3246617bea4cb5c71080/1632812530083/pdf8633.pdf,published national average merit value
+2020,16,222.9,https://www.skolverket.se/download/18.37d3246617bea4cb5c71080/1632812530083/pdf8633.pdf,derived: 2021 value (223.9) minus the reported increase of 1.0 from 2020
+2022,17,229.2,https://www.skolverket.se/download/18.2cb9d0c18340c7dae395d/1664351539747/pdf10334.pdf,published national average merit value
+2022,16,221.2,https://www.skolverket.se/download/18.2cb9d0c18340c7dae395d/1664351539747/pdf10334.pdf,derived: 2021 value (223.9) minus the reported decrease of 2.7
+2024,17,227.6,https://skolverket.se/download/18.bcb791419221c6a75313/1727178799386/pdf13149.pdf,published national average merit value

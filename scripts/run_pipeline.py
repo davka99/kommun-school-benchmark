@@ -32,6 +32,9 @@ Stages
   robustness  M7. Pre-registered robustness variants, Stockholm-county table,
          Moran's I: reports/robustness.json, robustness_effects.csv, stockholm_county.csv.
 
+  bi  Offline. SQLite star schema + SQL views (sql/), exported to reports/bi/ for the
+         Power BI report described in docs/powerbi.md.
+
 Network access is only needed for `probe`, `probe_scb`, `fetch` and `reconcile`. The build
 sandbox cannot reach the sources, so these stages run in GitHub Actions.
 """
@@ -381,9 +384,24 @@ def stage_quality() -> None:
     summary = quality.summarise(panel, raw, ou, scb_cmp)
     if scb_error:
         summary["scb_error"] = scb_error
+    pub_path = ROOT / "data" / "reference" / "skolverket_published_merit.csv"
+    if scb_cmp is not None and pub_path.exists():
+        ex = quality.scb_vs_published(scb_cmp, raw, pd.read_csv(pub_path))
+        d16 = (ex["scb_combined"] - ex["skolverket_16"]).abs().max()
+        d17 = (ex["kolada_total"] - ex["skolverket_17"]).abs().max()
+        summary["scb_explained"] = {
+            "rows": json.loads(ex.to_json(orient="records")),
+            "max_abs_diff_16": round(float(d16), 2), "max_abs_diff_17": round(float(d17), 2)}
     _write_json(config.REPORTS / "data_quality_summary.json", summary)
     (ROOT / "docs" / "data_quality.md").write_text(quality.render_markdown(summary), encoding="utf-8")
     print(json.dumps({k: summary[k] for k in ("panel_rows", "range_violations", "max_abs_reconciliation_diff")}))
+
+
+def stage_bi() -> None:
+    """BI layer (offline): SQLite star schema + SQL views, exported to reports/bi/ for Power BI."""
+    import bi
+
+    print(json.dumps(bi.main()))
 
 
 def stage_descriptives() -> None:
@@ -537,7 +555,8 @@ def stage_robustness() -> None:
 
 STAGES = {"probe": stage_probe, "probe_scb": stage_probe_scb, "fetch": stage_fetch,
           "reconcile": stage_reconcile, "quality": stage_quality, "descriptives": stage_descriptives,
-          "expected": stage_expected, "persistence": stage_persistence, "robustness": stage_robustness}
+          "expected": stage_expected, "persistence": stage_persistence, "robustness": stage_robustness,
+          "bi": stage_bi}
 
 
 def main(argv: list[str]) -> None:
