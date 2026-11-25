@@ -420,7 +420,7 @@ def stage_descriptives() -> None:
     figures.changes_vs_size(
         descriptives.demeaned_changes(p), a, b, config.FIGURES / "changes_vs_size.png",
         title=f"With 100 pupils a year, a {bands['100']:.0f}-point swing is within cohort noise; "
-              f"with 1,000, {bands['1000']:.0f}")
+              f"with 1,000 pupils, {bands['1000']:.0f} points")
     figures.funnel_plot(descriptives.funnel(p, "merit", s["funnel_year"], s["noise_model"]["point"]["pupil_sd"]),
                         s["funnel_year"], config.FIGURES / f"funnel_{s['funnel_year']}.png")
     try:

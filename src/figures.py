@@ -7,6 +7,8 @@ Titles state the conclusion; source lines name Kolada / SCB.
 
 from __future__ import annotations
 
+import textwrap
+
 import matplotlib
 
 matplotlib.use("Agg")
@@ -58,7 +60,9 @@ def changes_vs_size(ch, a, b, path, title, z=1.959964):
     ax.set_xticklabels(["25", "50", "100", "200", "500", "1k", "3k", "10k"])
     ax.set_xlabel("Grade-9 pupils per year (estimated, log scale)")
     ax.set_ylabel("Change in merit value vs previous year\n(points, national change removed)")
-    ax.set_title(title)
+    if len(title) > 70 and "; " in title:  # long titles were cut off at the figure edge
+        title = title.replace("; ", ";\n", 1)
+    ax.set_title("\n".join(textwrap.fill(t, 72) for t in title.split("\n")))
     ax.legend(frameon=False, loc="upper right", fontsize=8.5)
     _finish(fig, path)
 
@@ -133,8 +137,15 @@ def actual_vs_expected(d, year, path, title, highlight_county="01"):
     _finish(fig, path)
 
 
-def caterpillar(eff, path, title):
-    """Every municipality's persistent effect with its 95 % interval, sorted."""
+LABELLED = ("0180", "0126")  # Stockholm and Huddinge: always named in the caterpillar plot
+
+
+def caterpillar(eff, path, title, labelled=LABELLED, extremes=1):
+    """Every municipality's persistent effect with its 95 % interval, sorted.
+
+    Names the municipalities in ``labelled`` plus the ``extremes`` highest and lowest,
+    so a reader can find a few reference points among the 290 bars.
+    """
     style()
     e = eff.sort_values("eb_mean").reset_index(drop=True)
     colors = np.where(e["verdict"] == "above", DIV_POS, np.where(e["verdict"] == "below", DIV_NEG, "#b5b4ad"))
@@ -148,8 +159,26 @@ def caterpillar(eff, path, title):
             ha="right", va="top", fontsize=9)
     ax.text(2, float(e["lo95"].min()), f"{n_below} clearly below expected", color=DIV_NEG, ha="left",
             va="bottom", fontsize=9)
-    ax.text(len(e) / 2, float(e["hi95"].max()), f"{len(e) - n_above - n_below} interval includes 0",
+    ax.text(len(e) / 2, float(e["hi95"].max()),
+            f"{len(e) - n_above - n_below} cannot be told apart from expected",
             color=INK2, ha="center", va="top", fontsize=9)
+    picks = set(e.index[:extremes]) | set(e.index[-extremes:])
+    if "municipality" in e and "name" in e:
+        picks |= set(e.index[e["municipality"].astype(str).str.zfill(4).isin(labelled)])
+        # Labels go under the bar for municipalities above expected and over it for those
+        # below; neighbours get staggered offsets so the names do not overlap.
+        steps = {True: 0, False: 0}
+        for i in sorted(picks, reverse=True):
+            above = bool(e.at[i, "eb_mean"] >= 0)
+            y = e.at[i, "lo95"] if above else e.at[i, "hi95"]
+            off = 12 + 15 * (steps[above] % 3)
+            steps[above] += 1
+            ax.annotate(e.at[i, "name"], xy=(i, y), xytext=(0, -off if above else off),
+                        textcoords="offset points", ha="right", va="top" if above else "bottom",
+                        fontsize=7.5, color=INK,
+                        bbox={"boxstyle": "round,pad=0.15", "fc": SURFACE, "ec": "none", "alpha": 0.9},
+                        arrowprops={"arrowstyle": "-", "color": MUTED, "lw": 0.6,
+                                    "shrinkA": 0, "shrinkB": 1})
     ax.set_xticks([])
     ax.set_xlabel("290 municipalities, sorted by estimated persistent effect")
     ax.set_ylabel("Persistent difference from expected\nmerit value (points, 95 % interval)")
