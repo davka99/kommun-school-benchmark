@@ -183,6 +183,23 @@ def scb_comparison(tema42: pd.DataFrame, raw: pd.DataFrame) -> pd.DataFrame:
     return m.reset_index(drop=True)
 
 
+def scb_vs_published(cmp: pd.DataFrame, raw: pd.DataFrame, published: pd.DataFrame) -> pd.DataFrame:
+    """Explain the SCB gap: combine SCB's values for girls and boys with the girls' share
+    implied by Kolada (T = w*K + (1-w)*M) and compare both series with Skolverket's
+    published national averages for 16 and 17 subjects."""
+    k = raw[(raw["municipality"] == "0000") & (raw["kpi"] == VARIABLES["merit"])]
+    kt = k.pivot_table(index="period", columns="gender", values="value")
+    w = (kt["T"] - kt["M"]) / (kt["K"] - kt["M"])
+    scb = cmp.pivot_table(index="year", columns="sex", values="scb")
+    out = pd.DataFrame({"girls_share": w.round(3), "kolada_total": kt["T"],
+                        "scb_combined": (w * scb["K"] + (1 - w) * scb["M"]).round(1)}).dropna()
+    out.index.name = "year"
+    pub = published.pivot_table(index="year", columns="subjects", values="value")
+    out["skolverket_17"] = pub.get(17)
+    out["skolverket_16"] = pub.get(16)
+    return out.reset_index()
+
+
 def _table(rows: list[dict], cols: list[str]) -> str:
     head = "| " + " | ".join(cols) + " |\n|" + "---|" * len(cols) + "\n"
     return head + "".join("| " + " | ".join("" if r.get(c) is None or (isinstance(r.get(c), float) and np.isnan(r.get(c)))
@@ -240,6 +257,27 @@ def render_markdown(s: dict) -> str:
         f"- Background shares: largest gap {s['max_abs_reconciliation_diff']['parents_post_secondary']} pp "
         f"(parents' education) and {s['max_abs_reconciliation_diff']['foreign_background']} pp (foreign background).",
     ]
+    if s.get("scb_explained"):
+        ex = s["scb_explained"]
+        lines_ex = [
+            "",
+            "**Why the levels differ (verified):** SCB's table is the merit value for **16 subjects**; Kolada "
+            "(N15504) is the merit value for **17 subjects** (16 + modern languages), the figure Skolverket "
+            "headlines. Combining SCB's values for girls and boys with the girls' share implied by Kolada "
+            "reproduces Skolverket's published 16-subject national averages, and Kolada's total equals the "
+            "published 17-subject averages (`data/reference/skolverket_published_merit.csv`, with sources):",
+            "",
+            _table(ex["rows"], ["year", "girls_share", "scb_combined", "skolverket_16", "kolada_total",
+                                "skolverket_17"]),
+            "",
+            f"- Largest difference to a published value: {ex['max_abs_diff_16']} points (16 subjects) and "
+            f"{ex['max_abs_diff_17']} points (17 subjects).",
+            "- The gap is larger for girls, consistent with more girls having a modern-language grade. The 2016 "
+            "value is an outlier (gap 12.6 points); Skolverket published the 2016 results both with and without "
+            "pupils of unknown background, which may explain it. Not verified.",
+        ]
+    else:
+        lines_ex = []
     if s.get("scb_national_by_sex"):
         lines += [
             "",
@@ -255,10 +293,8 @@ def render_markdown(s: dict) -> str:
             f"(range {min(v['min_difference'] for v in st.values())}–{max(v['max_difference'] for v in st.values())}).",
             f"- **The year pattern matches** for girls (correlation of yearly changes {st['K']['corr_yearly_changes']}) "
             f"and less well for boys ({st['M']['corr_yearly_changes']}), mainly because of SCB's 2016 value for boys.",
-            "- A gap this stable points to a definition difference, not a data error. The most likely one is the "
-            "denominator: Skolverket's merit value in Kolada averages pupils with grades in at least one subject, "
-            "while a table of *all* pupils who left grade 9 would include pupils without any grade (often newly "
-            "arrived) at zero points. **Not verified** — SCB's table notes were not available through the API.",
+            "- A gap this stable points to a definition difference, not a data error.",
+            *lines_ex,
             "- Impact: none on the analysis, which only compares municipalities within Kolada's definition, and "
             "Kolada's municipal values add up to its national value (internal check above). The README will "
             "state that the level is Skolverket's Kolada definition.",
